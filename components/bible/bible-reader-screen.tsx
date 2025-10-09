@@ -159,7 +159,7 @@ export function BibleReaderScreen({ onBack, onConsult, initialBook }: BibleReade
           <div className="flex items-center justify-center py-12">
             <div className="text-center">
               <div className="mb-2 h-8 w-8 animate-spin rounded-full border-4 border-primary border-t-transparent" />
-              <p className="text-sm text-muted-foreground">Cargando capítulo...</p>
+              <p className="text-sm text-muted-foreground">Loading chapter...</p>
             </div>
           </div>
         )}
@@ -176,7 +176,6 @@ export function BibleReaderScreen({ onBack, onConsult, initialBook }: BibleReade
               <h1 className="mb-2 text-balance text-2xl font-bold">
                 {selectedBook?.name} {chapter}
               </h1>
-              <p className="text-sm text-muted-foreground">Reina Valera 1960 (RVR1960)</p>
             </div>
 
             <div className="space-y-4 leading-relaxed" onMouseUp={handleTextSelection} onTouchEnd={handleTextSelection}>
@@ -192,13 +191,13 @@ export function BibleReaderScreen({ onBack, onConsult, initialBook }: BibleReade
             <div className="mt-8 flex items-center justify-between">
               <Button variant="outline" onClick={handlePreviousChapter} disabled={chapter === 1}>
                 <ChevronLeft className="mr-2 h-4 w-4" />
-                Anterior
+                Previous
               </Button>
               <span className="text-sm text-muted-foreground">
-                Capítulo {chapter} de {selectedBook?.chapters}
+                Chapter {chapter} of {selectedBook?.chapters}
               </span>
               <Button variant="outline" onClick={handleNextChapter} disabled={chapter === selectedBook?.chapters}>
-                Siguiente
+                Next
                 <ChevronRight className="ml-2 h-4 w-4" />
               </Button>
             </div>

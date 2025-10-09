@@ -63,8 +63,8 @@ export function HomeScreen({
     <div className="min-h-screen bg-background pb-24">
       <div className="border-b bg-gradient-to-br from-primary/5 via-background to-accent/5 p-6">
         <div className="mx-auto max-w-2xl">
-          <h1 className="mb-1 text-2xl font-bold">Bienvenido, {userName}</h1>
-          <p className="text-sm text-muted-foreground">Tu jornada espiritual continúa</p>
+          <h1 className="mb-1 text-2xl font-bold">Welcome, {userName}</h1>
+          <p className="text-sm text-muted-foreground">Your spiritual journey continues</p>
         </div>
       </div>
 
@@ -76,7 +76,7 @@ export function HomeScreen({
                 <div className="flex-1">
                   <div className="mb-2 flex items-center gap-2">
                     <Sparkles className="h-5 w-5 text-primary" />
-                    <span className="text-sm font-semibold text-primary">Reflexión para hoy</span>
+                    <span className="text-sm font-semibold text-primary">Today's Reflection</span>
                   </div>
                   <h3 className="mb-1 text-balance text-xl font-bold">{dailyReflection.title}</h3>
                   {dailyReflection.scripture && (
@@ -86,9 +86,9 @@ export function HomeScreen({
               </div>
               <p className="mb-4 text-pretty leading-relaxed text-muted-foreground">{dailyReflection.description}</p>
               <div className="flex items-center justify-between">
-                <span className="text-sm text-muted-foreground">{dailyReflection.estimatedMinutes} minutos</span>
+                <span className="text-sm text-muted-foreground">{dailyReflection.estimatedMinutes} minutes</span>
                 <Button onClick={handleStartReflection} className="rounded-full font-semibold">
-                  Comenzar reflexión
+                  Start Reflection
                 </Button>
               </div>
             </div>
@@ -97,19 +97,19 @@ export function HomeScreen({
 
         {progress && (
           <Card className="p-6">
-            <h3 className="mb-4 text-lg font-semibold">Tu Jornada</h3>
+            <h3 className="mb-4 text-lg font-semibold">Your Journey</h3>
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
                 <div className="mb-1 text-2xl font-bold text-primary">{progress.daysOfPractice}</div>
-                <div className="text-xs text-muted-foreground">Días de práctica</div>
+                <div className="text-xs text-muted-foreground">Days of practice</div>
               </div>
               <div className="text-center">
                 <div className="mb-1 text-2xl font-bold text-primary">{progress.topicsExplored.length}</div>
-                <div className="text-xs text-muted-foreground">Temas explorados</div>
+                <div className="text-xs text-muted-foreground">Topics explored</div>
               </div>
               <div className="text-center">
                 <div className="mb-1 text-2xl font-bold text-primary">{progress.reflectionsCompleted.length}</div>
-                <div className="text-xs text-muted-foreground">Reflexiones</div>
+                <div className="text-xs text-muted-foreground">Reflections</div>
               </div>
             </div>
           </Card>
@@ -123,13 +123,13 @@ export function HomeScreen({
                   <GraduationCap className="h-7 w-7 text-accent" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">Escuela Espiritual</h3>
-                  <p className="mb-2 text-sm text-muted-foreground">Lecciones interactivas y estructuradas</p>
+                  <h3 className="mb-1 text-lg font-semibold">Spiritual School</h3>
+                  <p className="mb-2 text-sm text-muted-foreground">Interactive and structured lessons</p>
                   <div className="flex items-center gap-4 text-xs text-muted-foreground">
                     <span>
-                      {lessonStats.completedLessons} de {lessonStats.totalLessons} lecciones
+                      {lessonStats.completedLessons} of {lessonStats.totalLessons} lessons
                     </span>
-                    <span>{Math.round(lessonStats.totalTimeSpent / 60)}h dedicadas</span>
+                    <span>{Math.round(lessonStats.totalTimeSpent / 60)}h dedicated</span>
                   </div>
                 </div>
                 <ChevronRight className="h-6 w-6 text-muted-foreground" />
@@ -141,10 +141,10 @@ export function HomeScreen({
         {nextTopics.length > 0 && (
           <div>
             <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-lg font-semibold">Camino de Aprendizaje</h3>
+              <h3 className="text-lg font-semibold">Learning Path</h3>
               {onNavigateToJourney && (
                 <Button variant="ghost" size="sm" onClick={onNavigateToJourney}>
-                  Ver todo
+                  View all
                   <ChevronRight className="ml-1 h-4 w-4" />
                 </Button>
               )}
@@ -184,8 +184,8 @@ export function HomeScreen({
                   <Book className="h-7 w-7 text-accent" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="mb-1 text-lg font-semibold">Leer la Biblia</h3>
-                  <p className="text-sm text-muted-foreground">Explora las Escrituras</p>
+                  <h3 className="mb-1 text-lg font-semibold">Read the Bible</h3>
+                  <p className="text-sm text-muted-foreground">Explore the Scriptures</p>
                 </div>
                 <ChevronRight className="h-6 w-6 text-muted-foreground" />
               </div>
@@ -200,8 +200,8 @@ export function HomeScreen({
                 <MessageCircle className="h-7 w-7 text-primary" />
               </div>
               <div className="flex-1">
-                <h3 className="mb-1 text-lg font-semibold">Conversar</h3>
-                <p className="text-sm text-muted-foreground">Comparte tus pensamientos y preguntas</p>
+                <h3 className="mb-1 text-lg font-semibold">Chat</h3>
+                <p className="text-sm text-muted-foreground">Share your thoughts and questions</p>
               </div>
             </div>
           </button>

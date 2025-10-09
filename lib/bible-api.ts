@@ -1,4 +1,3 @@
-// API para obtener la Biblia en español (RVR1960)
 import { getBibleChapterData } from "./bible-system"
 
 export interface BibleVerse {
@@ -109,19 +108,19 @@ export const BIBLE_BOOKS: BibleBook[] = [
 ]
 
 export async function getBibleChapter(bookId: string, chapter: number): Promise<BibleChapter> {
-  const verses = getBibleChapterData(bookId, chapter)
+  const localVerses = getBibleChapterData(bookId, chapter)
 
-  if (verses) {
-    console.log("[v0] Using local Bible data for", bookId, chapter)
+  if (localVerses) {
+    console.log("[v0] Using local JSON data for", bookId, chapter)
     return {
       book: bookId,
       chapter,
-      verses,
+      verses: localVerses,
     }
   }
 
   throw new Error(
-    `El capítulo ${chapter} de ${bookId} aún no está disponible. Estamos trabajando para agregar más contenido.`,
+    `Capítulo ${chapter} del libro ${bookId} no disponible. Por favor, agrega el archivo JSON correspondiente.`,
   )
 }
 

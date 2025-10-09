@@ -25,8 +25,7 @@ export function BibleChatScreen({ onBack }: BibleChatScreenProps) {
     if (bibleContext) {
       setContext(bibleContext)
 
-      // Preparar pregunta automática para el chat
-      const autoQuestion = `¿Qué significa "${bibleContext.selectedText}" en ${bibleContext.bookName} ${bibleContext.chapter}?`
+      const autoQuestion = `What does "${bibleContext.selectedText}" mean in ${bibleContext.bookName} ${bibleContext.chapter}?`
       localStorage.setItem("bibleAutoQuestion", autoQuestion)
       localStorage.setItem("bibleContextForAI", JSON.stringify(bibleContext))
     }
@@ -44,7 +43,7 @@ export function BibleChatScreen({ onBack }: BibleChatScreenProps) {
               </div>
               <div className="flex-1">
                 <div className="mb-1 flex items-center gap-2">
-                  <span className="text-sm font-semibold text-primary">Consultando sobre:</span>
+                  <span className="text-sm font-semibold text-primary">Asking about:</span>
                   <span className="text-sm text-muted-foreground">
                     {context.bookName} {context.chapter}
                   </span>
@@ -53,7 +52,7 @@ export function BibleChatScreen({ onBack }: BibleChatScreenProps) {
               </div>
               <Button variant="ghost" size="sm" onClick={onBack}>
                 <ChevronLeft className="mr-1 h-4 w-4" />
-                Volver
+                Back
               </Button>
             </div>
           </div>
