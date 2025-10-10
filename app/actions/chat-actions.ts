@@ -18,49 +18,54 @@ const AI_CONFIG = {
 }
 
 function generateBibleStudyPrompt(bibleContext: any): string {
-  return `Eres un maestro bíblico evangélico experto que ayuda a entender las Escrituras.
+  return `You are an expert evangelical Bible teacher who helps people understand Scripture.
 
-CONTEXTO DE LA CONSULTA:
-- Libro: ${bibleContext.bookName}
-- Capítulo: ${bibleContext.chapter}
-- Texto seleccionado: "${bibleContext.selectedText}"
-- Contexto completo: "${bibleContext.fullContext}"
+QUERY CONTEXT:
+- Book: ${bibleContext.bookName}
+- Chapter: ${bibleContext.chapter}
+- Selected text: "${bibleContext.selectedText}"
+- Full context: "${bibleContext.fullContext}"
 
-PRINCIPIOS DE INTERPRETACIÓN EVANGÉLICA:
-1. Sola Scriptura - La Biblia interpreta la Biblia
-2. Contexto histórico y cultural del pasaje
-3. Contexto literario (versículos anteriores y posteriores)
-4. Significado original para los lectores originales
-5. Aplicación práctica para hoy
-6. Conexión con el evangelio y Cristo cuando sea relevante
+LANGUAGE:
+- Respond in English by default
+- If the user's question is in another language, respond in that language
+- Maintain the same clear, educational tone regardless of language
 
-ESTILO DE RESPUESTA:
-- Claro, educativo y pastoral
-- Usa ejemplos prácticos y contemporáneos
-- Cita otros versículos relevantes cuando sea útil
-- Evita jerga teológica compleja
-- Enfoque compasivo y aplicable a la vida diaria
-- Respuestas concisas pero completas (2-3 párrafos)
+EVANGELICAL INTERPRETATION PRINCIPLES:
+1. Sola Scriptura - The Bible interprets the Bible
+2. Historical and cultural context of the passage
+3. Literary context (preceding and following verses)
+4. Original meaning for the original readers
+5. Practical application for today
+6. Connection to the gospel and Christ when relevant
 
-ESTRUCTURA SUGERIDA:
-1. Explica el significado del texto en su contexto original
-2. Aclara palabras o conceptos clave
-3. Ofrece aplicación práctica para hoy
-4. Invita a profundizar con una pregunta reflexiva
+RESPONSE STYLE:
+- Clear, educational, and pastoral
+- Use practical and contemporary examples
+- Cite other relevant verses when helpful
+- Avoid complex theological jargon
+- Compassionate approach applicable to daily life
+- Concise but complete responses (2-3 paragraphs)
 
-Recuerda: Eres un maestro que acompaña en el estudio, no un predicador que sermonea.`
+SUGGESTED STRUCTURE:
+1. Explain the meaning of the text in its original context
+2. Clarify key words or concepts
+3. Offer practical application for today
+4. Invite deeper reflection with a thoughtful question
+
+Remember: You are a teacher who accompanies in study, not a preacher who lectures.`
 }
 
 export async function sendMessageToAI(
   userMessage: string,
   conversationHistory: Message[] = [],
-  userName = "amigo",
+  userName = "friend",
   bibleContext?: any,
 ) {
   const apiKey = process.env.OPENROUTER_API_KEY
 
   if (!apiKey) {
-    throw new Error("OPENROUTER_API_KEY no está configurada en las variables de entorno")
+    throw new Error("OPENROUTER_API_KEY is not configured in environment variables")
   }
 
   const profile = getUserProfile()
@@ -70,8 +75,9 @@ export async function sendMessageToAI(
     ? generateBibleStudyPrompt(bibleContext)
     : profile
       ? generateDynamicSystemPrompt(profile, memory)
-      : `Eres un compañero espiritual cercano y empático llamado "Tu Compañero". 
-       Hablas con ${userName} de forma amigable y comprensiva.`
+      : `You are a warm and empathetic spiritual companion called "Your Companion". 
+       You speak with ${userName} in a friendly and understanding way.
+       Respond in English by default, but if ${userName} writes in another language, respond in that language.`
 
   const messages = [
     { role: "system", content: systemPrompt },
@@ -89,7 +95,7 @@ export async function sendMessageToAI(
         Authorization: `Bearer ${apiKey}`,
         "Content-Type": "application/json",
         "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
-        "X-Title": "Compañero Espiritual",
+        "X-Title": "Spiritual Companion",
       },
       body: JSON.stringify({
         model: AI_CONFIG.model,
@@ -103,13 +109,13 @@ export async function sendMessageToAI(
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({}))
       console.error("[v0] OpenRouter error:", errorData)
-      throw new Error(`Error de OpenRouter: ${response.status} ${response.statusText}`)
+      throw new Error(`OpenRouter error: ${response.status} ${response.statusText}`)
     }
 
     const data = await response.json()
 
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
-      throw new Error("Respuesta inválida de OpenRouter")
+      throw new Error("Invalid response from OpenRouter")
     }
 
     return {
@@ -120,8 +126,8 @@ export async function sendMessageToAI(
     console.error("[v0] Error in sendMessageToAI:", error)
     return {
       success: false,
-      message: "Lo siento, tuve un problema al procesar tu mensaje. ¿Podrías intentarlo de nuevo?",
-      error: error instanceof Error ? error.message : "Error desconocido",
+      message: "I'm sorry, I had a problem processing your message. Could you try again?",
+      error: error instanceof Error ? error.message : "Unknown error",
     }
   }
 }

@@ -14,10 +14,10 @@ export function WelcomeScreen({ onContinue }: WelcomeScreenProps) {
         <Sparkles className="h-12 w-12 text-primary" />
       </div>
 
-      <h1 className="mb-4 text-balance text-4xl font-bold tracking-tight">Hola, soy tu compañero espiritual</h1>
+      <h1 className="mb-4 text-balance text-4xl font-bold tracking-tight">Hello, I'm your spiritual companion</h1>
 
       <p className="mb-12 max-w-md text-pretty text-lg text-muted-foreground leading-relaxed">
-        Estoy aquí para caminar contigo en tu fe, responder tus preguntas y crecer juntos cada día
+        I'm here to walk with you in your faith, answer your questions, and grow together every day
       </p>
 
       <div className="relative mb-12 h-64 w-full max-w-sm">
@@ -25,12 +25,16 @@ export function WelcomeScreen({ onContinue }: WelcomeScreenProps) {
           <div className="h-48 w-48 rounded-full bg-gradient-to-br from-primary/20 via-accent/20 to-secondary/20 blur-3xl" />
         </div>
         <div className="relative flex h-full items-center justify-center">
-          <img src="/peaceful-dove-with-olive-branch-spiritual-illustra.jpg" alt="Spiritual companion" className="h-48 w-48 object-contain" />
+          <img
+            src="/peaceful-dove-with-olive-branch-spiritual-illustra.jpg"
+            alt="Spiritual companion"
+            className="h-48 w-48 object-contain"
+          />
         </div>
       </div>
 
       <Button onClick={onContinue} size="lg" className="w-full max-w-sm rounded-full text-lg font-semibold">
-        Comenzar mi camino
+        Begin my journey
       </Button>
     </div>
   )

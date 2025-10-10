@@ -30,17 +30,17 @@ export function NameScreen({ onSubmit }: NameScreenProps) {
           </div>
         </div>
 
-        <h2 className="mb-3 text-balance text-center text-3xl font-bold">¿Cómo te gustaría que te llame?</h2>
+        <h2 className="mb-3 text-balance text-center text-3xl font-bold">What would you like me to call you?</h2>
 
         <p className="mb-8 text-pretty text-center text-muted-foreground leading-relaxed">
-          Solo necesito tu nombre o un apodo para personalizar nuestra conversación
+          I just need your name or a nickname to personalize our conversation
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-6">
           <div>
             <Input
               type="text"
-              placeholder="Tu nombre o apodo"
+              placeholder="Your name or nickname"
               value={name}
               onChange={(e) => setName(e.target.value)}
               className="h-14 rounded-xl text-lg"
@@ -49,11 +49,11 @@ export function NameScreen({ onSubmit }: NameScreenProps) {
           </div>
 
           <Button type="submit" size="lg" className="w-full rounded-full text-lg font-semibold" disabled={!name.trim()}>
-            Continuar
+            Continue
           </Button>
         </form>
 
-        <p className="mt-6 text-center text-sm text-muted-foreground">No compartiremos tu información con nadie</p>
+        <p className="mt-6 text-center text-sm text-muted-foreground">We won't share your information with anyone</p>
       </div>
     </div>
   )

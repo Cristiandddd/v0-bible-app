@@ -40,7 +40,7 @@ export function SelectionPopup({ selectedText, position, onConsult, onClose }: S
         <div className="flex items-center gap-2 p-3">
           <Button size="sm" onClick={onConsult} className="gap-2">
             <MessageCircle className="h-4 w-4" />
-            Consultar
+            Consult
           </Button>
           <Button size="sm" variant="ghost" onClick={onClose}>
             <X className="h-4 w-4" />

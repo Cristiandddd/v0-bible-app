@@ -21,14 +21,14 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
   // Respuestas del usuario
   const [denomination, setDenomination] = useState("")
   const [bibleExperience, setBibleExperience] = useState("") // New field for Bible experience
-  const [preferredTreatment, setPreferredTreatment] = useState("amigable")
+  const [preferredTreatment, setPreferredTreatment] = useState("friendly")
   const [spiritualGoals, setSpiritualGoals] = useState<string[]>([])
   const [customNotes, setCustomNotes] = useState("")
 
   const handleComplete = () => {
     const profile: UserProfile = {
       name: userName,
-      religion: "evangelical Christianity", // Fixed to evangelical
+      religion: "evangelico", // Fixed to evangelical
       denomination: denomination || undefined,
       preferredTreatment,
       spiritualGoals,
@@ -63,7 +63,7 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
           <div className="space-y-2">
             <div className="flex justify-between text-sm text-muted-foreground">
               <span>
-                Paso {step} de {totalSteps}
+                Step {step} of {totalSteps}
               </span>
               <span>{Math.round((step / totalSteps) * 100)}%</span>
             </div>
@@ -78,23 +78,23 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
           {step === 1 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">Bienvenido!</h2>
+                <h2 className="text-2xl font-semibold text-foreground">Welcome!</h2>
                 <p className="text-muted-foreground">
-                  Esta app está diseñada para cristianos evangélicos. ¿A qué denominación perteneces?
+                  This app is designed for evangelical Christians. Which denomination do you belong to?
                 </p>
               </div>
 
               <RadioGroup value={denomination} onValueChange={setDenomination}>
                 <div className="space-y-3">
                   {[
-                    { value: "bautista", label: "Bautista" },
+                    { value: "baptist", label: "Baptist" },
                     { value: "pentecostal", label: "Pentecostal" },
-                    { value: "presbiteriana", label: "Presbiteriana" },
-                    { value: "metodista", label: "Metodista" },
-                    { value: "asambleas-dios", label: "Asambleas de Dios" },
-                    { value: "nazareno", label: "Iglesia del Nazareno" },
-                    { value: "no-denominacional", label: "No denominacional" },
-                    { value: "otra", label: "Otra denominación evangélica" },
+                    { value: "presbyterian", label: "Presbyterian" },
+                    { value: "methodist", label: "Methodist" },
+                    { value: "assemblies-of-god", label: "Assemblies of God" },
+                    { value: "nazarene", label: "Church of the Nazarene" },
+                    { value: "non-denominational", label: "Non-denominational" },
+                    { value: "other", label: "Other evangelical denomination" },
                   ].map((option) => (
                     <div
                       key={option.value}
@@ -116,33 +116,33 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
             <div className="space-y-4">
               <div className="space-y-2">
                 <h2 className="text-2xl font-semibold text-foreground">
-                  ¿Cuánta experiencia tienes leyendo la Biblia?
+                  How much experience do you have reading the Bible?
                 </h2>
-                <p className="text-muted-foreground">Esto me ayudará a adaptar el contenido a tu nivel</p>
+                <p className="text-muted-foreground">This will help me adapt the content to your level</p>
               </div>
 
               <RadioGroup value={bibleExperience} onValueChange={setBibleExperience}>
                 <div className="space-y-3">
                   {[
                     {
-                      value: "nuevo",
-                      label: "Soy nuevo en la fe",
-                      description: "Recién empiezo mi camino con Cristo",
+                      value: "new",
+                      label: "I'm new to the faith",
+                      description: "Just starting my journey with Christ",
                     },
                     {
-                      value: "ocasional",
-                      label: "Leo ocasionalmente",
-                      description: "Leo la Biblia de vez en cuando",
+                      value: "occasional",
+                      label: "I read occasionally",
+                      description: "I read the Bible from time to time",
                     },
                     {
                       value: "regular",
-                      label: "Leo regularmente",
-                      description: "Tengo el hábito de leer la Biblia",
+                      label: "I read regularly",
+                      description: "I have a habit of reading the Bible",
                     },
                     {
-                      value: "avanzado",
-                      label: "Estudio profundamente",
-                      description: "Estudio la Biblia con dedicación",
+                      value: "advanced",
+                      label: "I study deeply",
+                      description: "I study the Bible with dedication",
                     },
                   ].map((option) => (
                     <div
@@ -164,33 +164,30 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
             </div>
           )}
 
-          {/* Step 3: Estilo de comunicación */}
           {step === 3 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">¿Cómo prefieres que te hable?</h2>
-                <p className="text-muted-foreground">
-                  Elige el estilo de comunicación con el que te sientas más cómodo
-                </p>
+                <h2 className="text-2xl font-semibold text-foreground">How do you prefer I speak to you?</h2>
+                <p className="text-muted-foreground">Choose the communication style you feel most comfortable with</p>
               </div>
 
               <RadioGroup value={preferredTreatment} onValueChange={setPreferredTreatment}>
                 <div className="space-y-3">
                   {[
                     {
-                      value: "amigable",
-                      label: "Amigable y cercano",
-                      description: "Como un amigo de confianza (recomendado)",
+                      value: "friendly",
+                      label: "Friendly and warm",
+                      description: "Like a trusted friend (recommended)",
                     },
                     {
                       value: "casual",
-                      label: "Casual y relajado",
-                      description: "Conversación informal y natural",
+                      label: "Casual and relaxed",
+                      description: "Informal and natural conversation",
                     },
                     {
                       value: "formal",
-                      label: "Formal y respetuoso",
-                      description: "Trato más tradicional y respetuoso",
+                      label: "Formal and respectful",
+                      description: "More traditional and respectful approach",
                     },
                   ].map((option) => (
                     <div
@@ -215,22 +212,22 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
           {step === 4 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">¿Qué te gustaría lograr?</h2>
-                <p className="text-muted-foreground">Selecciona tus objetivos espirituales (puedes elegir varios)</p>
+                <h2 className="text-2xl font-semibold text-foreground">What would you like to achieve?</h2>
+                <p className="text-muted-foreground">Select your spiritual goals (you can choose multiple)</p>
               </div>
 
               <div className="space-y-3">
                 {[
-                  "Conocer mejor la Biblia",
-                  "Fortalecer mi fe",
-                  "Prepararme para enseñar o evangelizar",
-                  "Entender doctrinas evangélicas",
-                  "Crecer espiritualmente",
-                  "Encontrar paz interior",
-                  "Entender mi propósito en la vida",
-                  "Superar momentos difíciles",
-                  "Crecer en amor y compasión",
-                  "Conectar con mi comunidad",
+                  "Know the Bible better",
+                  "Strengthen my faith",
+                  "Prepare to teach or evangelize",
+                  "Understand evangelical doctrines",
+                  "Grow spiritually",
+                  "Find inner peace",
+                  "Understand my purpose in life",
+                  "Overcome difficult times",
+                  "Grow in love and compassion",
+                  "Connect with my community",
                 ].map((goal) => (
                   <div
                     key={goal}
@@ -251,18 +248,17 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
             </div>
           )}
 
-          {/* Step 5: Notas adicionales */}
           {step === 5 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">¿Algo más que deba saber?</h2>
+                <h2 className="text-2xl font-semibold text-foreground">Anything else I should know?</h2>
                 <p className="text-muted-foreground">
-                  Comparte cualquier información que te ayude a tener una mejor experiencia (opcional)
+                  Share any information that will help you have a better experience (optional)
                 </p>
               </div>
 
               <Textarea
-                placeholder="Ej: Estoy pasando por un momento difícil, me interesa aprender sobre el perdón, prefiero respuestas cortas..."
+                placeholder="E.g.: I'm going through a difficult time, I'm interested in learning about forgiveness, I prefer short answers..."
                 value={customNotes}
                 onChange={(e) => setCustomNotes(e.target.value)}
                 rows={6}
@@ -276,18 +272,18 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
             {step > 1 && (
               <Button variant="outline" onClick={() => setStep(step - 1)} className="flex-1">
                 <ChevronLeft className="w-4 h-4 mr-2" />
-                Anterior
+                Previous
               </Button>
             )}
 
             {step < totalSteps ? (
               <Button onClick={() => setStep(step + 1)} disabled={!canContinue()} className="flex-1">
-                Siguiente
+                Next
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Button>
             ) : (
               <Button onClick={handleComplete} className="flex-1">
-                Comenzar mi camino
+                Start my journey
               </Button>
             )}
           </div>

@@ -21,13 +21,13 @@ export function BookSelector({ onSelectBook, onBack }: BookSelectorProps) {
           <Button variant="ghost" size="icon" onClick={onBack}>
             <ChevronLeft className="h-5 w-5" />
           </Button>
-          <h1 className="text-xl font-bold">Seleccionar Libro</h1>
+          <h1 className="text-xl font-bold">Select Book</h1>
         </div>
       </div>
 
       <div className="mx-auto max-w-2xl space-y-8 p-6">
         <div>
-          <h2 className="mb-4 text-lg font-semibold text-primary">Antiguo Testamento</h2>
+          <h2 className="mb-4 text-lg font-semibold text-primary">Old Testament</h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {oldTestamentBooks.map((book) => (
               <Card
@@ -38,7 +38,7 @@ export function BookSelector({ onSelectBook, onBack }: BookSelectorProps) {
                 <div className="p-4">
                   <h3 className="mb-1 font-semibold">{book.name}</h3>
                   <p className="text-xs text-muted-foreground">
-                    {book.chapters} {book.chapters === 1 ? "capítulo" : "capítulos"}
+                    {book.chapters} {book.chapters === 1 ? "chapter" : "chapters"}
                   </p>
                 </div>
               </Card>
@@ -47,7 +47,7 @@ export function BookSelector({ onSelectBook, onBack }: BookSelectorProps) {
         </div>
 
         <div>
-          <h2 className="mb-4 text-lg font-semibold text-primary">Nuevo Testamento</h2>
+          <h2 className="mb-4 text-lg font-semibold text-primary">New Testament</h2>
           <div className="grid grid-cols-2 gap-3 sm:grid-cols-3">
             {newTestamentBooks.map((book) => (
               <Card
@@ -58,7 +58,7 @@ export function BookSelector({ onSelectBook, onBack }: BookSelectorProps) {
                 <div className="p-4">
                   <h3 className="mb-1 font-semibold">{book.name}</h3>
                   <p className="text-xs text-muted-foreground">
-                    {book.chapters} {book.chapters === 1 ? "capítulo" : "capítulos"}
+                    {book.chapters} {book.chapters === 1 ? "chapter" : "chapters"}
                   </p>
                 </div>
               </Card>
