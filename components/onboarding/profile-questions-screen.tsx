@@ -28,7 +28,7 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
   const handleComplete = () => {
     const profile: UserProfile = {
       name: userName,
-      religion: "evangelico", // Fixed to evangelical
+      religion: "evangelical Christianity", // Fixed to evangelical
       denomination: denomination || undefined,
       preferredTreatment,
       spiritualGoals,
