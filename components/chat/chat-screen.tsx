@@ -83,14 +83,14 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
 
       if (pendingReflectionData) {
         const reflection: DailyReflection = JSON.parse(pendingReflectionData)
-        welcomeMessage = `Hola ${userName}, vamos a reflexionar juntos sobre "${reflection.title}". ${reflection.description}\n\n${reflection.scripture ? `Podemos comenzar meditando en ${reflection.scripture}.\n\n` : ""}${reflection.questions[0]}`
+        welcomeMessage = `Hello ${userName}, let's reflect together on "${reflection.title}". ${reflection.description}\n\n${reflection.scripture ? `We can start by meditating on ${reflection.scripture}.\n\n` : ""}${reflection.questions[0]}`
       } else if (selectedTopicData) {
         const topic: LearningTopic = JSON.parse(selectedTopicData)
-        welcomeMessage = `Hola ${userName}, exploremos juntos "${topic.title}". ${topic.description}\n\n¿Qué te gustaría saber sobre este tema?`
+        welcomeMessage = `Hello ${userName}, let's explore "${topic.title}" together. ${topic.description}\n\nWhat would you like to know about this topic?`
       } else if (profile) {
-        welcomeMessage = `Hola ${userName}, qué gusto tenerte aquí. Veo que te interesa ${profile.religion} y quieres ${profile.spiritualGoals[0] || "crecer espiritualmente"}. Estoy aquí para acompañarte en tu camino. ¿En qué puedo ayudarte hoy?`
+        welcomeMessage = `Hello ${userName}, it's great to have you here. I see you're interested in ${profile.religion} and want to ${profile.spiritualGoals[0] || "grow spiritually"}. I'm here to accompany you on your journey. How can I help you today?`
       } else {
-        welcomeMessage = `Hola ${userName}, qué gusto tenerte aquí. Soy tu compañero espiritual y estoy aquí para acompañarte en tu camino de fe. Puedes preguntarme lo que quieras sobre la Biblia, compartir cómo te sientes, o simplemente conversar. ¿En qué puedo ayudarte hoy?`
+        welcomeMessage = `Hello ${userName}, it's great to have you here. I'm your spiritual companion and I'm here to accompany you on your faith journey. You can ask me anything about the Bible, share how you're feeling, or just chat. How can I help you today?`
       }
 
       setMessages([
@@ -136,7 +136,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       } else {
         const errorMessage: Message = {
           role: "assistant",
-          content: "Disculpa, tuve un problema técnico. ¿Podrías intentar de nuevo?",
+          content: "Sorry, I had a technical problem. Could you try again?",
           timestamp: Date.now(),
         }
         setMessages((prev) => [...prev, errorMessage])
@@ -145,7 +145,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       console.error("[v0] Error sending auto-question:", error)
       const errorMessage: Message = {
         role: "assistant",
-        content: "Lo siento, algo salió mal. Por favor intenta nuevamente.",
+        content: "Sorry, something went wrong. Please try again.",
         timestamp: Date.now(),
       }
       setMessages((prev) => [...prev, errorMessage])
@@ -156,23 +156,25 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
 
   const detectAndSaveMemory = (userMessage: string, aiResponse: string) => {
     const importantKeywords = [
-      "perdí",
-      "murió",
-      "falleci",
-      "enferm",
-      "divorcio",
-      "separación",
-      "trabajo",
-      "despido",
-      "embarazo",
-      "bebé",
-      "hijo",
-      "hija",
-      "depresión",
-      "ansiedad",
-      "miedo",
-      "soledad",
-      "dolor",
+      "lost",
+      "died", 
+      "passed away",
+      "sick",
+      "illness",
+      "divorce",
+      "separation",
+      "job",
+      "work",
+      "fired",
+      "pregnancy",
+      "baby",
+      "son",
+      "daughter",
+      "depression",
+      "anxiety",
+      "fear",
+      "loneliness",
+      "pain",
     ]
 
     const lowerMessage = userMessage.toLowerCase()
@@ -184,14 +186,14 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
     }
 
     const topics = [
-      { keywords: ["perdón", "perdonar"], topic: "perdón" },
-      { keywords: ["oración", "orar", "rezar"], topic: "oración" },
-      { keywords: ["fe", "creer", "creencia"], topic: "fe" },
-      { keywords: ["amor", "amar"], topic: "amor" },
-      { keywords: ["esperanza", "esperar"], topic: "esperanza" },
-      { keywords: ["miedo", "temor", "ansiedad"], topic: "manejo del miedo" },
-      { keywords: ["familia", "esposo", "esposa", "hijo"], topic: "familia" },
-      { keywords: ["trabajo", "empleo", "carrera"], topic: "trabajo" },
+      { keywords: ["forgiveness", "forgive"], topic: "forgiveness" },
+      { keywords: ["prayer", "pray"], topic: "prayer" },
+      { keywords: ["faith", "believe", "belief"], topic: "faith" },
+      { keywords: ["love", "loving"], topic: "love" },
+      { keywords: ["hope", "hoping"], topic: "hope" },
+      { keywords: ["fear", "afraid", "anxiety"], topic: "fear management" },
+      { keywords: ["family", "husband", "wife", "son", "daughter"], topic: "family" },
+      { keywords: ["job", "work", "career"], topic: "work" },
     ]
 
     topics.forEach(({ keywords, topic }) => {
@@ -211,8 +213,8 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
     const profile = getUserProfile()
 
     const welcomeMessage = profile
-      ? `Hola ${userName}, qué gusto tenerte aquí nuevamente. Estoy aquí para acompañarte en tu camino. ¿En qué puedo ayudarte hoy?`
-      : `Hola ${userName}, qué gusto tenerte aquí. ¿En qué puedo ayudarte hoy?`
+      ? `Hello ${userName}, it's great to have you here again. I'm here to accompany you on your journey. How can I help you today?`
+      : `Hello ${userName}, it's great to have you here. How can I help you today?`
 
     setMessages([
       {
@@ -254,7 +256,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       } else {
         const errorMessage: Message = {
           role: "assistant",
-          content: "Disculpa, tuve un problema técnico. ¿Podrías intentar de nuevo?",
+          content: "Sorry, I had a technical problem. Could you try again?",
           timestamp: Date.now(),
         }
         setMessages((prev) => [...prev, errorMessage])
@@ -263,7 +265,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       console.error("[v0] Error sending message:", error)
       const errorMessage: Message = {
         role: "assistant",
-        content: "Lo siento, algo salió mal. Por favor intenta nuevamente.",
+        content: "Sorry, something went wrong. Please try again.",
         timestamp: Date.now(),
       }
       setMessages((prev) => [...prev, errorMessage])
@@ -287,17 +289,17 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
 
     if (selectedTopic) {
       return [
-        `¿Cuál es la importancia de ${selectedTopic.title.toLowerCase()}?`,
-        `Dame ejemplos prácticos`,
-        `¿Cómo puedo aplicar esto en mi vida?`,
+        `What is the importance of ${selectedTopic.title.toLowerCase()}?`,
+        `Give me practical examples`,
+        `How can I apply this in my life?`,
       ]
     }
 
     return [
-      "¿Qué significa amar al prójimo?",
-      "Estoy pasando por un momento difícil",
-      "¿Cómo puedo perdonar?",
-      "Háblame sobre la esperanza",
+      "What does it mean to love your neighbor?",
+      "I'm going through a difficult time",
+      "How can I forgive?",
+      "Tell me about hope",
     ]
   }
 
@@ -316,8 +318,8 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
               <span className="text-lg">🕊️</span>
             </div>
             <div>
-              <h2 className="font-semibold">Tu Compañero</h2>
-              <p className="text-xs text-muted-foreground">En línea</p>
+              <h2 className="font-semibold">Your Companion</h2>
+              <p className="text-xs text-muted-foreground">Online</p>
             </div>
           </div>
           <div className="ml-auto">
@@ -330,7 +332,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
               <DropdownMenuContent align="end">
                 <DropdownMenuItem onClick={() => setShowResetDialog(true)} className="text-destructive">
                   <Trash2 className="mr-2 h-4 w-4" />
-                  Resetear chat
+                  Reset chat
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
@@ -354,7 +356,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
                     message.role === "user" ? "text-primary-foreground/70" : "text-muted-foreground"
                   }`}
                 >
-                  {new Date(message.timestamp).toLocaleTimeString("es-ES", {
+                  {new Date(message.timestamp).toLocaleTimeString("en-US", {
                     hour: "2-digit",
                     minute: "2-digit",
                   })}
@@ -368,7 +370,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
               <Card className="max-w-[80%] bg-card p-4">
                 <div className="flex items-center gap-2">
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  <p className="text-sm text-muted-foreground">Escribiendo...</p>
+                  <p className="text-sm text-muted-foreground">Writing...</p>
                 </div>
               </Card>
             </div>
@@ -382,7 +384,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       {messages.filter((m) => m.role === "user").length === 0 && (
         <div className="border-t bg-card p-4">
           <div className="mx-auto max-w-2xl">
-            <p className="mb-2 text-sm text-muted-foreground">Sugerencias:</p>
+            <p className="mb-2 text-sm text-muted-foreground">Suggestions:</p>
             <div className="flex flex-wrap gap-2">
               {quickSuggestions.map((suggestion, index) => (
                 <Button
@@ -408,7 +410,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Escribe tu mensaje..."
+            placeholder="Write your message..."
             className="min-h-[44px] max-h-32 flex-1 resize-none rounded-full border bg-background px-4 py-3 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
             rows={1}
             disabled={isLoading}
@@ -428,16 +430,16 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       <AlertDialog open={showResetDialog} onOpenChange={setShowResetDialog}>
         <AlertDialogContent>
           <AlertDialogHeader>
-            <AlertDialogTitle>¿Resetear el chat?</AlertDialogTitle>
+            <AlertDialogTitle>Reset chat?</AlertDialogTitle>
             <AlertDialogDescription>
-              Esto eliminará todos los mensajes de la conversación. Tu perfil y memoria importante se mantendrán
-              intactos. Esta acción no se puede deshacer.
+              This will delete all messages from the conversation. Your profile and important memory will remain intact.
+              This action cannot be undone.
             </AlertDialogDescription>
           </AlertDialogHeader>
           <AlertDialogFooter>
-            <AlertDialogCancel>Cancelar</AlertDialogCancel>
+            <AlertDialogCancel>Cancel</AlertDialogCancel>
             <AlertDialogAction onClick={handleResetChat} className="bg-destructive text-destructive-foreground">
-              Sí, resetear
+              Yes, reset
             </AlertDialogAction>
           </AlertDialogFooter>
         </AlertDialogContent>
