@@ -83,10 +83,10 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
 
       if (pendingReflectionData) {
         const reflection: DailyReflection = JSON.parse(pendingReflectionData)
-        welcomeMessage = `Hola ${userName}, vamos a reflexionar juntos sobre "${reflection.title}". ${reflection.description}\n\n${reflection.scripture ? `Podemos comenzar meditando en ${reflection.scripture}.\n\n` : ""}${reflection.questions[0]}`
+        welcomeMessage = `Hello ${userName}, let's reflect together on "${reflection.title}". ${reflection.description}\n\n${reflection.scripture ? `We can start by meditating on ${reflection.scripture}.\n\n` : ""}${reflection.questions[0]}`
       } else if (selectedTopicData) {
         const topic: LearningTopic = JSON.parse(selectedTopicData)
-        welcomeMessage = `Hola ${userName}, exploremos juntos "${topic.title}". ${topic.description}\n\n¿Qué te gustaría saber sobre este tema?`
+        welcomeMessage = `Hello ${userName}, let's explore "${topic.title}" together. ${topic.description}\n\nWhat would you like to know about this topic?`
       } else if (profile) {
         welcomeMessage = `Hello ${userName}, it's great to have you here. I see you're interested in ${profile.religion} and want to ${profile.spiritualGoals[0] || "grow spiritually"}. I'm here to accompany you on your journey. How can I help you today?`
       } else {
@@ -136,7 +136,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       } else {
         const errorMessage: Message = {
           role: "assistant",
-          content: "Disculpa, tuve un problema técnico. ¿Podrías intentar de nuevo?",
+          content: "Sorry, I had a technical problem. Could you try again?",
           timestamp: Date.now(),
         }
         setMessages((prev) => [...prev, errorMessage])
@@ -145,7 +145,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       console.error("[v0] Error sending auto-question:", error)
       const errorMessage: Message = {
         role: "assistant",
-        content: "Lo siento, algo salió mal. Por favor intenta nuevamente.",
+        content: "Sorry, something went wrong. Please try again.",
         timestamp: Date.now(),
       }
       setMessages((prev) => [...prev, errorMessage])
@@ -156,23 +156,25 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
 
   const detectAndSaveMemory = (userMessage: string, aiResponse: string) => {
     const importantKeywords = [
-      "perdí",
-      "murió",
-      "falleci",
-      "enferm",
-      "divorcio",
-      "separación",
-      "trabajo",
-      "despido",
-      "embarazo",
-      "bebé",
-      "hijo",
-      "hija",
-      "depresión",
-      "ansiedad",
-      "miedo",
-      "soledad",
-      "dolor",
+      "lost",
+      "died", 
+      "passed away",
+      "sick",
+      "illness",
+      "divorce",
+      "separation",
+      "job",
+      "work",
+      "fired",
+      "pregnancy",
+      "baby",
+      "son",
+      "daughter",
+      "depression",
+      "anxiety",
+      "fear",
+      "loneliness",
+      "pain",
     ]
 
     const lowerMessage = userMessage.toLowerCase()
@@ -184,14 +186,14 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
     }
 
     const topics = [
-      { keywords: ["perdón", "perdonar"], topic: "perdón" },
-      { keywords: ["oración", "orar", "rezar"], topic: "oración" },
-      { keywords: ["fe", "creer", "creencia"], topic: "fe" },
-      { keywords: ["amor", "amar"], topic: "amor" },
-      { keywords: ["esperanza", "esperar"], topic: "esperanza" },
-      { keywords: ["miedo", "temor", "ansiedad"], topic: "manejo del miedo" },
-      { keywords: ["familia", "esposo", "esposa", "hijo"], topic: "familia" },
-      { keywords: ["trabajo", "empleo", "carrera"], topic: "trabajo" },
+      { keywords: ["forgiveness", "forgive"], topic: "forgiveness" },
+      { keywords: ["prayer", "pray"], topic: "prayer" },
+      { keywords: ["faith", "believe", "belief"], topic: "faith" },
+      { keywords: ["love", "loving"], topic: "love" },
+      { keywords: ["hope", "hoping"], topic: "hope" },
+      { keywords: ["fear", "afraid", "anxiety"], topic: "fear management" },
+      { keywords: ["family", "husband", "wife", "son", "daughter"], topic: "family" },
+      { keywords: ["job", "work", "career"], topic: "work" },
     ]
 
     topics.forEach(({ keywords, topic }) => {
@@ -254,7 +256,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       } else {
         const errorMessage: Message = {
           role: "assistant",
-          content: "Disculpa, tuve un problema técnico. ¿Podrías intentar de nuevo?",
+          content: "Sorry, I had a technical problem. Could you try again?",
           timestamp: Date.now(),
         }
         setMessages((prev) => [...prev, errorMessage])
@@ -263,7 +265,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       console.error("[v0] Error sending message:", error)
       const errorMessage: Message = {
         role: "assistant",
-        content: "Lo siento, algo salió mal. Por favor intenta nuevamente.",
+        content: "Sorry, something went wrong. Please try again.",
         timestamp: Date.now(),
       }
       setMessages((prev) => [...prev, errorMessage])
@@ -287,17 +289,17 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
 
     if (selectedTopic) {
       return [
-        `¿Cuál es la importancia de ${selectedTopic.title.toLowerCase()}?`,
-        `Dame ejemplos prácticos`,
-        `¿Cómo puedo aplicar esto en mi vida?`,
+        `What is the importance of ${selectedTopic.title.toLowerCase()}?`,
+        `Give me practical examples`,
+        `How can I apply this in my life?`,
       ]
     }
 
     return [
-      "¿Qué significa amar al prójimo?",
-      "Estoy pasando por un momento difícil",
-      "¿Cómo puedo perdonar?",
-      "Háblame sobre la esperanza",
+      "What does it mean to love your neighbor?",
+      "I'm going through a difficult time",
+      "How can I forgive?",
+      "Tell me about hope",
     ]
   }
 
@@ -354,7 +356,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
                     message.role === "user" ? "text-primary-foreground/70" : "text-muted-foreground"
                   }`}
                 >
-                  {new Date(message.timestamp).toLocaleTimeString("es-ES", {
+                  {new Date(message.timestamp).toLocaleTimeString("en-US", {
                     hour: "2-digit",
                     minute: "2-digit",
                   })}
