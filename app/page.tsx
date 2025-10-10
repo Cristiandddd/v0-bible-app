@@ -7,7 +7,6 @@ import { ProfileQuestionsScreen } from "@/components/onboarding/profile-question
 import { ExplanationScreen } from "@/components/onboarding/explanation-screen"
 import { HomeScreen } from "@/components/home/home-screen"
 import { ChatScreen } from "@/components/chat/chat-screen"
-import { LearningPathScreen } from "@/components/journey/learning-path-screen"
 import { JournalScreen } from "@/components/journey/journal-screen"
 import { LessonsScreen } from "@/components/lessons/lessons-screen"
 import { LessonInteractive } from "@/components/lessons/lesson-interactive"
@@ -15,7 +14,6 @@ import { BibleReaderScreen } from "@/components/bible/bible-reader-screen"
 import { BibleChatScreen } from "@/components/bible/bible-chat-screen"
 import { BibleBookSelectionScreen } from "@/components/bible/bible-book-selection-screen"
 import { hasCompletedOnboarding, getUserProfile } from "@/lib/user-profile"
-import { startTopic, type LearningTopic } from "@/lib/spiritual-journey"
 import type { Lesson } from "@/lib/lessons-system"
 
 type Screen =
@@ -25,7 +23,6 @@ type Screen =
   | "explanation"
   | "home"
   | "chat"
-  | "learning-path"
   | "journal"
   | "lessons"
   | "lesson-interactive"
@@ -56,12 +53,6 @@ export default function Page() {
 
   const handleProfileComplete = () => {
     setScreen("explanation")
-  }
-
-  const handleSelectTopic = (topic: LearningTopic) => {
-    startTopic(topic.id)
-    localStorage.setItem("selectedTopic", JSON.stringify(topic))
-    setScreen("chat")
   }
 
   const handleStartLesson = (lesson: Lesson) => {
@@ -100,15 +91,11 @@ export default function Page() {
         <HomeScreen
           userName={userName}
           onNavigateToChat={() => setScreen("chat")}
-          onNavigateToJourney={() => setScreen("learning-path")}
           onNavigateToLessons={() => setScreen("lessons")}
           onNavigateToBible={handleNavigateToBible}
         />
       )}
       {screen === "chat" && <ChatScreen userName={userName} onBack={() => setScreen("home")} />}
-      {screen === "learning-path" && (
-        <LearningPathScreen onBack={() => setScreen("home")} onSelectTopic={handleSelectTopic} />
-      )}
       {screen === "journal" && <JournalScreen onBack={() => setScreen("home")} />}
       {screen === "lessons" && <LessonsScreen onStartLesson={handleStartLesson} />}
       {screen === "lesson-interactive" && currentLesson && (

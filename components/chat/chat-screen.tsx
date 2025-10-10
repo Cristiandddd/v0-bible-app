@@ -9,7 +9,13 @@ import { ArrowLeft, Send, Loader2, Trash2, MoreVertical } from "lucide-react"
 import { sendMessageToAI, type Message } from "@/app/actions/chat-actions"
 import { getUserProfile, addImportantFact, addTopic } from "@/lib/user-profile"
 import { cleanOldMessages, resetChat } from "@/lib/chat-utils"
-import { completeReflection, startTopic, type DailyReflection, type LearningTopic } from "@/lib/spiritual-journey"
+import {
+  completeReflection,
+  startTopic,
+  trackChatSession,
+  type DailyReflection,
+  type LearningTopic,
+} from "@/lib/spiritual-journey"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu"
 import {
   AlertDialog,
@@ -39,6 +45,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
   const messagesEndRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLTextAreaElement>(null)
   const autoQuestionSentRef = useRef(false)
+  const sessionTrackedRef = useRef(false)
 
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" })
@@ -157,7 +164,7 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
   const detectAndSaveMemory = (userMessage: string, aiResponse: string) => {
     const importantKeywords = [
       "lost",
-      "died", 
+      "died",
       "passed away",
       "sick",
       "illness",
@@ -230,6 +237,11 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
   const handleSend = async () => {
     if (!input.trim() || isLoading) return
 
+    if (!sessionTrackedRef.current) {
+      trackChatSession()
+      sessionTrackedRef.current = true
+    }
+
     const userMessage: Message = {
       role: "user",
       content: input.trim(),
@@ -287,19 +299,11 @@ export function ChatScreen({ userName, onBack, isBibleChat = false }: ChatScreen
       return pendingReflection.questions.slice(0, 3)
     }
 
-    if (selectedTopic) {
-      return [
-        `What is the importance of ${selectedTopic.title.toLowerCase()}?`,
-        `Give me practical examples`,
-        `How can I apply this in my life?`,
-      ]
-    }
-
     return [
-      "What does it mean to love your neighbor?",
-      "I'm going through a difficult time",
-      "How can I forgive?",
-      "Tell me about hope",
+      "What does it mean to love my neighbor?",
+      "How can I find peace in difficult times?",
+      "Help me understand forgiveness",
+      "What does the Bible say about hope?",
     ]
   }
 

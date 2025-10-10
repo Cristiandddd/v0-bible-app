@@ -1,6 +1,6 @@
 /**
- * Sistema de Jornada Espiritual
- * Maneja el contenido, progreso y seguimiento del camino de fe del usuario
+ * Spiritual Journey System
+ * Manages content, progress, and tracking of the user's faith journey
  */
 
 export interface DailyReflection {
@@ -16,7 +16,7 @@ export interface DailyReflection {
 export interface LearningTopic {
   id: string
   religion: string
-  category: string // "fundamentos", "vivir-la-fe", "profundizando"
+  category: string // "fundamentals", "living-faith", "deepening"
   title: string
   description: string
   subtopics: string[]
@@ -29,9 +29,11 @@ export interface SpiritualProgress {
   userId: string
   daysOfPractice: number
   lastPracticeDate: string // YYYY-MM-DD
-  topicsExplored: string[] // IDs de temas explorados
-  topicsCompleted: string[] // IDs de temas completados
-  reflectionsCompleted: string[] // IDs de reflexiones completadas
+  topicsExplored: string[] // IDs of explored topics
+  topicsCompleted: string[] // IDs of completed topics
+  reflectionsCompleted: string[] // IDs of completed reflections
+  chaptersRead: string[] // IDs of chapters read (e.g., "genesis-1", "exodus-2")
+  chatSessions: number // Total chat sessions
   journalEntries: JournalEntry[]
   habits: SpiritualHabits
   createdAt: number
@@ -47,16 +49,16 @@ export interface JournalEntry {
 }
 
 export interface SpiritualHabits {
-  prayer: number // días consecutivos
-  reading: number // días consecutivos
-  reflection: number // días consecutivos
+  prayer: number // consecutive days
+  reading: number // consecutive days
+  reflection: number // consecutive days
   lastPrayerDate?: string
   lastReadingDate?: string
   lastReflectionDate?: string
 }
 
 // ============================================
-// CONTENIDO RELIGIOSO
+// RELIGIOUS CONTENT
 // ============================================
 
 export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
@@ -64,31 +66,271 @@ export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
     {
       id: "cr-1",
       religion: "cristianismo",
-      title: "El Amor que Transforma",
-      description: "Reflexiona sobre cómo el amor de Dios puede transformar tu vida y tus relaciones",
-      scripture: "1 Corintios 13:4-7",
-      questions: [
-        "¿Cómo has experimentado el amor de Dios en tu vida?",
-        "¿Hay alguien a quien necesites mostrar más amor hoy?",
-      ],
+      title: "Love That Transforms",
+      description: "Reflect on how God's love can transform your life and relationships",
+      scripture: "1 Corinthians 13:4-7",
+      questions: ["How have you experienced God's love in your life?", "How can you show more love to someone today?"],
       estimatedMinutes: 5,
     },
     {
       id: "cr-2",
       religion: "cristianismo",
-      title: "La Paz en la Tormenta",
-      description: "Descubre cómo encontrar paz interior incluso en momentos difíciles",
-      scripture: "Filipenses 4:6-7",
-      questions: ["¿Qué situación te está causando ansiedad hoy?", "¿Cómo puedes entregar esa preocupación a Dios?"],
+      title: "Peace in the Storm",
+      description: "Discover how to find inner peace even in difficult times",
+      scripture: "Philippians 4:6-7",
+      questions: ["What situation is causing you anxiety today?", "How can you surrender that worry to God?"],
       estimatedMinutes: 5,
     },
     {
       id: "cr-3",
       religion: "cristianismo",
-      title: "El Perdón que Libera",
-      description: "Explora el poder sanador del perdón en tu vida",
-      scripture: "Mateo 6:14-15",
-      questions: ["¿Hay alguien a quien necesites perdonar?", "¿Qué te impide dar ese paso?"],
+      title: "Forgiveness That Frees",
+      description: "Explore the healing power of forgiveness in your life",
+      scripture: "Matthew 6:14-15",
+      questions: ["How can I practice forgiveness?", "What does true forgiveness look like?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-4",
+      religion: "cristianismo",
+      title: "Walking in Faith",
+      description: "Learn to trust God even when you cannot see the path ahead",
+      scripture: "Hebrews 11:1",
+      questions: ["What does it mean to walk by faith?", "How can I strengthen my faith today?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-5",
+      religion: "cristianismo",
+      title: "The Power of Prayer",
+      description: "Discover how prayer connects you with God's heart",
+      scripture: "Matthew 6:9-13",
+      questions: ["How can I improve my prayer life?", "What should I pray about today?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-6",
+      religion: "cristianismo",
+      title: "Serving Others",
+      description: "Reflect on how serving others reflects Christ's love",
+      scripture: "Mark 10:45",
+      questions: ["How can I serve others today?", "What does servant leadership mean?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-7",
+      religion: "cristianismo",
+      title: "God's Faithfulness",
+      description: "Remember how God has been faithful in your journey",
+      scripture: "Lamentations 3:22-23",
+      questions: ["How has God been faithful to me?", "What promises of God can I hold onto?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-8",
+      religion: "cristianismo",
+      title: "Living with Purpose",
+      description: "Discover God's purpose for your life",
+      scripture: "Jeremiah 29:11",
+      questions: ["What is God's purpose for my life?", "How can I live purposefully today?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-9",
+      religion: "cristianismo",
+      title: "Gratitude and Joy",
+      description: "Cultivate a heart of gratitude in all circumstances",
+      scripture: "1 Thessalonians 5:16-18",
+      questions: ["What am I grateful for today?", "How can gratitude change my perspective?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-10",
+      religion: "cristianismo",
+      title: "Trusting God's Timing",
+      description: "Learn to wait on God's perfect timing",
+      scripture: "Ecclesiastes 3:1",
+      questions: ["How can I trust God's timing?", "What am I waiting for from God?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-11",
+      religion: "cristianismo",
+      title: "The Joy of Salvation",
+      description: "Celebrate the gift of salvation and new life in Christ",
+      scripture: "Psalm 51:12",
+      questions: ["What does salvation mean to me?", "How can I share this joy with others?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-12",
+      religion: "cristianismo",
+      title: "Overcoming Fear",
+      description: "Find courage in God's presence and promises",
+      scripture: "2 Timothy 1:7",
+      questions: ["What fears am I facing?", "How can God's strength help me overcome fear?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-13",
+      religion: "cristianismo",
+      title: "The Fruit of the Spirit",
+      description: "Reflect on how the Holy Spirit produces fruit in your life",
+      scripture: "Galatians 5:22-23",
+      questions: ["Which fruit of the Spirit do I need most?", "How can I cultivate spiritual fruit?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-14",
+      religion: "cristianismo",
+      title: "Wisdom from Above",
+      description: "Seek God's wisdom for daily decisions",
+      scripture: "James 1:5",
+      questions: ["What decision do I need wisdom for?", "How can I discern God's will?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-15",
+      religion: "cristianismo",
+      title: "Compassion for Others",
+      description: "Develop a heart of compassion like Christ",
+      scripture: "Colossians 3:12",
+      questions: ["Who needs my compassion today?", "How can I show Christ's compassion?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-16",
+      religion: "cristianismo",
+      title: "The Power of Words",
+      description: "Understand how your words can build up or tear down",
+      scripture: "Proverbs 18:21",
+      questions: ["How can I use my words to encourage?", "What should I speak over my life?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-17",
+      religion: "cristianismo",
+      title: "Patience in Trials",
+      description: "Learn to persevere through difficult seasons",
+      scripture: "James 1:2-4",
+      questions: ["What trial am I facing?", "How can this trial strengthen my faith?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-18",
+      religion: "cristianismo",
+      title: "God's Provision",
+      description: "Trust in God's faithful provision for all your needs",
+      scripture: "Philippians 4:19",
+      questions: ["What do I need from God today?", "How has God provided for me in the past?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-19",
+      religion: "cristianismo",
+      title: "Humility Before God",
+      description: "Embrace humility as a path to spiritual growth",
+      scripture: "James 4:10",
+      questions: ["What does humility look like in my life?", "How can I humble myself before God?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-20",
+      religion: "cristianismo",
+      title: "The Great Commission",
+      description: "Reflect on your role in sharing the Gospel",
+      scripture: "Matthew 28:19-20",
+      questions: ["How can I share my faith?", "Who can I tell about Jesus?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-21",
+      religion: "cristianismo",
+      title: "Contentment in Christ",
+      description: "Find satisfaction in Christ alone",
+      scripture: "Philippians 4:11-13",
+      questions: ["What am I seeking contentment in?", "How can Christ satisfy my deepest needs?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-22",
+      religion: "cristianismo",
+      title: "The Armor of God",
+      description: "Prepare for spiritual battles with God's armor",
+      scripture: "Ephesians 6:10-18",
+      questions: ["What spiritual battles am I facing?", "How can I put on God's armor daily?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-23",
+      religion: "cristianismo",
+      title: "Renewing Your Mind",
+      description: "Transform your thinking through God's Word",
+      scripture: "Romans 12:2",
+      questions: ["What thoughts need to change?", "How can Scripture renew my mind?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-24",
+      religion: "cristianismo",
+      title: "The Good Shepherd",
+      description: "Rest in the care and guidance of Jesus, your Shepherd",
+      scripture: "Psalm 23",
+      questions: ["How is Jesus shepherding me?", "What does it mean to follow the Good Shepherd?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-25",
+      religion: "cristianismo",
+      title: "Unity in the Body",
+      description: "Celebrate and pursue unity among believers",
+      scripture: "Ephesians 4:3",
+      questions: ["How can I promote unity?", "What divides believers and how can I bridge it?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-26",
+      religion: "cristianismo",
+      title: "Eternal Perspective",
+      description: "Set your mind on things above, not earthly things",
+      scripture: "Colossians 3:2",
+      questions: ["What eternal matters should I focus on?", "How can I live with heaven in mind?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-27",
+      religion: "cristianismo",
+      title: "The Cross of Christ",
+      description: "Meditate on the sacrifice and victory of the cross",
+      scripture: "1 Corinthians 1:18",
+      questions: ["What does the cross mean to me?", "How does the cross change everything?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-28",
+      religion: "cristianismo",
+      title: "Spiritual Disciplines",
+      description: "Develop habits that draw you closer to God",
+      scripture: "1 Timothy 4:7-8",
+      questions: ["What spiritual disciplines should I practice?", "How can I be more disciplined in my faith?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-29",
+      religion: "cristianismo",
+      title: "God's Grace",
+      description: "Marvel at the unmerited favor of God",
+      scripture: "Ephesians 2:8-9",
+      questions: ["What does grace mean to me?", "How can I extend grace to others?"],
+      estimatedMinutes: 5,
+    },
+    {
+      id: "cr-30",
+      religion: "cristianismo",
+      title: "The Resurrection Power",
+      description: "Experience the same power that raised Christ from the dead",
+      scripture: "Ephesians 1:19-20",
+      questions: ["How can resurrection power work in my life?", "What needs to be resurrected in me?"],
       estimatedMinutes: 5,
     },
   ],
@@ -96,22 +338,22 @@ export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
     {
       id: "cat-1",
       religion: "catolicismo",
-      title: "La Gracia de los Sacramentos",
-      description: "Reflexiona sobre cómo los sacramentos fortalecen tu vida espiritual",
-      scripture: "Juan 6:54-56",
+      title: "The Grace of the Sacraments",
+      description: "Reflect on how the sacraments strengthen your spiritual life",
+      scripture: "John 6:54-56",
       questions: [
-        "¿Cuándo fue la última vez que recibiste la Eucaristía?",
-        "¿Cómo te preparas espiritualmente para recibirla?",
+        "When was the last time you received the Eucharist?",
+        "How do you prepare spiritually to receive it?",
       ],
       estimatedMinutes: 5,
     },
     {
       id: "cat-2",
       religion: "catolicismo",
-      title: "María, Madre de Misericordia",
-      description: "Medita sobre el papel de María en tu camino de fe",
-      scripture: "Lucas 1:46-55",
-      questions: ["¿Cómo te ayuda María en tu vida espiritual?", "¿Qué puedes aprender de su ejemplo de fe?"],
+      title: "Mary, Mother of Mercy",
+      description: "Meditate on Mary's role in your faith journey",
+      scripture: "Luke 1:46-55",
+      questions: ["How does Mary help you in your spiritual life?", "What can you learn from her example of faith?"],
       estimatedMinutes: 5,
     },
   ],
@@ -119,10 +361,10 @@ export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
     {
       id: "isl-1",
       religion: "islam",
-      title: "La Misericordia de Alá",
-      description: "Reflexiona sobre la infinita misericordia y compasión de Alá",
-      scripture: "Corán 39:53",
-      questions: ["¿Cómo has experimentado la misericordia de Alá?", "¿Cómo puedes mostrar misericordia a otros hoy?"],
+      title: "Allah's Mercy",
+      description: "Reflect on the infinite mercy and compassion of Allah",
+      scripture: "Quran 39:53",
+      questions: ["How have you experienced Allah's mercy?", "How can you show mercy to others today?"],
       estimatedMinutes: 5,
     },
   ],
@@ -130,12 +372,12 @@ export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
     {
       id: "jud-1",
       religion: "judaismo",
-      title: "Tikkun Olam - Reparar el Mundo",
-      description: "Reflexiona sobre tu responsabilidad de hacer del mundo un lugar mejor",
-      scripture: "Deuteronomio 16:20",
+      title: "Tikkun Olam - Repairing the World",
+      description: "Reflect on your responsibility to make the world a better place",
+      scripture: "Deuteronomy 16:20",
       questions: [
-        "¿Qué acción puedes hacer hoy para reparar el mundo?",
-        "¿Cómo puedes practicar la justicia en tu vida diaria?",
+        "What action can you take today to repair the world?",
+        "How can you practice justice in your daily life?",
       ],
       estimatedMinutes: 5,
     },
@@ -144,9 +386,9 @@ export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
     {
       id: "bud-1",
       religion: "budismo",
-      title: "La Práctica de la Compasión",
-      description: "Medita sobre cómo cultivar compasión hacia ti mismo y los demás",
-      questions: ["¿Cómo puedes ser más compasivo contigo mismo?", "¿Qué significa para ti la compasión universal?"],
+      title: "The Practice of Compassion",
+      description: "Meditate on how to cultivate compassion for yourself and others",
+      questions: ["How can you be more compassionate with yourself?", "What does universal compassion mean to you?"],
       estimatedMinutes: 5,
     },
   ],
@@ -154,79 +396,79 @@ export const DAILY_REFLECTIONS: Record<string, DailyReflection[]> = {
 
 export const LEARNING_PATHS: Record<string, LearningTopic[]> = {
   cristianismo: [
-    // Fundamentos
+    // Fundamentals
     {
       id: "cr-fund-1",
       religion: "cristianismo",
-      category: "fundamentos",
-      title: "La Naturaleza de Dios",
-      description: "Comprende quién es Dios y cómo se revela a la humanidad",
-      subtopics: ["La Trinidad", "Los atributos de Dios", "Dios como Padre"],
+      category: "fundamentals",
+      title: "The Nature of God",
+      description: "Understand who God is and how He reveals Himself to humanity",
+      subtopics: ["The Trinity", "God's Attributes", "God as Father"],
       completed: false,
     },
     {
       id: "cr-fund-2",
       religion: "cristianismo",
-      category: "fundamentos",
-      title: "El Mensaje de Jesús",
-      description: "Explora las enseñanzas centrales de Jesucristo",
-      subtopics: ["El Reino de Dios", "El Sermón del Monte", "Las Bienaventuranzas"],
+      category: "fundamentals",
+      title: "The Message of Jesus",
+      description: "Explore the central teachings of Jesus Christ",
+      subtopics: ["The Kingdom of God", "The Sermon on the Mount", "The Beatitudes"],
       completed: false,
     },
     {
       id: "cr-fund-3",
       religion: "cristianismo",
-      category: "fundamentos",
-      title: "El Espíritu Santo",
-      description: "Descubre el papel del Espíritu Santo en la vida del creyente",
-      subtopics: ["Los dones del Espíritu", "El fruto del Espíritu", "La guía divina"],
+      category: "fundamentals",
+      title: "The Holy Spirit",
+      description: "Discover the role of the Holy Spirit in the believer's life",
+      subtopics: ["Gifts of the Spirit", "Fruit of the Spirit", "Divine Guidance"],
       completed: false,
     },
-    // Vivir la Fe
+    // Living Faith
     {
       id: "cr-vida-1",
       religion: "cristianismo",
-      category: "vivir-la-fe",
-      title: "La Oración",
-      description: "Aprende diferentes formas de comunicarte con Dios",
-      subtopics: ["El Padre Nuestro", "Oración contemplativa", "Intercesión"],
+      category: "living-faith",
+      title: "Prayer",
+      description: "Learn different ways to communicate with God",
+      subtopics: ["The Lord's Prayer", "Contemplative Prayer", "Intercession"],
       completed: false,
     },
     {
       id: "cr-vida-2",
       religion: "cristianismo",
-      category: "vivir-la-fe",
-      title: "El Perdón",
-      description: "Comprende y practica el perdón cristiano",
-      subtopics: ["Perdonar a otros", "Recibir perdón", "Reconciliación"],
+      category: "living-faith",
+      title: "Forgiveness",
+      description: "Understand and practice Christian forgiveness",
+      subtopics: ["Forgiving Others", "Receiving Forgiveness", "Reconciliation"],
       completed: false,
     },
     {
       id: "cr-vida-3",
       religion: "cristianismo",
-      category: "vivir-la-fe",
-      title: "El Servicio",
-      description: "Descubre cómo servir a otros como Jesús lo hizo",
-      subtopics: ["Amor al prójimo", "Justicia social", "Generosidad"],
+      category: "living-faith",
+      title: "Service",
+      description: "Discover how to serve others as Jesus did",
+      subtopics: ["Love for Neighbor", "Social Justice", "Generosity"],
       completed: false,
     },
-    // Profundizando
+    // Deepening
     {
       id: "cr-prof-1",
       religion: "cristianismo",
-      category: "profundizando",
-      title: "Las Parábolas",
-      description: "Explora el significado profundo de las parábolas de Jesús",
-      subtopics: ["El hijo pródigo", "El buen samaritano", "El sembrador"],
+      category: "deepening",
+      title: "The Parables",
+      description: "Explore the deep meaning of Jesus' parables",
+      subtopics: ["The Prodigal Son", "The Good Samaritan", "The Sower"],
       completed: false,
     },
     {
       id: "cr-prof-2",
       religion: "cristianismo",
-      category: "profundizando",
-      title: "Los Profetas",
-      description: "Comprende el mensaje de los profetas del Antiguo Testamento",
-      subtopics: ["Isaías", "Jeremías", "Los profetas menores"],
+      category: "deepening",
+      title: "The Prophets",
+      description: "Understand the message of the Old Testament prophets",
+      subtopics: ["Isaiah", "Jeremiah", "The Minor Prophets"],
       completed: false,
     },
   ],
@@ -234,19 +476,19 @@ export const LEARNING_PATHS: Record<string, LearningTopic[]> = {
     {
       id: "cat-fund-1",
       religion: "catolicismo",
-      category: "fundamentos",
-      title: "Los Sacramentos",
-      description: "Comprende los siete sacramentos de la Iglesia",
-      subtopics: ["Bautismo", "Eucaristía", "Confirmación", "Reconciliación"],
+      category: "fundamentals",
+      title: "The Sacraments",
+      description: "Understand the seven sacraments of the Church",
+      subtopics: ["Baptism", "Eucharist", "Confirmation", "Reconciliation"],
       completed: false,
     },
     {
       id: "cat-vida-1",
       religion: "catolicismo",
-      category: "vivir-la-fe",
-      title: "La Vida Litúrgica",
-      description: "Explora el año litúrgico y las celebraciones",
-      subtopics: ["Adviento", "Cuaresma", "Pascua", "Tiempo Ordinario"],
+      category: "living-faith",
+      title: "Liturgical Life",
+      description: "Explore the liturgical year and celebrations",
+      subtopics: ["Advent", "Lent", "Easter", "Ordinary Time"],
       completed: false,
     },
   ],
@@ -254,9 +496,9 @@ export const LEARNING_PATHS: Record<string, LearningTopic[]> = {
     {
       id: "isl-fund-1",
       religion: "islam",
-      category: "fundamentos",
-      title: "Los Cinco Pilares",
-      description: "Comprende los fundamentos de la práctica islámica",
+      category: "fundamentals",
+      title: "The Five Pillars",
+      description: "Understand the foundations of Islamic practice",
       subtopics: ["Shahada", "Salat", "Zakat", "Sawm", "Hajj"],
       completed: false,
     },
@@ -265,10 +507,10 @@ export const LEARNING_PATHS: Record<string, LearningTopic[]> = {
     {
       id: "jud-fund-1",
       religion: "judaismo",
-      category: "fundamentos",
-      title: "La Torá",
-      description: "Explora las enseñanzas fundamentales de la Torá",
-      subtopics: ["Los Cinco Libros", "Las Mitzvot", "La interpretación"],
+      category: "fundamentals",
+      title: "The Torah",
+      description: "Explore the fundamental teachings of the Torah",
+      subtopics: ["The Five Books", "The Mitzvot", "Interpretation"],
       completed: false,
     },
   ],
@@ -276,17 +518,17 @@ export const LEARNING_PATHS: Record<string, LearningTopic[]> = {
     {
       id: "bud-fund-1",
       religion: "budismo",
-      category: "fundamentos",
-      title: "Las Cuatro Nobles Verdades",
-      description: "Comprende las verdades fundamentales del budismo",
-      subtopics: ["El sufrimiento", "El origen", "El cese", "El camino"],
+      category: "fundamentals",
+      title: "The Four Noble Truths",
+      description: "Understand the fundamental truths of Buddhism",
+      subtopics: ["Suffering", "Origin", "Cessation", "The Path"],
       completed: false,
     },
   ],
 }
 
 // ============================================
-// FUNCIONES DE PROGRESO
+// PROGRESS FUNCTIONS
 // ============================================
 
 export function getSpiritualProgress(): SpiritualProgress {
@@ -299,6 +541,8 @@ export function getSpiritualProgress(): SpiritualProgress {
       topicsExplored: [],
       topicsCompleted: [],
       reflectionsCompleted: [],
+      chaptersRead: [],
+      chatSessions: 0,
       journalEntries: [],
       habits: {
         prayer: 0,
@@ -312,10 +556,13 @@ export function getSpiritualProgress(): SpiritualProgress {
 
   const saved = localStorage.getItem("spiritualProgress")
   if (saved) {
-    return JSON.parse(saved)
+    const progress = JSON.parse(saved)
+    if (!progress.chaptersRead) progress.chaptersRead = []
+    if (progress.chatSessions === undefined) progress.chatSessions = 0
+    return progress
   }
 
-  // Crear progreso inicial
+  // Create initial progress
   const initialProgress: SpiritualProgress = {
     userId: localStorage.getItem("userName") || "user",
     daysOfPractice: 0,
@@ -323,6 +570,8 @@ export function getSpiritualProgress(): SpiritualProgress {
     topicsExplored: [],
     topicsCompleted: [],
     reflectionsCompleted: [],
+    chaptersRead: [],
+    chatSessions: 0,
     journalEntries: [],
     habits: {
       prayer: 0,
@@ -395,25 +644,20 @@ export function addJournalEntry(entry: Omit<JournalEntry, "id">): void {
 
 export function getDailyReflection(religion: string): DailyReflection | null {
   const reflections = DAILY_REFLECTIONS[religion] || DAILY_REFLECTIONS.cristianismo
-  const progress = getSpiritualProgress()
 
-  // Encontrar una reflexión no completada
-  const available = reflections.filter((r) => !progress.reflectionsCompleted.includes(r.id))
+  if (reflections.length === 0) return null
 
-  if (available.length === 0) {
-    // Si completó todas, rotar desde el principio
-    return reflections[0]
-  }
+  // Use random selection for variety
+  const randomIndex = Math.floor(Math.random() * reflections.length)
 
-  // Retornar la primera disponible
-  return available[0]
+  return reflections[randomIndex]
 }
 
 export function getLearningPath(religion: string): LearningTopic[] {
   const topics = LEARNING_PATHS[religion] || LEARNING_PATHS.cristianismo
   const progress = getSpiritualProgress()
 
-  // Marcar temas como completados según el progreso
+  // Mark topics as completed based on progress
   return topics.map((topic) => ({
     ...topic,
     completed: progress.topicsCompleted.includes(topic.id),
@@ -423,4 +667,22 @@ export function getLearningPath(religion: string): LearningTopic[] {
 export function getTopicsByCategory(religion: string, category: string): LearningTopic[] {
   const allTopics = getLearningPath(religion)
   return allTopics.filter((t) => t.category === category)
+}
+
+export function trackChapterRead(bookId: string, chapter: number): void {
+  const progress = getSpiritualProgress()
+  const chapterId = `${bookId}-${chapter}`
+
+  if (!progress.chaptersRead.includes(chapterId)) {
+    progress.chaptersRead.push(chapterId)
+    updateDaysOfPractice()
+    saveSpiritualProgress(progress)
+  }
+}
+
+export function trackChatSession(): void {
+  const progress = getSpiritualProgress()
+  progress.chatSessions += 1
+  updateDaysOfPractice()
+  saveSpiritualProgress(progress)
 }

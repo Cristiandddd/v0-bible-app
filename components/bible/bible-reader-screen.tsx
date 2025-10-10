@@ -6,6 +6,7 @@ import { Card } from "@/components/ui/card"
 import { ChevronLeft, ChevronRight, BookOpen } from "lucide-react"
 import { getBibleChapter, getBibleBook, type BibleChapter, type BibleBook } from "@/lib/bible-api"
 import { saveBibleContext, saveReadingPosition, getReadingPosition } from "@/lib/bible-context"
+import { trackChapterRead } from "@/lib/spiritual-journey"
 import { BookSelector } from "./book-selector"
 import { SelectionPopup } from "./selection-popup"
 
@@ -53,6 +54,7 @@ export function BibleReaderScreen({ onBack, onConsult, initialBook }: BibleReade
     if (selectedBook) {
       loadChapter(selectedBook.id, chapter)
       saveReadingPosition(selectedBook.id, chapter)
+      trackChapterRead(selectedBook.id, chapter)
     }
   }, [selectedBook, chapter])
 

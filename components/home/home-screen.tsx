@@ -3,15 +3,9 @@
 import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
-import { BookOpen, MessageCircle, Sparkles, ChevronRight, GraduationCap, Book } from "lucide-react"
+import { MessageCircle, Sparkles, ChevronRight, GraduationCap, Book } from "lucide-react"
 import { getUserProfile } from "@/lib/user-profile"
-import {
-  getSpiritualProgress,
-  getDailyReflection,
-  getLearningPath,
-  type DailyReflection,
-  type LearningTopic,
-} from "@/lib/spiritual-journey"
+import { getSpiritualProgress, getDailyReflection, type DailyReflection } from "@/lib/spiritual-journey"
 import { getLessonStats } from "@/lib/lessons-system"
 
 interface HomeScreenProps {
@@ -31,7 +25,6 @@ export function HomeScreen({
 }: HomeScreenProps) {
   const [dailyReflection, setDailyReflection] = useState<DailyReflection | null>(null)
   const [progress, setProgress] = useState<ReturnType<typeof getSpiritualProgress> | null>(null)
-  const [nextTopics, setNextTopics] = useState<LearningTopic[]>([])
   const [lessonStats, setLessonStats] = useState({ totalLessons: 0, completedLessons: 0, totalTimeSpent: 0 })
 
   useEffect(() => {
@@ -43,10 +36,6 @@ export function HomeScreen({
 
     const userProgress = getSpiritualProgress()
     setProgress(userProgress)
-
-    const topics = getLearningPath(userProfile.religion)
-    const incomplete = topics.filter((t) => !t.completed).slice(0, 3)
-    setNextTopics(incomplete)
 
     const stats = getLessonStats(userProfile.religion)
     setLessonStats(stats)
@@ -101,15 +90,15 @@ export function HomeScreen({
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
                 <div className="mb-1 text-2xl font-bold text-primary">{progress.daysOfPractice}</div>
-                <div className="text-xs text-muted-foreground">Days of practice</div>
+                <div className="text-xs text-muted-foreground">Days active</div>
               </div>
               <div className="text-center">
-                <div className="mb-1 text-2xl font-bold text-primary">{progress.topicsExplored.length}</div>
-                <div className="text-xs text-muted-foreground">Topics explored</div>
+                <div className="mb-1 text-2xl font-bold text-primary">{lessonStats.completedLessons}</div>
+                <div className="text-xs text-muted-foreground">Lessons completed</div>
               </div>
               <div className="text-center">
-                <div className="mb-1 text-2xl font-bold text-primary">{progress.reflectionsCompleted.length}</div>
-                <div className="text-xs text-muted-foreground">Reflections</div>
+                <div className="mb-1 text-2xl font-bold text-primary">{progress.chaptersRead.length}</div>
+                <div className="text-xs text-muted-foreground">Chapters read</div>
               </div>
             </div>
           </Card>
@@ -136,44 +125,6 @@ export function HomeScreen({
               </div>
             </button>
           </Card>
-        )}
-
-        {nextTopics.length > 0 && (
-          <div>
-            <div className="mb-3 flex items-center justify-between">
-              <h3 className="text-lg font-semibold">Learning Path</h3>
-              {onNavigateToJourney && (
-                <Button variant="ghost" size="sm" onClick={onNavigateToJourney}>
-                  View all
-                  <ChevronRight className="ml-1 h-4 w-4" />
-                </Button>
-              )}
-            </div>
-            <div className="space-y-3">
-              {nextTopics.map((topic) => (
-                <Card key={topic.id} className="overflow-hidden">
-                  <button
-                    className="w-full p-4 text-left transition-colors hover:bg-muted/50"
-                    onClick={() => {
-                      localStorage.setItem("selectedTopic", JSON.stringify(topic))
-                      onNavigateToChat()
-                    }}
-                  >
-                    <div className="flex items-start gap-3">
-                      <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-lg bg-primary/10">
-                        <BookOpen className="h-5 w-5 text-primary" />
-                      </div>
-                      <div className="flex-1">
-                        <h4 className="mb-1 font-semibold">{topic.title}</h4>
-                        <p className="text-sm text-muted-foreground">{topic.description}</p>
-                      </div>
-                      <ChevronRight className="h-5 w-5 flex-shrink-0 text-muted-foreground" />
-                    </div>
-                  </button>
-                </Card>
-              ))}
-            </div>
-          </div>
         )}
 
         {onNavigateToBible && (
