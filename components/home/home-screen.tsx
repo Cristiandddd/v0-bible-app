@@ -89,16 +89,16 @@ export function HomeScreen({
             <h3 className="mb-4 text-lg font-semibold">Your Journey</h3>
             <div className="grid grid-cols-3 gap-4">
               <div className="text-center">
-                <div className="mb-1 text-2xl font-bold text-primary">{progress.daysOfPractice}</div>
+                <div className="mb-1 text-2xl font-bold text-primary">{progress.daysActive}</div>
                 <div className="text-xs text-muted-foreground">Days active</div>
               </div>
               <div className="text-center">
-                <div className="mb-1 text-2xl font-bold text-primary">{lessonStats.completedLessons}</div>
-                <div className="text-xs text-muted-foreground">Lessons completed</div>
+                <div className="mb-1 text-2xl font-bold text-primary">{progress.dailyActivity.lessonsCompleted}</div>
+                <div className="text-xs text-muted-foreground">Lessons today</div>
               </div>
               <div className="text-center">
-                <div className="mb-1 text-2xl font-bold text-primary">{progress.chaptersRead.length}</div>
-                <div className="text-xs text-muted-foreground">Chapters read</div>
+                <div className="mb-1 text-2xl font-bold text-primary">{progress.dailyActivity.chaptersRead}</div>
+                <div className="text-xs text-muted-foreground">Chapters today</div>
               </div>
             </div>
           </Card>

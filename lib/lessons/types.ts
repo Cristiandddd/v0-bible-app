@@ -8,7 +8,7 @@ export interface LessonBook {
   title: string
   description: string
   icon: string
-  testament?: "antiguo" | "nuevo"
+  testament?: "antiguo" | "nuevo" | "old" | "new"
   category?: string
   sections: LessonSection[]
 }

@@ -4,12 +4,13 @@
 
 export interface UserProfile {
   name: string
-  religion: string // "cristianismo", "catolicismo", "protestantismo", "otro"
-  denomination?: string // Denominación específica si aplica
-  preferredTreatment: string // "formal", "casual", "amigable"
-  spiritualGoals: string[] // Objetivos espirituales del usuario
-  interests: string[] // Temas de interés
-  customNotes?: string // Notas adicionales del usuario
+  religion: string // Always "cristianismo" for this app
+  faithJourneyStage: string // "new-believer", "growing", "seeking", "returning", "mature"
+  currentNeed: string // What brings them to the app today
+  preferredTreatment: string // "formal", "casual", "friendly"
+  spiritualGoals: string[] // Spiritual goals
+  interests: string[] // Topics of interest
+  customNotes?: string // Additional notes
   createdAt: number
   lastUpdated: number
 }

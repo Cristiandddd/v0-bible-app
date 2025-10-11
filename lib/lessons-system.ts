@@ -1,12 +1,6 @@
 import type { LessonBook, LessonProgress } from "./lessons/types"
-import { GENESIS_BOOK } from "./lessons/genesis-content"
-import { GENESIS_BOOK_2 } from "./lessons/genesis-content-2"
-import { GENESIS_BOOK_3 } from "./lessons/genesis-content-3"
-import { GENESIS_BOOK_4 } from "./lessons/genesis-content-4"
-import { EXODUS_BOOK } from "./lessons/exodus-content"
-import { EXODUS_BOOK_PART2 } from "./lessons/exodus-content-2"
-import { EXODUS_BOOK_PART3 } from "./lessons/exodus-content-3"
-import { EXODUS_BOOK_PART4 } from "./lessons/exodus-content-4"
+import { GENESIS_LESSON_1 } from "./lessons/genesis-lesson-1"
+import { trackLessonCompletion } from "./spiritual-journey" // Import tracking function
 
 export type {
   LessonBook,
@@ -19,33 +13,10 @@ export type {
   LessonState,
 } from "./lessons/types"
 
-function mergeGenesisBooks(): LessonBook {
-  return {
-    ...GENESIS_BOOK,
-    sections: [
-      ...GENESIS_BOOK.sections,
-      ...GENESIS_BOOK_2.sections,
-      ...GENESIS_BOOK_3.sections,
-      ...GENESIS_BOOK_4.sections,
-    ],
-  }
-}
-
-function mergeExodusBooks(): LessonBook {
-  return {
-    ...EXODUS_BOOK,
-    sections: [
-      ...EXODUS_BOOK.sections,
-      ...EXODUS_BOOK_PART2.sections,
-      ...EXODUS_BOOK_PART3.sections,
-      ...EXODUS_BOOK_PART4.sections,
-    ],
-  }
-}
-
 // Contenido de lecciones organizado por religión
 export const LESSON_BOOKS: Record<string, LessonBook[]> = {
-  cristianismo: [mergeGenesisBooks(), mergeExodusBooks()],
+  cristianismo: [GENESIS_LESSON_1],
+  christianity: [GENESIS_LESSON_1],
 }
 
 // Funciones de progreso
@@ -110,6 +81,8 @@ export function completeLesson(lessonId: string): void {
     if (progress.lessonStates[lessonId]) {
       progress.lessonStates[lessonId].completedAt = Date.now()
     }
+
+    trackLessonCompletion() // Track lesson completion for daily stats
 
     saveLessonProgress(progress)
   }

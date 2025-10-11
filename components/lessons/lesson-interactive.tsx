@@ -4,7 +4,8 @@ import { useState, useEffect } from "react"
 import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
-import { BookOpen, HelpCircle, ArrowRight, CheckCircle2, Sparkles } from "lucide-react"
+import { Textarea } from "@/components/ui/textarea"
+import { BookOpen, HelpCircle, ArrowRight, CheckCircle2, Sparkles, Loader2, Send } from "lucide-react"
 import {
   completeLesson,
   getLessonProgress,
@@ -13,6 +14,7 @@ import {
   type Lesson,
   type DialogueStep,
 } from "@/lib/lessons-system"
+import { explainLessonConcept, evaluateApplicationAnswer } from "@/app/actions/chat-actions"
 
 interface LessonInteractiveProps {
   lesson: Lesson
@@ -24,7 +26,12 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
   const [currentStepIndex, setCurrentStepIndex] = useState(0)
   const [selectedOptions, setSelectedOptions] = useState<Record<string, string>>({})
   const [showHelp, setShowHelp] = useState(false)
+  const [aiExplanation, setAiExplanation] = useState<string>("")
+  const [isLoadingExplanation, setIsLoadingExplanation] = useState(false)
   const [isComplete, setIsComplete] = useState(false)
+  const [textAnswers, setTextAnswers] = useState<Record<string, string>>({})
+  const [aiFeedback, setAiFeedback] = useState<Record<string, string>>({})
+  const [isSubmittingAnswer, setIsSubmittingAnswer] = useState(false)
 
   useEffect(() => {
     startLesson(lesson.id)
@@ -40,6 +47,9 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
   const currentStep = allSteps[currentStepIndex]
   const progress = ((currentStepIndex + 1) / allSteps.length) * 100
   const isLastStep = currentStepIndex === allSteps.length - 1
+  const isOpenEnded =
+    (currentStep.type === "application" || currentStep.type === "reflection") &&
+    (!currentStep.options || currentStep.options.length === 0)
 
   const handleOptionSelect = (optionId: string) => {
     setSelectedOptions({
@@ -47,7 +57,6 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
       [currentStep.id]: optionId,
     })
 
-    // Guardar respuesta en el progreso
     const lessonProgress = getLessonProgress()
     if (lessonProgress.lessonStates[lesson.id]) {
       lessonProgress.lessonStates[lesson.id].responses[currentStep.id] = optionId
@@ -55,18 +64,57 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
     }
   }
 
+  const handleSubmitTextAnswer = async () => {
+    const answer = textAnswers[currentStep.id]
+    if (!answer || answer.trim().length === 0) return
+
+    setIsSubmittingAnswer(true)
+    setAiFeedback({ ...aiFeedback, [currentStep.id]: "" })
+
+    const result = await evaluateApplicationAnswer(currentStep.text, answer)
+
+    setIsSubmittingAnswer(false)
+    if (result.success) {
+      setAiFeedback({ ...aiFeedback, [currentStep.id]: result.feedback })
+
+      const lessonProgress = getLessonProgress()
+      if (lessonProgress.lessonStates[lesson.id]) {
+        lessonProgress.lessonStates[lesson.id].responses[currentStep.id] = answer
+        saveLessonProgress(lessonProgress)
+      }
+    } else {
+      setAiFeedback({ ...aiFeedback, [currentStep.id]: result.feedback })
+    }
+  }
+
   const handleNext = () => {
     if (isLastStep) {
-      // Completar lección
       completeLesson(lesson.id)
       setIsComplete(true)
     } else {
       setCurrentStepIndex(currentStepIndex + 1)
       setShowHelp(false)
+      setAiExplanation("")
+    }
+  }
+
+  const handleGetExplanation = async () => {
+    setShowHelp(true)
+    setIsLoadingExplanation(true)
+    setAiExplanation("")
+
+    const result = await explainLessonConcept(currentStep.text)
+
+    setIsLoadingExplanation(false)
+    if (result.success) {
+      setAiExplanation(result.explanation)
+    } else {
+      setAiExplanation("I'm having trouble explaining this right now. Please try again.")
     }
   }
 
   const selectedOption = currentStep.options?.find((opt) => opt.id === selectedOptions[currentStep.id])
+  const hasReceivedFeedback = aiFeedback[currentStep.id] && aiFeedback[currentStep.id].length > 0
 
   if (isComplete) {
     return (
@@ -78,14 +126,14 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
                 <CheckCircle2 className="h-8 w-8 text-green-600" />
               </div>
             </div>
-            <h2 className="mb-2 text-2xl font-bold">Lección Completada</h2>
-            <p className="mb-6 text-muted-foreground">Has completado exitosamente: {lesson.title}</p>
+            <h2 className="mb-2 text-2xl font-bold">Lesson Completed</h2>
+            <p className="mb-6 text-muted-foreground">You have successfully completed: {lesson.title}</p>
             <div className="space-y-2">
               <Button onClick={onComplete} className="w-full">
-                Continuar aprendiendo
+                Continue learning
               </Button>
               <Button onClick={onExit} variant="outline" className="w-full bg-transparent">
-                Volver al inicio
+                Back to home
               </Button>
             </div>
           </div>
@@ -105,12 +153,12 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
               <h1 className="text-lg font-semibold">{lesson.title}</h1>
             </div>
             <Button variant="ghost" size="sm" onClick={onExit}>
-              Salir
+              Exit
             </Button>
           </div>
           <Progress value={progress} className="h-1.5" />
           <p className="mt-2 text-xs text-muted-foreground">
-            Paso {currentStepIndex + 1} de {allSteps.length}
+            Step {currentStepIndex + 1} of {allSteps.length}
           </p>
         </div>
       </div>
@@ -131,6 +179,37 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
             <p className="leading-relaxed">{currentStep.text}</p>
           </Card>
         </div>
+
+        {isOpenEnded && !hasReceivedFeedback && (
+          <div className="space-y-3">
+            <Textarea
+              placeholder="Type your answer here..."
+              value={textAnswers[currentStep.id] || ""}
+              onChange={(e) => setTextAnswers({ ...textAnswers, [currentStep.id]: e.target.value })}
+              className="min-h-32 resize-none"
+              disabled={isSubmittingAnswer}
+            />
+            <Button
+              onClick={handleSubmitTextAnswer}
+              disabled={
+                !textAnswers[currentStep.id] || textAnswers[currentStep.id].trim().length === 0 || isSubmittingAnswer
+              }
+              className="w-full"
+            >
+              {isSubmittingAnswer ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Thinking...
+                </>
+              ) : (
+                <>
+                  <Send className="mr-2 h-4 w-4" />
+                  Submit Answer
+                </>
+              )}
+            </Button>
+          </div>
+        )}
 
         {/* Options */}
         {currentStep.options && currentStep.options.length > 0 && (
@@ -154,23 +233,34 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
           </div>
         )}
 
+        {hasReceivedFeedback && (
+          <div className="flex items-start gap-3">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
+              <Sparkles className="h-5 w-5 text-primary" />
+            </div>
+            <Card className="flex-1 border-2 border-primary/20 bg-primary/5 p-4">
+              <p className="leading-relaxed">{aiFeedback[currentStep.id]}</p>
+            </Card>
+          </div>
+        )}
+
         {/* Response from AI */}
         {selectedOption && (
           <div className="flex items-start gap-3">
             <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-primary/10">
               <Sparkles className="h-5 w-5 text-primary" />
             </div>
-            <Card className="flex-1 border-2 border-primary/20 bg-primary/5 p-4">
+            <Card className="flex-1 p-4">
               <p className="leading-relaxed">{selectedOption.response}</p>
               {selectedOption.isCorrect !== undefined && (
                 <div className="mt-2 flex items-center gap-2">
                   {selectedOption.isCorrect ? (
                     <span className="flex items-center gap-1 text-sm font-medium text-green-600">
                       <CheckCircle2 className="h-4 w-4" />
-                      Correcto
+                      Correct
                     </span>
                   ) : (
-                    <span className="text-sm font-medium text-amber-600">Reflexionemos más sobre esto</span>
+                    <span className="text-sm font-medium text-amber-600">Let's reflect more on this</span>
                   )}
                 </div>
               )}
@@ -180,24 +270,33 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
 
         {/* Help Button */}
         {currentStep.helpAvailable && !showHelp && (
-          <Button variant="outline" size="sm" onClick={() => setShowHelp(true)} className="w-full">
-            <HelpCircle className="mr-2 h-4 w-4" />
-            No entiendo, explícame más
+          <Button variant="outline" size="sm" onClick={handleGetExplanation} className="w-full bg-transparent">
+            <HelpCircle className="mr-2 h-4 w-4" />I don't understand, explain more
           </Button>
         )}
 
         {showHelp && (
-          <Card className="border-2 border-amber-500/20 bg-amber-500/5 p-4">
-            <p className="text-sm leading-relaxed">
-              Claro, déjame explicarlo de otra manera. {currentStep.text} Piensa en ello como...
-            </p>
-          </Card>
+          <div className="flex items-start gap-3">
+            <div className="flex h-10 w-10 flex-shrink-0 items-center justify-center rounded-full bg-amber-500/10">
+              <HelpCircle className="h-5 w-5 text-amber-600" />
+            </div>
+            <Card className="flex-1 border-2 border-amber-500/20 bg-amber-500/5 p-4">
+              {isLoadingExplanation ? (
+                <div className="flex items-center gap-2 text-sm text-muted-foreground">
+                  <Loader2 className="h-4 w-4 animate-spin" />
+                  Thinking...
+                </div>
+              ) : (
+                <p className="text-sm leading-relaxed">{aiExplanation}</p>
+              )}
+            </Card>
+          </div>
         )}
 
         {/* Next Button */}
-        {(selectedOption || !currentStep.options) && (
+        {(selectedOption || (!currentStep.options && !isOpenEnded) || (isOpenEnded && hasReceivedFeedback)) && (
           <Button onClick={handleNext} className="w-full" size="lg">
-            {isLastStep ? "Completar lección" : "Continuar"}
+            {isLastStep ? "Complete lesson" : "Continue"}
             <ArrowRight className="ml-2 h-4 w-4" />
           </Button>
         )}

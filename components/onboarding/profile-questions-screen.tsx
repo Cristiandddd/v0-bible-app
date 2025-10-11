@@ -4,10 +4,9 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
-import { Checkbox } from "@/components/ui/checkbox"
 import { Textarea } from "@/components/ui/textarea"
 import { type UserProfile, saveUserProfile } from "@/lib/user-profile"
-import { ChevronRight, ChevronLeft } from "lucide-react"
+import { ChevronRight, ChevronLeft, Heart, Compass, MessageCircle } from "lucide-react"
 
 interface ProfileQuestionsScreenProps {
   userName: string
@@ -16,11 +15,10 @@ interface ProfileQuestionsScreenProps {
 
 export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestionsScreenProps) {
   const [step, setStep] = useState(1)
-  const totalSteps = 5 // Increased from 4 to 5 steps
+  const totalSteps = 4
 
-  // Respuestas del usuario
-  const [denomination, setDenomination] = useState("")
-  const [bibleExperience, setBibleExperience] = useState("") // New field for Bible experience
+  const [faithJourneyStage, setFaithJourneyStage] = useState("")
+  const [currentNeed, setCurrentNeed] = useState("")
   const [preferredTreatment, setPreferredTreatment] = useState("friendly")
   const [spiritualGoals, setSpiritualGoals] = useState<string[]>([])
   const [customNotes, setCustomNotes] = useState("")
@@ -28,8 +26,9 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
   const handleComplete = () => {
     const profile: UserProfile = {
       name: userName,
-      religion: "evangelical Christianity", // Fixed to evangelical
-      denomination: denomination || undefined,
+      religion: "cristianismo",
+      faithJourneyStage,
+      currentNeed,
       preferredTreatment,
       spiritualGoals,
       interests: [],
@@ -43,11 +42,10 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
   }
 
   const canContinue = () => {
-    if (step === 1) return denomination !== ""
-    if (step === 2) return bibleExperience !== ""
+    if (step === 1) return faithJourneyStage !== ""
+    if (step === 2) return currentNeed.trim().length >= 10
     if (step === 3) return preferredTreatment !== ""
     if (step === 4) return true
-    if (step === 5) return true
     return false
   }
 
@@ -78,77 +76,49 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
           {step === 1 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">Welcome!</h2>
-                <p className="text-muted-foreground">
-                  This app is designed for evangelical Christians. Which denomination do you belong to?
+                <div className="flex items-center gap-2 mb-3">
+                  <Compass className="h-6 w-6 text-primary" />
+                  <h2 className="text-2xl font-semibold text-foreground">Where are you in your faith journey?</h2>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  There's no right or wrong answer. I just want to understand where you are so I can walk alongside you
+                  better
                 </p>
               </div>
 
-              <RadioGroup value={denomination} onValueChange={setDenomination}>
-                <div className="space-y-3">
-                  {[
-                    { value: "baptist", label: "Baptist" },
-                    { value: "pentecostal", label: "Pentecostal" },
-                    { value: "presbyterian", label: "Presbyterian" },
-                    { value: "methodist", label: "Methodist" },
-                    { value: "assemblies-of-god", label: "Assemblies of God" },
-                    { value: "nazarene", label: "Church of the Nazarene" },
-                    { value: "non-denominational", label: "Non-denominational" },
-                    { value: "other", label: "Other evangelical denomination" },
-                  ].map((option) => (
-                    <div
-                      key={option.value}
-                      className="flex items-center space-x-3 p-3 rounded-lg border border-border hover:bg-accent/50 transition-colors cursor-pointer"
-                      onClick={() => setDenomination(option.value)}
-                    >
-                      <RadioGroupItem value={option.value} id={option.value} />
-                      <Label htmlFor={option.value} className="cursor-pointer flex-1">
-                        {option.label}
-                      </Label>
-                    </div>
-                  ))}
-                </div>
-              </RadioGroup>
-            </div>
-          )}
-
-          {step === 2 && (
-            <div className="space-y-4">
-              <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">
-                  How much experience do you have reading the Bible?
-                </h2>
-                <p className="text-muted-foreground">This will help me adapt the content to your level</p>
-              </div>
-
-              <RadioGroup value={bibleExperience} onValueChange={setBibleExperience}>
+              <RadioGroup value={faithJourneyStage} onValueChange={setFaithJourneyStage}>
                 <div className="space-y-3">
                   {[
                     {
-                      value: "new",
-                      label: "I'm new to the faith",
-                      description: "Just starting my journey with Christ",
+                      value: "new-believer",
+                      label: "I'm new to faith",
+                      description: "Just beginning my journey with God",
                     },
                     {
-                      value: "occasional",
-                      label: "I read occasionally",
-                      description: "I read the Bible from time to time",
+                      value: "growing",
+                      label: "I'm growing",
+                      description: "Learning and wanting to deepen my relationship with God",
                     },
                     {
-                      value: "regular",
-                      label: "I read regularly",
-                      description: "I have a habit of reading the Bible",
+                      value: "seeking",
+                      label: "I'm seeking answers",
+                      description: "Exploring faith and looking for understanding",
                     },
                     {
-                      value: "advanced",
-                      label: "I study deeply",
-                      description: "I study the Bible with dedication",
+                      value: "returning",
+                      label: "I'm returning",
+                      description: "Coming back to faith after time away",
+                    },
+                    {
+                      value: "mature",
+                      label: "I'm established in faith",
+                      description: "Looking to go deeper and help others grow",
                     },
                   ].map((option) => (
                     <div
                       key={option.value}
                       className="flex items-start space-x-3 p-4 rounded-lg border border-border hover:bg-accent/50 transition-colors cursor-pointer"
-                      onClick={() => setBibleExperience(option.value)}
+                      onClick={() => setFaithJourneyStage(option.value)}
                     >
                       <RadioGroupItem value={option.value} id={option.value} className="mt-1" />
                       <div className="flex-1">
@@ -164,11 +134,46 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
             </div>
           )}
 
+          {step === 2 && (
+            <div className="space-y-4">
+              <div className="space-y-2">
+                <div className="flex items-center gap-2 mb-3">
+                  <Heart className="h-6 w-6 text-primary" />
+                  <h2 className="text-2xl font-semibold text-foreground">What brings you here today?</h2>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  Take a moment to share what's on your heart. There's no right or wrong answer - just be honest with
+                  yourself and with me.
+                </p>
+              </div>
+
+              <div className="space-y-3">
+                <Textarea
+                  placeholder="For example: 'I'm going through a difficult time and need hope' or 'I want to understand God's plan for my career' or 'I'm curious about faith but have many doubts'..."
+                  value={currentNeed}
+                  onChange={(e) => setCurrentNeed(e.target.value)}
+                  rows={6}
+                  className="resize-none text-base"
+                />
+                <p className="text-sm text-muted-foreground italic">
+                  {currentNeed.trim().length < 10
+                    ? "Share at least a few words so I can understand how to help you best"
+                    : "Thank you for sharing. This helps me understand how to support you"}
+                </p>
+              </div>
+            </div>
+          )}
+
           {step === 3 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">How do you prefer I speak to you?</h2>
-                <p className="text-muted-foreground">Choose the communication style you feel most comfortable with</p>
+                <div className="flex items-center gap-2 mb-3">
+                  <MessageCircle className="h-6 w-6 text-primary" />
+                  <h2 className="text-2xl font-semibold text-foreground">How should we talk?</h2>
+                </div>
+                <p className="text-muted-foreground leading-relaxed">
+                  I want you to feel comfortable. How would you like me to communicate with you?
+                </p>
               </div>
 
               <RadioGroup value={preferredTreatment} onValueChange={setPreferredTreatment}>
@@ -176,18 +181,18 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
                   {[
                     {
                       value: "friendly",
-                      label: "Friendly and warm",
-                      description: "Like a trusted friend (recommended)",
+                      label: "Like a close friend",
+                      description: "Warm, personal, and encouraging (most people love this)",
                     },
                     {
                       value: "casual",
-                      label: "Casual and relaxed",
-                      description: "Informal and natural conversation",
+                      label: "Casual and natural",
+                      description: "Relaxed conversation, like talking over coffee",
                     },
                     {
                       value: "formal",
-                      label: "Formal and respectful",
-                      description: "More traditional and respectful approach",
+                      label: "Respectful and thoughtful",
+                      description: "More traditional and measured approach",
                     },
                   ].map((option) => (
                     <div
@@ -212,58 +217,24 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
           {step === 4 && (
             <div className="space-y-4">
               <div className="space-y-2">
-                <h2 className="text-2xl font-semibold text-foreground">What would you like to achieve?</h2>
-                <p className="text-muted-foreground">Select your spiritual goals (you can choose multiple)</p>
-              </div>
-
-              <div className="space-y-3">
-                {[
-                  "Know the Bible better",
-                  "Strengthen my faith",
-                  "Prepare to teach or evangelize",
-                  "Understand evangelical doctrines",
-                  "Grow spiritually",
-                  "Find inner peace",
-                  "Understand my purpose in life",
-                  "Overcome difficult times",
-                  "Grow in love and compassion",
-                  "Connect with my community",
-                ].map((goal) => (
-                  <div
-                    key={goal}
-                    className="flex items-center space-x-3 p-3 rounded-lg border border-border hover:bg-accent/50 transition-colors cursor-pointer"
-                    onClick={() => toggleGoal(goal)}
-                  >
-                    <Checkbox
-                      id={goal}
-                      checked={spiritualGoals.includes(goal)}
-                      onCheckedChange={() => toggleGoal(goal)}
-                    />
-                    <Label htmlFor={goal} className="cursor-pointer flex-1">
-                      {goal}
-                    </Label>
-                  </div>
-                ))}
-              </div>
-            </div>
-          )}
-
-          {step === 5 && (
-            <div className="space-y-4">
-              <div className="space-y-2">
                 <h2 className="text-2xl font-semibold text-foreground">Anything else I should know?</h2>
-                <p className="text-muted-foreground">
-                  Share any information that will help you have a better experience (optional)
+                <p className="text-muted-foreground leading-relaxed">
+                  This is completely optional, but if there's anything that would help me support you better, I'd love
+                  to know
                 </p>
               </div>
 
               <Textarea
-                placeholder="E.g.: I'm going through a difficult time, I'm interested in learning about forgiveness, I prefer short answers..."
+                placeholder="For example: I'm dealing with anxiety, I'm interested in learning about prayer, I prefer shorter responses, I'm preparing to teach a Bible study..."
                 value={customNotes}
                 onChange={(e) => setCustomNotes(e.target.value)}
                 rows={6}
                 className="resize-none"
               />
+
+              <p className="text-sm text-muted-foreground italic">
+                Don't worry - you can always adjust these preferences later as we get to know each other
+              </p>
             </div>
           )}
 
@@ -272,18 +243,18 @@ export function ProfileQuestionsScreen({ userName, onComplete }: ProfileQuestion
             {step > 1 && (
               <Button variant="outline" onClick={() => setStep(step - 1)} className="flex-1">
                 <ChevronLeft className="w-4 h-4 mr-2" />
-                Previous
+                Back
               </Button>
             )}
 
             {step < totalSteps ? (
               <Button onClick={() => setStep(step + 1)} disabled={!canContinue()} className="flex-1">
-                Next
+                Continue
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Button>
             ) : (
               <Button onClick={handleComplete} className="flex-1">
-                Start my journey
+                Let's begin
               </Button>
             )}
           </div>

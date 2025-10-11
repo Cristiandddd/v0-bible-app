@@ -27,12 +27,18 @@ export interface LearningTopic {
 
 export interface SpiritualProgress {
   userId: string
-  daysOfPractice: number
+  daysActive: number // Renamed from daysOfPractice - cumulative count of days with activity
   lastPracticeDate: string // YYYY-MM-DD
+  dailyActivity: {
+    date: string // YYYY-MM-DD
+    lessonsCompleted: number
+    chaptersRead: number
+    reflectionsCompleted: number
+  }
   topicsExplored: string[] // IDs of explored topics
   topicsCompleted: string[] // IDs of completed topics
-  reflectionsCompleted: string[] // IDs of completed reflections
-  chaptersRead: string[] // IDs of chapters read (e.g., "genesis-1", "exodus-2")
+  reflectionsCompleted: string[] // IDs of completed reflections (cumulative)
+  chaptersRead: string[] // IDs of chapters read (cumulative)
   chatSessions: number // Total chat sessions
   journalEntries: JournalEntry[]
   habits: SpiritualHabits
@@ -536,8 +542,14 @@ export function getSpiritualProgress(): SpiritualProgress {
     // Return default progress for SSR
     return {
       userId: "user",
-      daysOfPractice: 0,
+      daysActive: 0,
       lastPracticeDate: "",
+      dailyActivity: {
+        date: new Date().toISOString().split("T")[0],
+        lessonsCompleted: 0,
+        chaptersRead: 0,
+        reflectionsCompleted: 0,
+      },
       topicsExplored: [],
       topicsCompleted: [],
       reflectionsCompleted: [],
@@ -557,16 +569,40 @@ export function getSpiritualProgress(): SpiritualProgress {
   const saved = localStorage.getItem("spiritualProgress")
   if (saved) {
     const progress = JSON.parse(saved)
+
+    if (progress.daysOfPractice !== undefined && progress.daysActive === undefined) {
+      progress.daysActive = progress.daysOfPractice
+      delete progress.daysOfPractice
+    }
+
+    if (!progress.dailyActivity) {
+      progress.dailyActivity = {
+        date: new Date().toISOString().split("T")[0],
+        lessonsCompleted: 0,
+        chaptersRead: 0,
+        reflectionsCompleted: 0,
+      }
+    }
+
     if (!progress.chaptersRead) progress.chaptersRead = []
     if (progress.chatSessions === undefined) progress.chatSessions = 0
+
+    checkAndResetDailyCounters(progress)
+
     return progress
   }
 
   // Create initial progress
   const initialProgress: SpiritualProgress = {
     userId: localStorage.getItem("userName") || "user",
-    daysOfPractice: 0,
+    daysActive: 0,
     lastPracticeDate: "",
+    dailyActivity: {
+      date: new Date().toISOString().split("T")[0],
+      lessonsCompleted: 0,
+      chaptersRead: 0,
+      reflectionsCompleted: 0,
+    },
     topicsExplored: [],
     topicsCompleted: [],
     reflectionsCompleted: [],
@@ -592,13 +628,30 @@ export function saveSpiritualProgress(progress: SpiritualProgress): void {
   localStorage.setItem("spiritualProgress", JSON.stringify(progress))
 }
 
-export function updateDaysOfPractice(): void {
-  const progress = getSpiritualProgress()
+function checkAndResetDailyCounters(progress: SpiritualProgress): void {
   const today = new Date().toISOString().split("T")[0]
 
-  if (progress.lastPracticeDate !== today) {
-    progress.daysOfPractice += 1
-    progress.lastPracticeDate = today
+  if (progress.dailyActivity.date !== today) {
+    // It's a new day!
+    const hadActivityYesterday =
+      progress.dailyActivity.lessonsCompleted > 0 ||
+      progress.dailyActivity.chaptersRead > 0 ||
+      progress.dailyActivity.reflectionsCompleted > 0
+
+    // If there was activity yesterday, increment daysActive
+    if (hadActivityYesterday && progress.lastPracticeDate !== today) {
+      progress.daysActive += 1
+      progress.lastPracticeDate = today
+    }
+
+    // Reset daily counters
+    progress.dailyActivity = {
+      date: today,
+      lessonsCompleted: 0,
+      chaptersRead: 0,
+      reflectionsCompleted: 0,
+    }
+
     saveSpiritualProgress(progress)
   }
 }
@@ -608,7 +661,7 @@ export function completeReflection(reflectionId: string): void {
 
   if (!progress.reflectionsCompleted.includes(reflectionId)) {
     progress.reflectionsCompleted.push(reflectionId)
-    updateDaysOfPractice()
+    progress.dailyActivity.reflectionsCompleted += 1 // Increment daily counter
     saveSpiritualProgress(progress)
   }
 }
@@ -675,7 +728,7 @@ export function trackChapterRead(bookId: string, chapter: number): void {
 
   if (!progress.chaptersRead.includes(chapterId)) {
     progress.chaptersRead.push(chapterId)
-    updateDaysOfPractice()
+    progress.dailyActivity.chaptersRead += 1 // Increment daily counter
     saveSpiritualProgress(progress)
   }
 }
@@ -683,6 +736,11 @@ export function trackChapterRead(bookId: string, chapter: number): void {
 export function trackChatSession(): void {
   const progress = getSpiritualProgress()
   progress.chatSessions += 1
-  updateDaysOfPractice()
+  saveSpiritualProgress(progress)
+}
+
+export function trackLessonCompletion(): void {
+  const progress = getSpiritualProgress()
+  progress.dailyActivity.lessonsCompleted += 1
   saveSpiritualProgress(progress)
 }

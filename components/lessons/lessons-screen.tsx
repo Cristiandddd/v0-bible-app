@@ -47,8 +47,8 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
       {/* Header */}
       <div className="border-b bg-gradient-to-br from-primary/5 via-background to-accent/5 p-6">
         <div className="mx-auto max-w-2xl">
-          <h1 className="mb-1 text-2xl font-bold">Escuela Espiritual</h1>
-          <p className="text-sm text-muted-foreground">Aprende de forma interactiva y profunda</p>
+          <h1 className="mb-1 text-2xl font-bold">Spiritual School</h1>
+          <p className="text-sm text-muted-foreground">Learn interactively and deeply</p>
         </div>
       </div>
 
@@ -58,14 +58,14 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
           <div className="bg-gradient-to-br from-primary/10 via-accent/5 to-secondary/10 p-6">
             <div className="mb-4 flex items-center gap-2">
               <Trophy className="h-5 w-5 text-primary" />
-              <h3 className="font-semibold">Tu Progreso</h3>
+              <h3 className="font-semibold">Your Progress</h3>
             </div>
 
             <div className="mb-4">
               <div className="mb-2 flex items-center justify-between text-sm">
-                <span className="text-muted-foreground">Lecciones completadas</span>
+                <span className="text-muted-foreground">Lessons completed</span>
                 <span className="font-semibold">
-                  {stats.completedLessons} de {stats.totalLessons}
+                  {stats.completedLessons} of {stats.totalLessons}
                 </span>
               </div>
               <Progress value={progressPercentage} className="h-2" />
@@ -74,11 +74,11 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
             <div className="grid grid-cols-2 gap-4">
               <div>
                 <div className="text-2xl font-bold text-primary">{Math.round(stats.totalTimeSpent / 60)}h</div>
-                <div className="text-xs text-muted-foreground">Tiempo dedicado</div>
+                <div className="text-xs text-muted-foreground">Time spent</div>
               </div>
               <div>
                 <div className="text-2xl font-bold text-primary">{stats.completedLessons}</div>
-                <div className="text-xs text-muted-foreground">Lecciones completadas</div>
+                <div className="text-xs text-muted-foreground">Lessons completed</div>
               </div>
             </div>
           </div>
@@ -86,7 +86,7 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
 
         {/* Books List */}
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Contenido Disponible</h3>
+          <h3 className="text-lg font-semibold">Available Content</h3>
 
           {books.map((book) => {
             const isExpanded = expandedBook === book.id
@@ -171,7 +171,7 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
                                         <h6 className="font-medium">{lesson.title}</h6>
                                         {isCurrent && (
                                           <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-                                            En progreso
+                                            In progress
                                           </span>
                                         )}
                                       </div>

@@ -131,3 +131,133 @@ export async function sendMessageToAI(
     }
   }
 }
+
+export async function explainLessonConcept(lessonText: string) {
+  const apiKey = process.env.OPENROUTER_API_KEY
+
+  if (!apiKey) {
+    throw new Error("OPENROUTER_API_KEY is not configured in environment variables")
+  }
+
+  const systemPrompt = `You are a patient Bible teacher. Explain concepts in simple, clear language.
+Keep your explanation to one concise paragraph (3-4 sentences).
+Use everyday examples when helpful.
+Respond in English.`
+
+  const messages = [
+    { role: "system", content: systemPrompt },
+    {
+      role: "user",
+      content: `I don't understand this Bible lesson concept. Please explain it simply: "${lessonText}"`,
+    },
+  ]
+
+  try {
+    const response = await fetch(AI_CONFIG.apiUrl, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+        "X-Title": "Spiritual Companion",
+      },
+      body: JSON.stringify({
+        model: AI_CONFIG.model,
+        messages,
+        temperature: 0.7,
+        max_tokens: 200,
+        top_p: 0.9,
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`OpenRouter error: ${response.status}`)
+    }
+
+    const data = await response.json()
+
+    if (!data.choices?.[0]?.message) {
+      throw new Error("Invalid response from OpenRouter")
+    }
+
+    return {
+      success: true,
+      explanation: data.choices[0].message.content,
+    }
+  } catch (error) {
+    console.error("[v0] Error in explainLessonConcept:", error)
+    return {
+      success: false,
+      explanation: "I'm having trouble explaining this right now. Please try again.",
+      error: error instanceof Error ? error.message : "Unknown error",
+    }
+  }
+}
+
+export async function evaluateApplicationAnswer(question: string, userAnswer: string) {
+  const apiKey = process.env.OPENROUTER_API_KEY
+
+  if (!apiKey) {
+    throw new Error("OPENROUTER_API_KEY is not configured in environment variables")
+  }
+
+  const systemPrompt = `You are a warm, encouraging Bible teacher evaluating a student's personal reflection.
+
+Your role is to:
+1. Acknowledge and validate their response thoughtfully
+2. Highlight insights or connections they've made
+3. Gently expand their thinking with a related thought or question
+4. Be conversational and personal, like a caring mentor
+
+Keep your response to 2-3 sentences. Be warm, specific to their answer, and encouraging.
+Respond in English.`
+
+  const messages = [
+    { role: "system", content: systemPrompt },
+    {
+      role: "user",
+      content: `Question: "${question}"\n\nStudent's answer: "${userAnswer}"\n\nProvide thoughtful, encouraging feedback on their reflection.`,
+    },
+  ]
+
+  try {
+    const response = await fetch(AI_CONFIG.apiUrl, {
+      method: "POST",
+      headers: {
+        Authorization: `Bearer ${apiKey}`,
+        "Content-Type": "application/json",
+        "HTTP-Referer": process.env.NEXT_PUBLIC_APP_URL || "http://localhost:3000",
+        "X-Title": "Spiritual Companion",
+      },
+      body: JSON.stringify({
+        model: AI_CONFIG.model,
+        messages,
+        temperature: 0.8,
+        max_tokens: 150,
+        top_p: 0.9,
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error(`OpenRouter error: ${response.status}`)
+    }
+
+    const data = await response.json()
+
+    if (!data.choices?.[0]?.message) {
+      throw new Error("Invalid response from OpenRouter")
+    }
+
+    return {
+      success: true,
+      feedback: data.choices[0].message.content,
+    }
+  } catch (error) {
+    console.error("[v0] Error in evaluateApplicationAnswer:", error)
+    return {
+      success: false,
+      feedback: "Thank you for sharing your thoughts. Your reflection is valuable.",
+      error: error instanceof Error ? error.message : "Unknown error",
+    }
+  }
+}
