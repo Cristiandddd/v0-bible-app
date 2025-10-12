@@ -1,5 +1,5 @@
 import type { LessonBook, LessonProgress } from "./lessons/types"
-import { GENESIS_LESSON_1 } from "./lessons/genesis-lesson-1"
+import { GENESIS_LESSONS_1_5 } from "./lessons/genesis-lessons-1-5"
 import { trackLessonCompletion } from "./spiritual-journey" // Import tracking function
 
 export type {
@@ -15,8 +15,8 @@ export type {
 
 // Contenido de lecciones organizado por religión
 export const LESSON_BOOKS: Record<string, LessonBook[]> = {
-  cristianismo: [GENESIS_LESSON_1],
-  christianity: [GENESIS_LESSON_1],
+  cristianismo: [GENESIS_LESSONS_1_5],
+  christianity: [GENESIS_LESSONS_1_5],
 }
 
 // Funciones de progreso
