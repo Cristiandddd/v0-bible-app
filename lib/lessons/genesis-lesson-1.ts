@@ -61,7 +61,7 @@ export const GENESIS_LESSON_1: LessonBook = {
               {
                 id: "teach-2",
                 type: "question",
-                text: "Notice what's missing from this opening? There's no argument for God's existence - it's assumed. Why do you think the Bible starts this way?",
+                text: "Why doesn't the Bible say when God was created?",
                 options: [
                   {
                     id: "opt-1",
