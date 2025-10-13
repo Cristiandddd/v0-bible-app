@@ -97,7 +97,7 @@ export default function Page() {
       )}
       {screen === "chat" && <ChatScreen userName={userName} onBack={() => setScreen("home")} />}
       {screen === "journal" && <JournalScreen onBack={() => setScreen("home")} />}
-      {screen === "lessons" && <LessonsScreen onStartLesson={handleStartLesson} />}
+      {screen === "lessons" && <LessonsScreen onStartLesson={handleStartLesson} onBack={() => setScreen("home")} />}
       {screen === "lesson-interactive" && currentLesson && (
         <LessonInteractive lesson={currentLesson} onComplete={handleLessonComplete} onExit={handleLessonExit} />
       )}

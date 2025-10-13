@@ -16,9 +16,10 @@ import {
 
 interface LessonsScreenProps {
   onStartLesson: (lesson: Lesson) => void
+  onBack?: () => void
 }
 
-export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
+export function LessonsScreen({ onStartLesson, onBack }: LessonsScreenProps) {
   const [books, setBooks] = useState<LessonBook[]>([])
   const [stats, setStats] = useState({ totalLessons: 0, completedLessons: 0, totalTimeSpent: 0, currentStreak: 0 })
   const [expandedBook, setExpandedBook] = useState<string | null>(null)
@@ -33,10 +34,9 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
     const lessonStats = getLessonStats(profile.religion)
     setStats(lessonStats)
 
-    // Expandir el primer libro por defecto
-    if (lessonBooks.length > 0) {
-      setExpandedBook(lessonBooks[0].id)
-    }
+    // if (lessonBooks.length > 0) {
+    //   setExpandedBook(lessonBooks[0].id)
+    // }
   }, [])
 
   const progress = getLessonProgress()
@@ -47,8 +47,20 @@ export function LessonsScreen({ onStartLesson }: LessonsScreenProps) {
       {/* Header */}
       <div className="border-b bg-gradient-to-br from-primary/5 via-background to-accent/5 p-6">
         <div className="mx-auto max-w-2xl">
-          <h1 className="mb-1 text-2xl font-bold">Spiritual School</h1>
-          <p className="text-sm text-muted-foreground">Learn interactively and deeply</p>
+          <div className="mb-2 flex items-center justify-between">
+            <div>
+              <h1 className="mb-1 text-2xl font-bold">Spiritual School</h1>
+              <p className="text-sm text-muted-foreground">Learn interactively and deeply</p>
+            </div>
+            {onBack && (
+              <button
+                onClick={onBack}
+                className="flex h-9 items-center gap-2 rounded-lg px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+              >
+                ← Back
+              </button>
+            )}
+          </div>
         </div>
       </div>
 

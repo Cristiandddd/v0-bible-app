@@ -98,6 +98,14 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
     }
   }
 
+  const handleBack = () => {
+    if (currentStepIndex > 0) {
+      setCurrentStepIndex(currentStepIndex - 1)
+      setShowHelp(false)
+      setAiExplanation("")
+    }
+  }
+
   const handleGetExplanation = async () => {
     setShowHelp(true)
     setIsLoadingExplanation(true)
@@ -152,9 +160,16 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
               <BookOpen className="h-5 w-5 text-primary" />
               <h1 className="text-lg font-semibold">{lesson.title}</h1>
             </div>
-            <Button variant="ghost" size="sm" onClick={onExit}>
-              Exit
-            </Button>
+            <div className="flex items-center gap-2">
+              {currentStepIndex > 0 && (
+                <Button variant="ghost" size="sm" onClick={handleBack}>
+                  Back
+                </Button>
+              )}
+              <Button variant="ghost" size="sm" onClick={onExit}>
+                Exit
+              </Button>
+            </div>
           </div>
           <Progress value={progress} className="h-1.5" />
           <p className="mt-2 text-xs text-muted-foreground">
