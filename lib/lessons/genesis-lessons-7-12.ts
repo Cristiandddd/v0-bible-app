@@ -1235,7 +1235,7 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
               {
                 id: "teach-8-g12-perfected",
                 type: "question",
-                text: "Four simple words that change history: 'So Abram went.' What makes this so remarkable?",
+                text: "Three simple words that change history: 'So Abram went.' What makes this so remarkable?",
                 options: [
                   {
                     id: "opt-1",
