@@ -2,6 +2,7 @@ import type { LessonBook, LessonProgress } from "./lessons/types"
 import { GENESIS_LESSONS_1_6 } from "./lessons/genesis-lessons-1-6"
 import { GENESIS_LESSONS_7_12 } from "./lessons/genesis-lessons-7-12"
 import { trackLessonCompletion } from "./spiritual-journey" // Import tracking function
+import { GENESIS_LESSONS_13_18 } from "./lessons/genesis-lessons-13-18"
 
 export type {
   LessonBook,
@@ -20,7 +21,7 @@ const GENESIS_COMPLETE: LessonBook = {
   description: "From Creation to Abraham's Call",
   testament: "old",
   order: 1,
-  sections: [...GENESIS_LESSONS_1_6.sections, ...GENESIS_LESSONS_7_12.sections],
+  sections: [...GENESIS_LESSONS_1_6.sections, ...GENESIS_LESSONS_7_12.sections, ...GENESIS_LESSONS_13_18.sections],
 }
 
 // Contenido de lecciones organizado por religión
