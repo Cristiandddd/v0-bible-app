@@ -1,5 +1,6 @@
 import type { LessonBook, LessonProgress } from "./lessons/types"
 import { GENESIS_LESSONS_1_6 } from "./lessons/genesis-lessons-1-6"
+import { GENESIS_LESSONS_7_12 } from "./lessons/genesis-lessons-7-12"
 import { trackLessonCompletion } from "./spiritual-journey" // Import tracking function
 
 export type {
@@ -13,10 +14,19 @@ export type {
   LessonState,
 } from "./lessons/types"
 
+const GENESIS_COMPLETE: LessonBook = {
+  id: "genesis",
+  title: "Genesis - The Foundation",
+  description: "From Creation to Abraham's Call",
+  testament: "old",
+  order: 1,
+  sections: [...GENESIS_LESSONS_1_6.sections, ...GENESIS_LESSONS_7_12.sections],
+}
+
 // Contenido de lecciones organizado por religión
 export const LESSON_BOOKS: Record<string, LessonBook[]> = {
-  cristianismo: [GENESIS_LESSONS_1_6],
-  christianity: [GENESIS_LESSONS_1_6],
+  cristianismo: [GENESIS_COMPLETE],
+  christianity: [GENESIS_COMPLETE],
 }
 
 // Funciones de progreso
