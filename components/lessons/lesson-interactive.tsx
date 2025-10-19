@@ -231,17 +231,23 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
           <div className="space-y-3">
             {currentStep.options.map((option) => {
               const isSelected = selectedOptions[currentStep.id] === option.id
+              const hasSelectedOption = selectedOptions[currentStep.id] !== undefined
+              const isDisabled = hasSelectedOption && !isSelected
+
               return (
                 <button
                   key={option.id}
-                  onClick={() => handleOptionSelect(option.id)}
+                  onClick={() => !hasSelectedOption && handleOptionSelect(option.id)}
+                  disabled={isDisabled}
                   className={`w-full rounded-lg border-2 p-4 text-left transition-all ${
                     isSelected
                       ? "border-primary bg-primary/5"
-                      : "border-border bg-card hover:border-primary/50 hover:bg-muted/50"
+                      : isDisabled
+                        ? "border-border bg-muted/30 opacity-50 cursor-not-allowed"
+                        : "border-border bg-card hover:border-primary/50 hover:bg-muted/50"
                   }`}
                 >
-                  <p className="font-medium">{option.text}</p>
+                  <p className={`font-medium ${isDisabled ? "text-muted-foreground" : ""}`}>{option.text}</p>
                 </button>
               )
             })}

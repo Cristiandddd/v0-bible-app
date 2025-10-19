@@ -67,22 +67,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "God has no beginning - He's eternal",
                     response:
-                      "Exactly! The Bible assumes God's eternal nature rather than explaining it. He simply IS.",
+                      "CORRECT. The Bible assumes God's eternal nature rather than explaining it. He simply IS - the self-existent One who depends on nothing outside Himself. This foundational truth distinguishes the Creator from all creation, which has a beginning. God's eternity is not something to be proven but accepted as the necessary precondition for everything else that exists.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Some truths are too profound for words",
                     response:
-                      "Yes! God's eternity is one of those mysteries we accept by faith, though the primary truth is His eternal self-existence.",
-                    isCorrect: true,
+                      "NOT QUITE. While God's nature is indeed profound, the Bible is clear and specific about His eternal existence. The issue isn't that it's too deep for words, but that God's self-existence is presented as axiomatic - the starting point that makes everything else meaningful. Scripture repeatedly affirms 'from everlasting to everlasting, you are God' (Psalm 90:2).",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It distinguishes God from creation",
                     response:
-                      "Important insight! Everything else has a beginning; only God is uncreated, which flows from His eternal nature.",
-                    isCorrect: true,
+                      "IMPORTANT but secondary. While this is true, the primary reason is more fundamental: God's eternal nature defines reality itself. Everything else is contingent and dependent; only God is necessary and self-sufficient. The distinction flows FROM His eternal nature rather than being the reason for the silence about His origin.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -108,21 +108,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "God is intimately involved from the start",
                     response:
-                      "Beautiful observation! Even in the chaos, God is present and attentive, like a parent watching over something precious.",
+                      "CORRECT. The imagery of hovering conveys attentive, protective presence. Even in the chaos and formlessness, God wasn't distant but intimately engaged with His creation. Like a mother bird watching over her nest, God's Spirit was actively involved, preparing to bring forth life and order. This shows creation wasn't a mechanical act but a personal, caring work.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Creation is cherished, not just made",
-                    response: "Yes! The imagery suggests care and anticipation, not just mechanical construction.",
-                    isCorrect: true,
+                    response:
+                      "PARTIALLY CORRECT but misses the active dimension. While God does cherish creation, the hovering specifically emphasizes His active, preparatory involvement. The focus is on what God is DOING in the chaos - not just how He feels about it. The cherishing becomes evident as He speaks order and beauty into existence.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "There's purpose in the chaos",
                     response:
-                      "Exactly! God doesn't see the formlessness as a problem to avoid, but as raw material for His masterpiece.",
-                    isCorrect: true,
+                      "TRUE but incomplete. The hovering does suggest purposeful engagement with the chaos, but the primary revelation is about God's personal, caring presence. The purpose emerges FROM His active involvement rather than being inherent in the chaos itself.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -148,22 +149,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "His word has creative power",
                     response:
-                      "Exactly! God doesn't build or craft - He speaks, and reality responds. This shows absolute sovereignty.",
+                      "CORRECT. God's speech is inherently powerful and effective. He doesn't build or craft using existing materials - His word itself brings reality into being. This demonstrates absolute sovereignty where mere declaration accomplishes His will. As Hebrews 11:3 confirms, the universe was created by God's command, showing His word is the ultimate creative force.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He establishes the power of words",
                     response:
-                      "Important insight! From the beginning, words matter. They create, define, and bring life.",
-                    isCorrect: true,
+                      "SECONDARY application. While words do matter, this focuses on human application rather than divine revelation. The primary truth is about God's unique creative authority, not establishing a general principle about language. Human words have derivative power; God's words have inherent creative power.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It connects to Jesus as the Word",
                     response:
-                      "Brilliant! John 1 will later identify Jesus as the Word through whom all things were made.",
-                    isCorrect: true,
+                      "IMPORTANT connection but not the primary meaning here. John 1 does identify Jesus as the Word through whom all things were made, but in Genesis 1, the focus is on God's sovereign creative power through His spoken word. The Christological connection is valid but represents later revelation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -189,22 +190,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "A hint of the Trinity",
                     response:
-                      "Many see this as an early glimpse of the triune God - Father, Son, and Spirit working together in creation.",
+                      "CORRECT. Many Christian theologians see this as an early glimpse of the triune God - Father, Son, and Spirit working together in creation. The plural language suggests divine deliberation within the Godhead, consistent with the New Testament revelation that all three persons were involved in creation (John 1:3, Colossians 1:16). This doesn't mean ancient readers understood the Trinity fully, but the language prepares for this later revelation.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "The majesty and complexity of God",
                     response:
-                      "Yes! Even in creation, God reveals Himself as beyond simple categories or solitary existence.",
-                    isCorrect: true,
+                      "TRUE but inadequate. While God is indeed majestic and complex, the specific plural language ('us/our') suggests interpersonal relationship rather than just complexity. The biblical emphasis is on God's relational nature within Himself, not merely His incomprehensible majesty.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "A heavenly council",
                     response:
-                      "Some see God addressing angelic beings, though humanity is created in God's image specifically, not theirs.",
-                    isCorrect: true,
+                      "LESS LIKELY interpretation. While God does consult heavenly beings elsewhere, humanity is created specifically in GOD'S image, not that of angelic beings. The consistent biblical testimony is that God alone creates humanity, making the heavenly council interpretation less compelling than the Trinitarian reading.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -230,22 +231,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "Representing God's character",
                     response:
-                      "Exactly! As kings place images of themselves to represent their authority, we represent God's character and rule.",
-                    isCorrect: true,
+                      "FOUNDATIONAL but incomplete. Representing God's character is crucial, but the image involves more - it includes functional representation and relational capacity. Ancient kings placed images of themselves to represent their authority in distant territories; similarly, we represent God's rule and character in creation.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-2",
                     text: "Creative stewardship of creation",
                     response:
-                      "Yes! 'Subdue' and 'have dominion' mean caring for creation as God would - with wisdom, love, and responsibility.",
+                      "CORRECT. This captures the functional aspect of the image. As God's image-bearers, we're called to 'subdue' and 'have dominion' - not as destructive tyrants but as wise stewards who cultivate and care for creation as God would. This reflects God's own creative, ordering work and represents His loving rule over what He made.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-3",
                     text: "Relational capacity like God's",
                     response:
-                      "Beautiful insight! Just as God exists in relationship (Father, Son, Spirit), we're made for relationship with God and each other.",
-                    isCorrect: true,
+                      "IMPORTANT dimension but not the primary meaning here. While we reflect God's relational nature, the creation account emphasizes our functional role as stewards. Our relational capacity flows FROM being God's image, but the initial commission focuses on our responsibility toward creation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -271,22 +272,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "He's modeling a rhythm for us",
                     response:
-                      "Exactly! God establishes a pattern of work and rest that reflects His wisdom for human flourishing.",
+                      "CORRECT. God establishes a pattern of work and rest that reflects His wisdom for human flourishing. The Sabbath principle isn't about God's need but about His design for creation. By resting, God sanctifies time itself and shows that productivity isn't humanity's ultimate purpose - relationship with Him is central.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He's enjoying His completed work",
                     response:
-                      "Yes! This is the rest of satisfaction, celebration, and enjoyment of something perfectly accomplished.",
-                    isCorrect: true,
+                      "PARTIALLY TRUE but misses the purposeful aspect. While God certainly delighted in His creation, the rest primarily signifies completion and perfection rather than mere enjoyment. It's the rest of satisfaction that declares 'it is finished' - nothing needs to be added or improved.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He's declaring creation 'complete'",
                     response:
-                      "Important insight! The rest signals that nothing needs to be added - creation is whole, functional, and very good.",
-                    isCorrect: true,
+                      "ACCURATE but secondary. The completion is indeed signaled by the rest, but the greater significance is the establishment of a pattern for human life. The Sabbath becomes a creation ordinance, built into the very fabric of reality for humanity's benefit and God's glory.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -358,20 +359,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Our value comes from God's breath, not our dust",
-                    response: "Exactly! The dust is common, but God's breath makes us uniquely valuable.",
+                    response:
+                      "CORRECT. The dust represents our humble origin and mortality, but God's breath gives us infinite worth. This combination shows we're both finite creatures and divine image-bearers. Our dignity doesn't come from our physical composition but from God's personal investment - His very breath making us living souls. This establishes human value as derived from God's action, not our inherent properties.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "We're both humble and exalted",
-                    response: "Yes! The dust keeps us humble; God's breath gives us infinite worth.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the source of value. While we are indeed both humble (dust) and exalted (God's breath), the key insight is that our worth comes entirely from God's gracious act. The dust keeps us dependent; God's breath makes us valuable. The combination shows grace - God elevating the lowly.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows we need God to truly live",
-                    response: "Beautiful insight! Without God's breath, we're just dust - we need Him for true life.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT application but secondary. While we do need God for spiritual life, the primary point is about human identity and value. The breath of life makes us living beings with inherent dignity, not just dependent creatures. Our need for God is real, but the text emphasizes what God HAS given, not what we lack.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -397,21 +401,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "Work is inherently good, not a curse",
                     response:
-                      "Exactly! Work becomes toil after the fall, but meaningful labor is part of God's good design.",
-                    isCorrect: true,
+                      "PARTIALLY CORRECT but incomplete. Work itself is indeed part of God's good design, but this answer doesn't capture the full purpose. Work becomes toil after the fall, but meaningful labor existed in perfection.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-2",
                     text: "We're designed for purpose and contribution",
-                    response: "Yes! Even in perfection, humans need meaningful work and responsibility.",
+                    response:
+                      "CORRECT. This gets to the heart of God's design! Even in paradise, humans needed meaningful work and responsibility. 'Working and keeping' the garden wasn't about survival but about fulfilling our created purpose - to actively partner with God in cultivating and caring for His creation. This reflects our identity as God's image-bearers called to purposeful contribution.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-3",
                     text: "We're stewards, not owners",
                     response:
-                      "Important insight! Adam 'keeps' what belongs to God - a model for our relationship with creation.",
-                    isCorrect: true,
+                      "IMPORTANT but secondary. While Adam was indeed a steward who 'kept' what belonged to God, this answer focuses on the 'what' rather than the 'why.' The primary revelation is that work fulfills our human need for purpose and reflects our identity as God's cooperative partners in creation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -436,21 +441,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "We're made for relationship",
-                    response: "Exactly! As image-bearers of a relational God, we reflect Him through community.",
+                    response:
+                      "CORRECT. As image-bearers of a relational God, we reflect His nature through community. The Trinity exists in eternal relationship, so solitude contradicts God's fundamental character expressed in humanity. Relationship isn't an add-on to human nature but essential to it. We image God not just as individuals but in our capacity for communion.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Completeness requires complementarity",
-                    response: "Yes! 'Helper fit for him' suggests partnership and mutual completion.",
-                    isCorrect: true,
+                    response:
+                      "TRUE for marriage but too narrow. While male-female complementarity is important, the 'not good' applies to human solitude in general, not just the absence of marriage. Humans need various relationships - with God, with others - to flourish as God intended.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Isolation contradicts God's nature",
                     response:
-                      "Beautiful insight! The triune God exists in eternal relationship - solitude cannot be 'good.'",
-                    isCorrect: true,
+                      "ACCURATE but focuses on God rather than human design. While isolation does contradict God's relational nature, the primary point is about human need. God declares solitude 'not good' for the human's sake, highlighting that relationship is essential for human flourishing, not just inconsistent with divine character.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -476,22 +483,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                     id: "opt-1",
                     text: "To show essential unity and equality",
                     response:
-                      "Exactly! She's made from the same substance, not inferior material, establishing their fundamental equality.",
+                      "CORRECT. Woman shares the same substance as man, establishing their fundamental equality as image-bearers. She isn't made from inferior material or as a separate creation, but from man's very being. This demonstrates they share the same nature, dignity, and value before God. Their unity precedes their distinction.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "To demonstrate intimate connection",
                     response:
-                      "Yes! The rib comes from near the heart, suggesting closeness and protection, though their equality remains foundational.",
-                    isCorrect: true,
+                      "TRUE but secondary. While the rib suggests closeness and protection, the primary significance is ontological - they share the same essential nature. The intimacy flows FROM their fundamental equality and unity, not the other way around.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "To establish marriage as reunification",
                     response:
-                      "Beautiful! In marriage, what was separated becomes one again. Nevertheless, the deeper foundation lies in their essential unity and equality from the beginning.",
-                    isCorrect: true,
+                      "BEAUTIFUL application but not the primary reason. While marriage does involve becoming 'one flesh' again, the creation from rib first establishes their original unity. The reunification in marriage presupposes the unity demonstrated in her creation from his side.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -574,20 +581,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Love requires free choice",
-                    response: "Exactly! Without the ability to disobey, obedience would be meaningless.",
+                    response:
+                      "CORRECT. You've identified the fundamental purpose! God created humans for genuine relationship, and authentic love cannot be forced or programmed. By placing the tree of knowledge of good and evil, God gave Adam and Eve a tangible reference point for their obedience and trust. This wasn't a 'setup for failure' but the necessary condition for their love and loyalty to be voluntary and meaningful. Without the possibility of disobedience, obedience would lack moral value. The tree defined the relationship: God as loving authority, humanity responding in faith and submission.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
-                    text: "It established a relationship boundary",
-                    response: "Yes! The tree defined their relationship with God - trust and obedience.",
-                    isCorrect: true,
+                    text: "He wanted to test their ability to resist temptation",
+                    response:
+                      "NOT QUITE. While testing occurred, this perspective misses the primary purpose. God, in His omniscience, knew humanity's limitations. The command's main goal was to define the relationship's terms: God as the Lord who provides and sets boundaries, and humans as His creatures called to live in dependence and trust. The tree symbolized that trust relationship, not primarily a test of willpower or self-sufficiency.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
-                    text: "It reminded them of their dependence",
-                    response: "Important insight! The tree was a daily reminder they weren't autonomous.",
-                    isCorrect: true,
+                    text: "It was necessary for the knowledge of good and evil to exist",
+                    response:
+                      "INCORRECT. This reverses God's original intention. The 'knowledge of good and evil' that Adam and Eve gained through disobedience was a distorted, sinful consequence of the fall, not the creation's purpose. God declared His creation 'very good' and intended humans to know good through relationship with Him, trusting His word to define what is good. The tree served as the one boundary in a world of abundance, reminding them that true wisdom begins with fearing the Lord, not moral autonomy.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -612,20 +622,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It makes God seem more restrictive than He is",
-                    response: "Exactly! Adding to God's commands can make Him appear unreasonable.",
+                    response:
+                      "CORRECT. Adding to God's commands distorts His character and makes Him appear unreasonable. When we amplify God's restrictions beyond what He actually said, we misrepresent His goodness and create unnecessary barriers to relationship. This legalistic tendency often precedes outright disobedience, as it plants seeds of resentment toward God's boundaries.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows she's already doubting God's goodness",
-                    response: "Yes! The addition suggests she's starting to see God's boundary as oppressive.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but not the primary danger. The added restriction does suggest developing suspicion, but the immediate problem is the misrepresentation of God's character. By making God seem more harsh than He actually is, she creates distance in the relationship before the serpent even speaks.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates the slippery slope of compromise",
-                    response: "Important observation! Small distortions prepare the way for major disobedience.",
-                    isCorrect: true,
+                    response:
+                      "VALID observation but focuses on process rather than consequence. The slippery slope is real, but the fundamental danger is theological - misrepresenting who God is. Every distortion of God's character makes disobedience more likely.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -650,20 +663,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "They're already made in God's image",
-                    response: "Exactly! They're trying to become what they already are by rejecting their Creator.",
+                    response:
+                      "CORRECT. The tragic irony is that they were already like God - created in His image to represent His rule. The serpent offered what they already possessed, making them sacrifice their true godlikeness (righteous rule through obedience) for a counterfeit version (autonomous knowledge through disobedience). They lost the likeness they had while chasing a phantom.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "True godlikeness comes through obedience",
-                    response: "Yes! They could have become more like God by trusting His wisdom, not defying it.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT truth but not the central irony. While obedience would have led to greater Christlikeness, the immediate irony is that they already possessed what was being offered. The serpent's lie was particularly deceptive because it contained just enough truth to be plausible.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The promise contains a twisted truth",
-                    response: "Their eyes were opened, but to shame and brokenness, not to divine glory.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but misses the profound irony. Their eyes were opened, but to shame and brokenness rather than divine glory. However, the deeper irony is that the desired godlikeness was already theirs by creation - they were trading reality for illusion.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -688,19 +704,22 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The lust of the flesh",
-                    response: "Yes! 'Good for food' - physical desires overriding spiritual obedience.",
+                    response:
+                      "CORRECT for 'good for food.' This represents physical desires overriding spiritual obedience. When our bodily appetites dictate our choices rather than God's word, we've succumbed to the lust of the flesh. It's the temptation to prioritize immediate physical satisfaction over eternal spiritual reality.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "The lust of the eyes",
-                    response: "Exactly! 'Delight to the eyes' - being drawn by appearance over substance.",
+                    response:
+                      "CORRECT for 'delight to the eyes.' This represents being drawn by appearance over substance. When something looks appealing regardless of God's evaluation, we're tempted by visual attraction rather than spiritual discernment. It's choosing based on external appearance rather than God's declared truth.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-3",
                     text: "The pride of life",
-                    response: "Yes! 'Desired to make one wise' - wanting autonomy from God.",
+                    response:
+                      "CORRECT for 'desired to make one wise.' This represents wanting autonomy from God - the pride of self-sufficiency and independent knowledge. It's the temptation to be our own authority, making decisions based on our judgment rather than God's revealed will.",
                     isCorrect: true,
                   },
                 ],
@@ -726,20 +745,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Shame is the appropriate response to broken relationship",
-                    response: "Exactly! Their openness with God and each other is now broken.",
+                    response:
+                      "CORRECT. Shame signals the rupture in their primary relationships - with God, with each other, and with themselves. Their openness and transparency are replaced by hiding and covering. Shame is the emotional and spiritual consequence of violating their created purpose as image-bearers living in truthful relationship.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "They've become aware of their vulnerability",
-                    response: "Yes! Innocence is lost, and they feel exposed and unsafe.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While they do feel exposed and unsafe, this is a consequence rather than the cause. The shame comes from their moral failure, not merely their physical nakedness. The vulnerability they feel reflects their new spiritual condition, not just physical awareness.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Their self-perception has been distorted",
-                    response: "Important insight! They now see themselves as inadequate and needing to hide.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on effect rather than cause. Their self-perception is indeed distorted, but the shame originates from their actual moral condition before God, not just psychological perception. The distortion is real because the relationship rupture is real.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -763,20 +785,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He seeks the lost",
-                    response: "Beautiful! Even in their sin, God comes looking for them.",
+                    response:
+                      "CORRECT. Despite their sin, God takes the initiative to seek them out. This reveals His gracious character as the seeking God who pursues broken relationships. Rather than waiting for them to come to Him, He comes to them, demonstrating that salvation begins with God's initiative, not human repentance.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He gives opportunity for confession",
-                    response: "Yes! The question invites honesty and repentance.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the full significance. While the question does invite confession, it primarily reveals God's heart to restore rather than condemn. His seeking them shows that judgment is His 'strange work' while redemption reflects His fundamental character.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He knows where they are but wants them to acknowledge it",
-                    response: "Exactly! This is a relational question, not an informational one.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on pedagogy rather than character. God certainly knows their location, but the question reveals more about His desire for relationship than His teaching method. It shows He wants them to recognize their condition so restoration can begin.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -801,20 +826,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It promises a Savior who will defeat Satan",
-                    response: "Exactly! The 'offspring' who will crush the serpent's head points to Christ.",
+                    response:
+                      "CORRECT. This is the first announcement of redemption! The 'offspring' who will crush the serpent's head points ultimately to Christ's victory over Satan through His death and resurrection. Even in judgment, God provides hope and reveals His plan to undo what sin has done through a coming Deliverer.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's plan for redemption begins immediately",
-                    response: "Yes! Even in judgment, God provides hope and a way back.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT but secondary. While redemption does begin here, the greater significance is the specific promise of a victorious offspring. The immediacy shows God's grace, but the content shows His sovereign plan to accomplish salvation through a particular person.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It reveals the cost of salvation",
-                    response: "The 'bruised heel' hints at the suffering the Savior would endure.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but incomplete. The 'bruised heel' does hint at the suffering the Savior would endure, but the primary significance is the victory promised. The cost is real, but the emphasis is on the certain defeat of evil through the offspring.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
