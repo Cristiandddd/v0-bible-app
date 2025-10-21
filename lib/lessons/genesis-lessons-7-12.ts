@@ -64,20 +64,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Human life has sacred worth because it bears God's image",
-                    response: "Exactly! The penalty reflects the supreme value of what was violated.",
+                    response:
+                      "CORRECT. The penalty for murder reflects the supreme value of what was violated - God's image in humanity. This establishes the infinite worth of human life, not based on achievement or status, but on our creation as God's image-bearers. The severe penalty protects human dignity by treating attacks on people as attacks on God's representative.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It establishes human government to restrain evil",
-                    response: "Yes! God delegates authority to humans to uphold justice.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While human government is instituted here, the foundational reason is theological: the sanctity of God's image. Government's role flows FROM the value of human life, not vice versa. The image-bearing dignity establishes WHY government must protect life.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows God takes violence against His image-bearers seriously",
-                    response: "Important insight! This protects the sanctity of human life.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on God's response rather than human value. While God certainly takes violence seriously, the key insight is WHY He takes it seriously - because humans carry His image. The seriousness derives from the value of what is attacked.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -102,20 +105,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God's compassion extends to all He made",
-                    response: "Exactly! His commitment isn't limited to humanity alone.",
+                    response:
+                      "CORRECT. The Noahic Covenant demonstrates God's commitment to His entire creation, not just humanity. Animals share in both judgment and preservation, showing God's concern for all living creatures. This reveals His comprehensive lordship and care - He values what He has made, not just rational beings. The covenant includes 'every living creature' multiple times for emphasis.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows creation's intrinsic value to God",
-                    response: "Yes! Animals aren't just resources but creatures God cares for.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the covenantal dimension. While creation has value, the significant development is God binding Himself by covenant to preserve it. The value leads to commitment, but the covenant itself represents a new level of divine promise.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates the scope of God's redemptive plans",
-                    response: "Romans 8 will later show all creation groaning for redemption.",
-                    isCorrect: true,
+                    response:
+                      "VALID but premature. While Romans 8 shows creation's ultimate redemption, this covenant concerns preservation, not redemption. The scope is universal but the content is about maintaining creation's stability, not yet its transformation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -140,20 +146,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God is declaring peace with creation",
-                    response: "Exactly! The warrior lays down His weapon against the earth.",
+                    response:
+                      "CORRECT. The rainbow represents God's war bow laid aside, signaling ceasefire with the earth. This powerful imagery shows God's commitment to peace despite humanity's continued sinfulness. The bow pointed away from earth signifies God's restraint and gracious commitment to preserve rather than destroy. It's a divine armistice agreement.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It's a divine ceasefire agreement",
-                    response: "Yes! The bow points away from earth, not toward it.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but redundant with the correct answer. This essentially repeats the primary insight about peace declaration without adding new understanding.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows God's self-restraint",
-                    response: "Beautiful insight! Though humanity remains sinful, God chooses mercy.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on God's action rather than the relationship. The restraint is evident, but the bow imagery specifically signifies peace establishment, not just personal discipline. The visual symbol communicates the new relationship status.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -178,20 +187,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It reveals God's relational commitment to us",
-                    response: "Exactly! He condescends to speak in human terms we can understand.",
+                    response:
+                      "CORRECT. God condescends to speak in human terms we can understand, describing His faithfulness in language of remembrance. This doesn't imply divine forgetfulness but emphasizes God's deliberate attention to His promises. The language assures us of God's reliable commitment, using concepts that communicate certainty to finite minds.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It's for our assurance, not His memory",
-                    response: "Yes! The rainbow comforts us that God keeps His promises.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the relational dimension. While assurance is certainly provided, the deeper significance is God's accommodation to our need for concrete expressions of His faithfulness. He establishes visible reminders because WE need them.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows God's faithfulness to His word",
-                    response: "He binds Himself to His own promise for our sake.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but incomplete. God's faithfulness is demonstrated, but the 'remembering' language specifically shows how He relates to us in ways we can comprehend. The faithfulness is expressed through committed attention to His covenant.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -262,20 +274,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows even the righteous struggle with sin",
-                    response: "Exactly! Salvation from judgment doesn't mean sinless perfection.",
+                    response:
+                      "CORRECT. This sobering account demonstrates that salvation from judgment doesn't mean sinless perfection. Noah, who 'walked with God' and was preserved through the flood, still falls into sin. This prevents idealizing biblical heroes and shows our constant need for grace. Even the most faithful remain vulnerable to temptation and failure.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It demonstrates the ongoing effects of the fall",
-                    response: "Yes! The flood judged society but didn't remove indwelling sin.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but too general. While the fall's effects are evident, the specific lesson is about individual responsibility amid grace. Noah's failure shows that redemption doesn't automatically eradicate indwelling sin; spiritual vigilance remains necessary.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It prepares us for the need for greater salvation",
-                    response: "Important insight! Noah points to our need for a perfect Savior.",
-                    isCorrect: true,
+                    response:
+                      "THEOLOGICALLY VALID but not the primary purpose. While Noah points to our need for a perfect Savior, the immediate lesson concerns the realism of spiritual warfare and the danger of complacency after great victories.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -300,20 +315,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Ham dishonored his father by exposing his weakness",
-                    response: "Exactly! He exploited rather than protected his father's dignity.",
+                    response:
+                      "CORRECT. Ham's sin wasn't merely seeing his father's condition but publicly exposing Noah's shame rather than protecting his dignity. In ancient honor-shame cultures (and in God's perspective), exploiting another's vulnerability constitutes serious dishonor. Shem and Japheth demonstrate the righteous response: covering shame while avoiding further exposure.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Shem and Japheth showed honor and discretion",
-                    response: "Yes! They preserved their father's honor despite his failure.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the righteous response rather than analyzing Ham's sin. While their actions model proper behavior, the question focuses on what made Ham's actions particularly wrong.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It reveals character in moments of vulnerability",
-                    response: "How we treat others in their weakness shows our true heart.",
-                    isCorrect: true,
+                    response:
+                      "VALID observation but doesn't specify the nature of Ham's failure. The character revelation is evident, but the specific failure was dishonoring his father through exposure rather than protection.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -338,20 +356,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It's prophetic, not prescriptive",
-                    response: "Exactly! Noah predicts future relationships, not establishes moral law.",
+                    response:
+                      "CORRECT. Noah's words predict future relationships between peoples, not establish moral law or social policy. The 'curse' on Canaan describes what will happen, not what should happen. Using this text to justify slavery or racism fundamentally misunderstands its genre and purpose - it's descriptive prophecy, not normative ethics.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It reflects ancient Near Eastern family dynamics",
-                    response: "Yes! A father's words carried weight about future generations.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but inadequate. While ancient family structures inform the context, this doesn't address the misuse issue. The primary correction needed is recognizing the difference between prediction and prescription.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The focus is spiritual, not racial",
-                    response: "Crucial insight! Shem's blessing connects him to the Lord, not ethnicity.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT clarification but secondary. While the blessings are spiritual (especially for Shem), the fundamental hermeneutical issue is genre: this is prophecy, not legislation. The spiritual focus is real but doesn't directly address the slavery justification error.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -375,20 +396,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The Messiah will come through Shem's line",
-                    response: "Exactly! Abraham, David, and Jesus all descend from Shem.",
+                    response:
+                      "CORRECT. Shem's blessing establishes his line as the channel for God's redemptive purposes. Abraham, David, and ultimately Jesus all descend from Shem. The specific blessing - 'Blessed be the LORD, the God of Shem' - identifies Yahweh as Shem's God in a special way, setting apart his descendants for covenant relationship.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It identifies Shem's God as the true LORD",
-                    response: "Yes! The blessing focuses on relationship with Yahweh.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the historical significance. While Yahweh is identified as Shem's God, the crucial development is that this relationship becomes the means for blessing all nations through the Messianic line.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Japheth will benefit from Shem's spiritual blessing",
-                    response: "'Dwell in the tents of Shem' suggests sharing spiritual inheritance.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but secondary. Japheth dwelling in Shem's tents does show Gentiles sharing spiritual blessings, but the primary significance is Shem's role as the bearer of covenant promises leading to Christ.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -459,20 +483,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows God's faithfulness to the creation mandate",
-                    response: "Exactly! 'Be fruitful and multiply' is being fulfilled through specific people.",
+                    response:
+                      "CORRECT. The Table of Nations demonstrates God's blessing on the command to 'be fruitful and multiply' being fulfilled through specific people and places. Despite the flood's judgment, God's creation purposes continue uninterrupted. Each name represents God's faithfulness to His world-populating plan and His sovereign direction of human history.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It demonstrates God's interest in all peoples",
-                    response: "Yes! Every nation matters to God, not just Israel.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the historical-redemptive significance. While God cares for all nations, the specific purpose here is to show how God's blessing spreads through Noah's family to populate the earth, setting the stage for Abraham's call from among these nations.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It provides the context for redemption history",
-                    response: "This is the stage upon which God's salvation drama will unfold.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. The nations table does provide context, but specifically it shows the fulfillment of creation blessing and the platform from which God will call one man to bless all these families.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -497,20 +524,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "They were geographically most distant from Israel",
-                    response: "Exactly! The narrative moves from farthest to nearest.",
+                    response:
+                      "CORRECT. The genealogy moves from farthest (Japheth) to nearest (Shem) from Israel's perspective. This geographical arrangement shows the narrative's focus narrowing toward the promised land and Abraham's family. The structure serves the redemptive historical purpose by moving from periphery to center.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's global perspective",
-                    response: "Yes! Scripture isn't Israel-centered but God-centered.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't explain the specific order. While God certainly has a global perspective, the sequencing serves a literary and theological purpose in preparing for Abraham's call from among the nations.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It prepares for 'dwelling in Shem's tents'",
-                    response: "Many Gentiles would later embrace Shem's God.",
-                    isCorrect: true,
+                    response:
+                      "VALID connection but not the organizational principle. The dwelling in Shem's tents is mentioned later, but the genealogical order follows geographical rather than thematic logic.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -535,20 +565,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He established human empires opposed to God",
-                    response: "Yes! His hunting may symbolize hunting men or defying God's order.",
+                    response:
+                      "CORRECT. Nimrod represents the rise of human civilization organizing itself against God's rule. His 'hunting' may symbolize hunting men or defying divine authority. The cities he founded (Babel, Nineveh) become centers of human pride and opposition to God's purposes. He embodies humanity's attempt at autonomous greatness apart from God.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He represents human power without God",
-                    response: "Exactly! Human civilization organizing itself against God's rule.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the oppositional dimension. Nimrod's power isn't just godless but actively sets itself against God's rule, as seen in the Tower of Babel narrative that immediately follows.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It foreshadows the tower of Babel",
-                    response: "His kingdom begins the movement toward human pride we'll see next.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but limited. While Nimrod's kingdom leads to Babel, the description reveals a pattern of human arrogance that transcends that single event. He represents the spirit of autonomous human achievement that characterizes godless civilization.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -573,20 +606,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He's the ancestor of Abraham and the Hebrew people",
-                    response: "Exactly! This signals the line through which blessing will come.",
+                    response:
+                      "CORRECT. Eber's highlighting signals the line through which God's redemptive purposes will advance. As the namesake of the Hebrews, he represents the transition to the chosen line. This selective emphasis shows God's sovereign election at work within the broader spread of nations - particularizing His blessing for universal purposes.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It highlights the chosen line for redemption",
-                    response: "Yes! God is tracing the specific family for His purposes.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but redundant with the correct answer. This essentially rephrases the primary point without adding new insight.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It prepares for the call of Abram",
-                    response: "We're being directed toward the next major character in God's plan.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on narrative function rather than theological significance. While it does prepare for Abram, the deeper significance is God's election of a particular line within humanity for redemptive purposes.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -611,20 +647,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows the potential for human collaboration",
-                    response: "Exactly! Unified humanity has tremendous power for good or ill.",
+                    response:
+                      "CORRECT. Unified humanity possesses tremendous power for collective action, which can be used for good or evil. The concentration of human potential sets the stage for the Babel incident, where unity becomes dangerous when directed against God. This demonstrates why diversity and distribution are part of God's wise design for human flourishing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It sets up the contrast with what follows",
-                    response: "Yes! Chapter 11 will show this unity used for rebellion.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on literary technique rather than theological insight. While the contrast with Babel is important, the primary lesson concerns the ambiguous potential of human unity apart from God.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates God's blessing on multiplication",
-                    response: "The creation mandate is being fulfilled rapidly.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but misses the ominous undertone. While multiplication is part of God's blessing, the unified concentration creates the conditions for the prideful collective action that follows.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -695,20 +734,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Unity without God leads to collective rebellion",
-                    response: "Exactly! Combined human power can oppose God's purposes.",
+                    response:
+                      "CORRECT. Combined human power can become a vehicle for organized opposition to God's purposes. When unity isn't centered on God, it easily turns into collective pride and self-sufficiency. The Babel incident shows how technological and linguistic unity, divorced from divine allegiance, becomes a threat to God's creation order and human destiny.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It contradicts the creation mandate to spread out",
-                    response: "Yes! They're settling instead of filling the earth.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on disobedience rather than the danger. While they are disobeying the creation mandate, the greater threat is the concentrated power this unity creates for opposing God's rule.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Human potential needs divine direction",
-                    response: "Great power without wisdom becomes destructive.",
-                    isCorrect: true,
+                    response:
+                      "VALID principle but doesn't specify the Babel situation. While human potential does need direction, the specific danger here is collective rebellion enabled by technological and linguistic unity.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -733,19 +775,22 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "They sought fame rather than God's glory",
-                    response: "Exactly! 'Make a name' versus receiving identity from God.",
+                    response:
+                      "CORRECT for 'make a name for ourselves.' This represents autonomous glory-seeking rather than receiving identity from God. They want to establish their own reputation independent of God's assessment, reversing the proper order where God names His creation.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "They tried to reach heaven on their terms",
-                    response: "Yes! Salvation by human achievement rather than divine grace.",
+                    response:
+                      "CORRECT for 'top in the heavens.' This represents salvation by human achievement rather than divine grace. They attempt to storm heaven through technology and collective effort instead of waiting for God's provision.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-3",
                     text: "They resisted God's command to fill the earth",
-                    response: "They feared obedience more than disobedience.",
+                    response:
+                      "CORRECT for 'lest we be dispersed.' This represents fear of obedience and desire for self-preservation over trust in God's wisdom. They prioritize security through concentration over faithful scattering as God commanded.",
                     isCorrect: true,
                   },
                 ],
@@ -771,20 +816,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God sees the dangerous potential of unified sin",
-                    response: "Exactly! Like parents limiting a child's dangerous freedom.",
+                    response:
+                      "CORRECT. God isn't threatened but recognizes the destructive potential of concentrated human rebellion. Like parents limiting a child's dangerous freedom, God intervenes to prevent ultimate self-destruction. The assessment reflects divine wisdom, not divine insecurity. Unlimited power in sinful hands would lead to irreversible corruption.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He's protecting them from themselves",
-                    response: "Yes! Unlimited power would lead to ultimate self-destruction.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the judicial aspect. While protection is involved, God's action is primarily judicial - a righteous response to organized rebellion. The protection is a byproduct of necessary judgment.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It's a judicial limitation, not a fearful reaction",
-                    response: "God acts in wisdom to restrain evil, not from weakness.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on what it isn't rather than what it is. While certainly not fear, the primary positive description is God's wise assessment of dangerous potential in unified sin.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -809,20 +857,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It forces them to fulfill the creation mandate",
-                    response: "Exactly! They wouldn't obey willingly, so God makes it necessary.",
+                    response:
+                      "CORRECT. God's judgment accomplishes what human disobedience resisted - the spreading abroad to fill the earth. The confusion of languages makes necessary what should have been voluntary. This shows God's commitment to His creation purposes even when humans resist them. His judgments often serve His merciful intentions for human flourishing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It limits the spread and power of sin",
-                    response: "Yes! Division restrains human capacity for collective evil.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on restraint rather than positive purpose. While sin is limited, the greater mercy is directing humanity toward its created destiny despite rebellion.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It prepares for redemption through diversity",
-                    response: "Beautiful insight! Different nations will later bring their glory to God.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL but represents later development. While diversity will ultimately serve redemption, the immediate mercy is ensuring humanity fulfills its creation mandate through necessary scattering.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -847,20 +898,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "They wanted a name but got confusion",
-                    response: "Exactly! The very thing they sought became their shame.",
+                    response:
+                      "CORRECT. The builders sought to 'make a name' for themselves but instead received the name 'Babel' - confusion. Their pursuit of autonomous glory resulted in the very opposite - not renown but ridiculousness. This demonstrates the futility of seeking significance apart from God's blessing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Their unity tower became a division monument",
-                    response: "Yes! The project meant to prevent scattering caused it.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the outcome rather than the irony. The division is the result, but the specific irony concerns their sought-after name versus their actual legacy.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Heaven-reaching ambition ended in earthly confusion",
-                    response: "Human effort to reach God always ends in frustration.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't capture the naming irony. While their ambition did end in confusion, the particular irony involves the name they sought versus the name they received.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -931,20 +985,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It establishes historical reliability",
-                    response: "Exactly! These are real people in real time, not myths.",
+                    response:
+                      "CORRECT. The precise chronology demonstrates these are real people in real time, not mythological figures. The specific years connect the flood to Abraham historically, showing God working in actual human history. This grounds redemption in concrete reality rather than abstract ideas, affirming that God's saving acts occur in measurable time and space.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's sovereignty over generations",
-                    response: "Yes! God works through the ordinary progression of family lines.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the historical significance. While God is sovereign over generations, the specific chronological data serves to authenticate the narrative as genuine history, connecting the patriarchal period directly back to creation through verifiable genealogy.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It connects the flood to Abraham chronologically",
-                    response: "We can trace how recently the flood was in Abraham's memory.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on connection rather than purpose. While the connection is made, the deeper significance is the historical verification this provides. The chronology shows Abraham lived relatively soon after the flood, making Noah's experience part of his family's living memory.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -968,20 +1025,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "They mark significant developments in redemptive history",
-                    response: "Exactly! The Hebrew people and geographical divisions matter for God's plan.",
+                    response:
+                      "CORRECT. Eber represents the emergence of the Hebrew people through whom redemption will come, while Peleg's time ('when the earth was divided') likely references the Tower of Babel judgment. These markers show God's sovereign direction of both ethnic development and geographical dispersion as part of His redemptive plan.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's purposeful selection",
-                    response: "Yes! Not random evolution but deliberate preparation.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but vague. While God's selection is evident, the specific significance lies in what these individuals represent - the chosen line (Eber) and the judicial division of nations (Peleg) that shape the context for Abraham's call.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It connects world events with the chosen line",
-                    response: "God's work in one family intersects with global developments.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't specify the connections. The genealogy intentionally links the Messianic line with key world developments, showing God's coordination of salvation history with human history.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1006,20 +1066,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Human initiative often falls short of God's call",
-                    response: "Exactly! Starting well doesn't guarantee finishing well.",
+                    response:
+                      "CORRECT. Terah begins the journey to Canaan but settles short of the destination, demonstrating how human obedience often falters before completing God's full purpose. This pattern of starting well but not finishing prepares for the contrast with Abraham's complete obedience. It shows the danger of settling for something good that falls short of God's best.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It sets up God's direct call to Abram",
-                    response: "Yes! The father's incompletion requires the son's obedience.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on narrative function rather than spiritual lesson. While it does set up Abram's call, the primary significance is the pattern of incomplete obedience that Abram will need to overcome.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows the pattern of faith developing",
-                    response: "God works through generations to accomplish His purposes.",
-                    isCorrect: true,
+                    response:
+                      "VALID but doesn't address the disobedience aspect. While faith does develop across generations, Terah's stopping represents failure rather than progressive development.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1044,20 +1107,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It highlights the impossibility of human solutions",
-                    response: "Exactly! God's promises will require divine intervention.",
+                    response:
+                      "CORRECT. Abram faces dead ends in every direction: no heir (barrenness) and no father (bereavement). This desperate situation eliminates any possibility of human achievement and prepares for divine intervention. God's promises will require miraculous fulfillment, ensuring He alone receives glory for what follows.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It sets up key themes of death and life",
-                    response: "Yes! From barrenness comes fruitfulness through faith.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on literary themes rather than theological purpose. While death and life are important themes, the primary significance is demonstrating human impossibility to highlight divine sovereignty.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It makes God's subsequent promises more dramatic",
-                    response: "The greater the obstacle, the greater God's glory in overcoming it.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but emphasizes dramatic effect over theological meaning. While the promises are more dramatic, the deeper purpose is to eliminate human boasting and establish that salvation comes through divine power alone.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1081,20 +1147,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows God calls people out of paganism",
-                    response: "Exactly! Redemption begins by leaving false worship.",
+                    response:
+                      "CORRECT. Abram's background in sophisticated pagan culture demonstrates that God's call transcends human spiritual preparation. Salvation begins with divine initiative, not human seeking. This establishes the pattern of grace: God calls the undeserving from among the idolaters to become channels of blessing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It highlights the cost of obedience",
-                    response: "Yes! Abram leaves civilization for unknown territory.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While leaving Ur was costly, the greater significance is theological: God's sovereign election of someone from pagan origins shows that salvation depends on God's choice, not human merit or background.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates God's grace to idolaters",
-                    response: "God doesn't call the worthy but makes the called worthy.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL but doesn't capture the call aspect. While grace is evident, the specific emphasis is on God's initiative in calling Abram out of paganism, not just showing grace to pagans.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1165,20 +1234,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It represents complete detachment from old identity",
-                    response: "Exactly! Faith requires leaving security at every level.",
+                    response:
+                      "CORRECT. The progression from nation (country) to extended family (kindred) to immediate family (father's house) requires abandoning every level of security and identity. This comprehensive separation ensures Abram's dependence is entirely on God, not any human relationships or cultural supports. Each level represents deeper attachments that must be surrendered for full obedience.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows the cost of full obedience",
-                    response: "Yes! The closest ties are often hardest to surrender.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on sacrifice rather than purpose. While the cost is real, the progression specifically serves to detach Abram completely from his past so his identity can be redefined by God's promises alone.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It makes Abram completely dependent on God",
-                    response: "No fallback positions - only God's provision remains.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't explain the progression. The dependence is the result, but the specific threefold separation systematically removes every natural source of security.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1203,20 +1275,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The universal scope: 'all families of earth blessed'",
-                    response: "Exactly! This shows God's global heart from the beginning.",
+                    response:
+                      "CORRECT. This climactic promise reveals God's global heart from the beginning. The Abrahamic covenant isn't ultimately about one man or nation but about God's plan to redeem all humanity. This universal scope shows God's mission extends beyond Israel to embrace every people group, establishing the biblical theme of particular election for universal blessing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "The purpose: 'be a blessing' not just be blessed",
-                    response: "Yes! God blesses us to bless others, not for selfish enjoyment.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While the purpose of blessing others is crucial, it serves the greater goal of universal blessing. The 'be a blessing' command is the means; 'all families blessed' is the ultimate goal.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The divine protection: 'I will curse who curse you'",
-                    response: "God takes personally how people treat His chosen ones.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT but instrumental. The protection ensures the promise can be fulfilled despite opposition, but it serves the larger purpose of universal blessing rather than being significant in itself.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1240,20 +1315,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He obeyed without knowing the destination",
-                    response: "Exactly! 'The land I will show you' - faith follows without full knowledge.",
+                    response:
+                      "CORRECT. Abram's faith acts on God's word despite incomplete information. 'The land I will show you' means he journeys toward an unknown destination, demonstrating radical trust in God's guidance. This defines biblical faith: obedient action based on God's character and word, not full understanding of the plan.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He was 75 with a barren wife",
-                    response: "Yes! Humanly speaking, it made no sense to start over.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on circumstances rather than faith. While his age and situation make obedience remarkable, the essence of his faith is trusting God's promise over visible reality, not just overcoming practical obstacles.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He left civilization for unknown territory",
-                    response: "From urban Ur to nomadic life - huge cultural sacrifice.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the action rather than the faith behind it. The significant thing isn't the geographical move but the complete trust in God's promise that motivated it.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1278,20 +1356,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Confirmation after the difficult journey",
-                    response: "Exactly! God reaffirms His promise when obedience gets hard.",
+                    response:
+                      "CORRECT. Having obeyed and arrived in Canaan, Abram needs reassurance that this unfamiliar land is indeed God's promise. The appearance confirms his obedience was correct and reinforces the promise with a visible manifestation. This pattern continues throughout Abram's life - God reaffirms His promises at key moments of obedience or testing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "The specific land promise he could see",
-                    response: "Yes! From general 'land I will show' to specific 'this land'.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the relational dimension. While the land is specified, the greater need is relational confirmation from God after costly obedience.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Encouragement to build an altar and worship",
-                    response: "The proper response to God's faithfulness is worship.",
-                    isCorrect: true,
+                    response:
+                      "SECONDARY purpose. While worship is the proper response, the primary reason for the appearance is confirming Abram's obedience and reinforcing the promise in the new location.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1315,20 +1396,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Visible reminders of God's faithfulness",
-                    response: "Exactly! Stone markers of where God met him.",
+                    response:
+                      "CORRECT. Each altar marks a place where God met Abram and reaffirmed His promises. These stone memorials serve as tangible reminders of divine encounters, creating a geography of grace throughout Canaan. They testify to God's faithfulness at specific locations, helping Abram remember God's promises during future challenges.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Acts of worship and dedication",
-                    response: "Yes! Giving back to God what God has given.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the memorial function. While worship is involved, the altars specifically mark significant encounters with God for future remembrance.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Claiming territory for Yahweh in pagan land",
-                    response: "Worshiping the true God in Canaanite territory.",
-                    isCorrect: true,
+                    response:
+                      "VALID but secondary. While the altars do stake a claim for Yahweh, their primary function is commemorating God's appearances and promises to Abram personally.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1352,20 +1436,23 @@ export const GENESIS_LESSONS_7_12: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Obedience involves continual following",
-                    response: "Exactly! We never 'arrive' spiritually this side of heaven.",
+                    response:
+                      "CORRECT. Abram's journey demonstrates that faith isn't a single decision but a lifestyle of following God's guidance. Each altar marks a stage in an ongoing journey of obedience. This pattern shows that walking with God means continual responsiveness to His direction, not just initial compliance.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Faith means living as a stranger and pilgrim",
-                    response: "Yes! Our true citizenship is in heaven, not earthly security.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the condition rather than the process. While Abram lives as a pilgrim, the significant lesson is his continual movement in response to God's ongoing guidance.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "God leads step by step, not all at once",
-                    response: "We get direction for the next step, not the entire journey.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on God's method rather than Abram's response. While God does lead progressively, the emphasis here is on Abram's continual obedience to that gradual guidance.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,

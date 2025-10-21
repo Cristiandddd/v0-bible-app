@@ -3,8 +3,9 @@
 import { useEffect, useState } from "react"
 import { Card } from "@/components/ui/card"
 import { Progress } from "@/components/ui/progress"
-import { BookOpen, Lock, CheckCircle2, Clock, ChevronRight, Trophy } from "lucide-react"
+import { BookOpen, Lock, CheckCircle2, Clock, ChevronRight, Trophy, ChevronLeft } from "lucide-react"
 import { getUserProfile } from "@/lib/user-profile"
+import { Button } from "@/components/ui/button"
 import {
   getLessonBooks,
   getLessonProgress,
@@ -48,18 +49,17 @@ export function LessonsScreen({ onStartLesson, onBack }: LessonsScreenProps) {
       <div className="border-b bg-gradient-to-br from-primary/5 via-background to-accent/5 p-6">
         <div className="mx-auto max-w-2xl">
           <div className="mb-2 flex items-center justify-between">
-            <div>
-              <h1 className="mb-1 text-2xl font-bold">Spiritual School</h1>
-              <p className="text-sm text-muted-foreground">Learn interactively and deeply</p>
+            <div className="flex items-center gap-3">
+              {onBack && (
+                <Button variant="ghost" size="icon" onClick={onBack}>
+                  <ChevronLeft className="h-5 w-5" />
+                </Button>
+              )}
+              <div>
+                <h1 className="mb-1 text-2xl font-bold">Spiritual School</h1>
+                <p className="text-sm text-muted-foreground">Learn interactively and deeply</p>
+              </div>
             </div>
-            {onBack && (
-              <button
-                onClick={onBack}
-                className="flex h-9 items-center gap-2 rounded-lg px-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
-              >
-                ← Back
-              </button>
-            )}
           </div>
         </div>
       </div>
@@ -181,11 +181,6 @@ export function LessonsScreen({ onStartLesson, onBack }: LessonsScreenProps) {
                                     <div className="flex-1">
                                       <div className="mb-0.5 flex items-center gap-2">
                                         <h6 className="font-medium">{lesson.title}</h6>
-                                        {isCurrent && (
-                                          <span className="rounded-full bg-primary/10 px-2 py-0.5 text-xs font-medium text-primary">
-                                            In progress
-                                          </span>
-                                        )}
                                       </div>
                                       <p className="mb-1 text-xs text-muted-foreground">{lesson.description}</p>
                                       <div className="flex items-center gap-3 text-xs text-muted-foreground">

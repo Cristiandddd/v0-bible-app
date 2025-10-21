@@ -5,7 +5,7 @@ import { Card } from "@/components/ui/card"
 import { Button } from "@/components/ui/button"
 import { Progress } from "@/components/ui/progress"
 import { Textarea } from "@/components/ui/textarea"
-import { BookOpen, HelpCircle, ArrowRight, CheckCircle2, Sparkles, Loader2, Send } from "lucide-react"
+import { BookOpen, HelpCircle, ArrowRight, CheckCircle2, Sparkles, Loader2, Send, ChevronLeft, X } from "lucide-react"
 import {
   completeLesson,
   getLessonProgress,
@@ -51,7 +51,11 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
     (currentStep.type === "application" || currentStep.type === "reflection") &&
     (!currentStep.options || currentStep.options.length === 0)
 
+  const isFirstQuestion = currentStepIndex === 0 && currentStep.type === "question"
+
   const handleOptionSelect = (optionId: string) => {
+    if (selectedOptions[currentStep.id]) return
+
     setSelectedOptions({
       ...selectedOptions,
       [currentStep.id]: optionId,
@@ -162,12 +166,12 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
             </div>
             <div className="flex items-center gap-2">
               {currentStepIndex > 0 && (
-                <Button variant="ghost" size="sm" onClick={handleBack}>
-                  Back
+                <Button variant="ghost" size="icon" onClick={handleBack}>
+                  <ChevronLeft className="h-5 w-5" />
                 </Button>
               )}
-              <Button variant="ghost" size="sm" onClick={onExit}>
-                Exit
+              <Button variant="ghost" size="icon" onClick={onExit}>
+                <X className="h-5 w-5" />
               </Button>
             </div>
           </div>
@@ -233,18 +237,30 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
               const isSelected = selectedOptions[currentStep.id] === option.id
               const hasSelectedOption = selectedOptions[currentStep.id] !== undefined
               const isDisabled = hasSelectedOption && !isSelected
+              const isCorrectAnswer = option.isCorrect === true
+              const borderColor = isFirstQuestion
+                ? "border-border"
+                : isSelected
+                  ? isCorrectAnswer
+                    ? "border-green-500"
+                    : "border-orange-500"
+                  : isDisabled
+                    ? "border-border"
+                    : "border-border"
 
               return (
                 <button
                   key={option.id}
                   onClick={() => !hasSelectedOption && handleOptionSelect(option.id)}
                   disabled={isDisabled}
-                  className={`w-full rounded-lg border-2 p-4 text-left transition-all ${
-                    isSelected
-                      ? "border-primary bg-primary/5"
+                  className={`w-full rounded-lg border-2 p-4 text-left transition-all ${borderColor} ${
+                    isSelected && !isFirstQuestion
+                      ? isCorrectAnswer
+                        ? "bg-green-500/5"
+                        : "bg-orange-500/5"
                       : isDisabled
-                        ? "border-border bg-muted/30 opacity-50 cursor-not-allowed"
-                        : "border-border bg-card hover:border-primary/50 hover:bg-muted/50"
+                        ? "bg-muted/30 opacity-50 cursor-not-allowed"
+                        : "bg-card hover:border-primary/50 hover:bg-muted/50"
                   }`}
                 >
                   <p className={`font-medium ${isDisabled ? "text-muted-foreground" : ""}`}>{option.text}</p>
@@ -260,7 +276,7 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
               <Sparkles className="h-5 w-5 text-primary" />
             </div>
             <Card className="flex-1 border-2 border-primary/20 bg-primary/5 p-4">
-              <p className="leading-relaxed">{aiFeedback[currentStep.id]}</p>
+              <p className="text-sm leading-relaxed">{aiFeedback[currentStep.id]}</p>
             </Card>
           </div>
         )}
@@ -280,9 +296,7 @@ export function LessonInteractive({ lesson, onComplete, onExit }: LessonInteract
                       <CheckCircle2 className="h-4 w-4" />
                       Correct
                     </span>
-                  ) : (
-                    <span className="text-sm font-medium text-amber-600">Let's reflect more on this</span>
-                  )}
+                  ) : null}
                 </div>
               )}
             </Card>

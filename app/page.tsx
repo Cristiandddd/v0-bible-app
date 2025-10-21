@@ -15,6 +15,7 @@ import { BibleChatScreen } from "@/components/bible/bible-chat-screen"
 import { BibleBookSelectionScreen } from "@/components/bible/bible-book-selection-screen"
 import { hasCompletedOnboarding, getUserProfile } from "@/lib/user-profile"
 import type { Lesson } from "@/lib/lessons-system"
+import { getNextLesson } from "@/lib/lessons-system"
 
 type Screen =
   | "welcome"
@@ -61,8 +62,20 @@ export default function Page() {
   }
 
   const handleLessonComplete = () => {
-    setCurrentLesson(null)
-    setScreen("lessons")
+    if (currentLesson) {
+      const nextLesson = getNextLesson(currentLesson.id)
+      if (nextLesson) {
+        setCurrentLesson(nextLesson)
+        // Stay on lesson-interactive screen with new lesson
+      } else {
+        // No more lessons, go back to lessons screen
+        setCurrentLesson(null)
+        setScreen("lessons")
+      }
+    } else {
+      setCurrentLesson(null)
+      setScreen("lessons")
+    }
   }
 
   const handleLessonExit = () => {
@@ -99,7 +112,12 @@ export default function Page() {
       {screen === "journal" && <JournalScreen onBack={() => setScreen("home")} />}
       {screen === "lessons" && <LessonsScreen onStartLesson={handleStartLesson} onBack={() => setScreen("home")} />}
       {screen === "lesson-interactive" && currentLesson && (
-        <LessonInteractive lesson={currentLesson} onComplete={handleLessonComplete} onExit={handleLessonExit} />
+        <LessonInteractive
+          key={currentLesson.id}
+          lesson={currentLesson}
+          onComplete={handleLessonComplete}
+          onExit={handleLessonExit}
+        />
       )}
       {screen === "bible-book-selection" && (
         <BibleBookSelectionScreen onSelectBook={handleSelectBibleBook} onBack={() => setScreen("home")} />

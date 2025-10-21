@@ -64,20 +64,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "To deepen faith beyond initial obedience",
-                    response: "Exactly! Initial faith must be tested to become mature faith.",
+                    response:
+                      "CORRECT. The famine tests whether Abram's faith can survive when God's promises seem contradicted by circumstances. Initial obedience must mature into persevering trust. This pattern continues throughout Scripture: God allows difficulties not to destroy faith but to strengthen it, moving believers from emotional commitment to proven character.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "To reveal what's really in Abram's heart",
-                    response: "Yes! Prosperity doesn't reveal character; testing does.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on diagnosis rather than development. While testing does reveal heart conditions, God's primary purpose is transformational - to build stronger faith through overcoming obstacles.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "To show God's faithfulness despite human failure",
-                    response: "Beautiful insight! God's plans aren't derailed by our mistakes.",
-                    isCorrect: true,
+                    response:
+                      "VALID but premature. While God will demonstrate faithfulness, the immediate purpose of the test is to develop Abram's character, not just display divine reliability.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -102,20 +105,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It creates the appearance of truth while being deceptive",
-                    response: "Exactly! Half-truths can be whole lies in practice.",
+                    response:
+                      "CORRECT. Half-truths can be whole lies in their effect and intention. By withholding the full truth about Sarai being his wife, Abram creates a false impression to protect himself at her expense. This demonstrates how technical truthfulness can mask fundamental deception, damaging relationships and misrepresenting reality.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows fear overriding integrity",
-                    response: "Yes! When afraid, we rationalize compromising our values.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on motivation rather than the deceptive nature of half-truths. While fear certainly drives the decision, the specific danger lies in using partial truth to enable falsehood.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It endangers others to protect self",
-                    response: "He protects himself at Sarai's potential expense.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the consequence rather than the deceptive mechanism. While others are endangered, the fundamental wrong is the deceptive use of partial truth.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -140,20 +146,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He gains wealth but loses his wife",
-                    response: "Exactly! His 'success' creates his worst nightmare.",
+                    response:
+                      "CORRECT. Abram's 'successful' deception creates his worst nightmare: Sarai taken into Pharaoh's harem. This demonstrates the folly of using sinful means to achieve seemingly good ends. The very thing he sought to protect (his life) is secured at the cost of what mattered most (his wife and God's promise through her).",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He compromises his calling to be a blessing",
-                    response: "Yes! He brings trouble rather than blessing to Egypt.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While his calling is compromised, the immediate tragedy is the potential loss of his wife and the threat to God's promise of offspring.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He endangers the promised offspring",
-                    response: "The Messianic line is threatened by his deception.",
-                    isCorrect: true,
+                    response:
+                      "THEOLOGICALLY significant but not the primary cost. While the Messianic line is threatened, the human cost of nearly losing his wife represents the more immediate consequence.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -178,20 +187,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God remains faithful to His covenant promises",
-                    response: "Exactly! God's faithfulness doesn't depend on our perfection.",
+                    response:
+                      "CORRECT. Despite Abram's failure, God protects His covenant purposes. This demonstrates that God's faithfulness doesn't depend on human perfection. His commitment to the covenant He initiated ensures He will rescue His people even from self-inflicted crises. This pattern reveals salvation by grace, not human merit.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He protects the innocent party (Sarai)",
-                    response: "Yes! God defends the vulnerable even when others fail them.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but incomplete. While Sarai is protected, the primary reason is theological: God's commitment to His covenant promises concerning both Abram and the offspring through Sarai.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He demonstrates grace that anticipates repentance",
-                    response: "God often rescues us before we even realize we need saving.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL but not the stated reason. While grace is evident, the text emphasizes God's action to protect His promises rather than Abram's repentance.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -216,20 +228,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The unbeliever acts more righteously than the believer",
-                    response: "Exactly! Sometimes God uses outsiders to convict His people.",
+                    response:
+                      "CORRECT. Pharaoh, though a pagan, recognizes the moral failure in Abram's deception and acts with greater integrity. This profound irony shows how sin can make God's people worse witnesses than unbelievers. It demonstrates that common grace can produce moral insight in those outside the covenant, while covenant people can fail to live by their own standards.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Abram's witness is destroyed by his deception",
-                    response: "Yes! He can't be a blessing when living in fear and deceit.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the consequence rather than the irony. While his witness is damaged, the specific irony is the pagan king's superior moral perception and action.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "God's reputation suffers through His representative's failure",
-                    response: "Our failures can misrepresent God's character to others.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on God rather than the relational irony. While God's reputation is affected, the striking contrast is between the pagan's righteousness and the believer's failure.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -300,20 +315,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Blessings test character as much as hardships do",
-                    response: "Exactly! Prosperity often reveals our hearts more than poverty.",
+                    response:
+                      "CORRECT. Prosperity often reveals hidden character flaws that poverty conceals. The conflict over resources tests whether Abram and Lot will handle God's blessings with wisdom and generosity. This demonstrates that spiritual maturity is proved not only in enduring lack but in managing abundance without relational damage.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "God uses conflict to direct His purposes",
-                    response: "Yes! This tension will lead to necessary separation.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on sovereignty rather than character development. While God does use the conflict for His purposes, the primary lesson concerns how blessings test and reveal character.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It forces growth and decision-making",
-                    response: "Comfortable situations don't require faith or wisdom.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the process rather than the purpose. While growth occurs, the specific purpose is testing character through the challenges of prosperity.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -338,20 +356,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Leaders are responsible for their people's conflicts",
-                    response: "Exactly! Wise leaders address issues before they escalate.",
+                    response:
+                      "CORRECT. The strife between herdsmen demonstrates that leaders must address conflicts among their followers before they damage core relationships. Abram recognizes his responsibility to resolve the situation rather than letting subordinate conflicts escalate. This principle of leadership accountability remains crucial for maintaining unity.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows how competition damages relationships",
-                    response: "Yes! Scarcity mindset turns allies into competitors.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the damage rather than leadership responsibility. While competition is damaging, the significant insight is the leaders' obligation to intervene in conflicts among their people.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates the ripple effect of our choices",
-                    response: "Our decisions affect everyone under our influence.",
-                    isCorrect: true,
+                    response:
+                      "VALID but doesn't address the leadership dimension. While choices have ripple effects, the specific lesson concerns leaders' responsibility for conflicts within their sphere of influence.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -376,20 +397,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He values relationship over advantage",
-                    response: "Exactly! Peace is more important than getting the best deal.",
+                    response:
+                      "CORRECT. As the elder and the one to whom God made the promises, Abram had the right to choose first. His generosity demonstrates that preserving family harmony matters more than securing the best land. This Christlike attitude prioritizes others' interests and trusts God to provide regardless of human advantage.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He trusts God rather than his own judgment",
-                    response: "Yes! He believes God can bless him anywhere.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the relational sacrifice. While trust is involved, the remarkable thing is Abram's willingness to sacrifice his rights for peace.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He demonstrates spiritual maturity",
-                    response: "The elder serves the younger, reversing cultural expectations.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. The specific maturity demonstrated is prioritizing relationships and trusting God's provision over asserting personal rights.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -414,20 +438,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He moves toward Sodom, known for wickedness",
-                    response: "Exactly! Prosperity draws him toward spiritual compromise.",
+                    response:
+                      "CORRECT. Lot's economically wise choice leads him toward spiritual compromise. The well-watered plain draws him gradually toward Sodom, a city notorious for sin. This demonstrates the danger of making decisions based solely on material considerations without spiritual discernment. What appears advantageous physically can be disastrous spiritually.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He chooses based on appearance not principle",
-                    response: "Yes! What looks good isn't always what is good.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't specify the spiritual consequence. While appearance-based choices are unwise, the specific danger is proximity to corruption and compromise.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He prioritizes provision over presence",
-                    response: "He chooses the watered valley over staying with God's chosen.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL but not the primary danger. While he does choose provision over staying with God's chosen, the immediate threat is the wicked influence of Sodom.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -452,20 +479,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Abram needed to empty his hands to receive God's gift",
-                    response: "Exactly! We must release what we're clutching to receive God's best.",
+                    response:
+                      "CORRECT. God waits until Abram has released his claim to the best land before reaffirming that ALL the land will be his. This demonstrates the spiritual principle that we must often release what we're clutching to receive God's greater gift. Abram's generosity makes room for God's abundant confirmation.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "God rewards faith-driven generosity",
-                    response: "Yes! When we trust God with our rights, He entrusts us with more.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on reward rather than the empty-hands principle. While reward is involved, the key insight is that God fills what we empty for His sake.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It confirms Abram made the right choice",
-                    response: "God's blessing validates wisdom and selflessness.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the function rather than the principle. While confirmation occurs, the deeper lesson concerns the relationship between surrender and receiving God's blessing.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -490,20 +520,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Worship is his default response to God's faithfulness",
-                    response: "Exactly! Every encounter with God leads to worship.",
+                    response:
+                      "CORRECT. Every significant encounter with God leads Abram to worship. This pattern shows that gratitude and worship should be our automatic response to God's faithfulness. The altars create a trail of memorials marking God's progressive revelation and Abram's continuing devotion throughout his journey.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He's claiming the land for Yahweh through worship",
-                    response: "Yes! Altars establish God's presence in new territories.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While the altars do stake a claim, the primary pattern is Abram's consistent worship response to God's appearances and promises.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It maintains his spiritual focus amid material blessing",
-                    response: "Worship keeps prosperity from corrupting his heart.",
-                    isCorrect: true,
+                    response:
+                      "VALID but doesn't capture the pattern of response. While spiritual focus is maintained, the significant development is the habitual worship response to divine encounters.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -574,20 +607,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It establishes the historical reality of the events",
-                    response: "Exactly! This isn't myth but actual history with real places.",
+                    response:
+                      "CORRECT. The specific kings and places ground this narrative in actual history, not myth or legend. This demonstrates that God works in real historical contexts with identifiable people and locations. The biblical faith is rooted in space-time reality, showing God's involvement in actual human events rather than abstract spiritual ideas.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God at work in world events",
-                    response: "Yes! God uses pagan kings and battles to accomplish His purposes.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the historical verification aspect. While God certainly works in world events, the specific names and places provide concrete evidence that this was real history, not just theological storytelling.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It sets the stage for Lot's capture",
-                    response: "The political situation creates the crisis requiring rescue.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on narrative function rather than historical significance. While it sets the stage, the greater importance is establishing the historical reliability of the account.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -612,20 +648,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Choices have consequences, even for believers",
-                    response: "Exactly! God's grace doesn't remove the natural consequences of poor decisions.",
+                    response:
+                      "CORRECT. Lot's decision to pitch his tent toward Sodom for material advantage now results in losing all those possessions and his freedom. This demonstrates that God's grace doesn't remove the natural consequences of poor decisions. While God will rescue Lot, he still experiences the painful outcomes of his choice to compromise with wickedness for prosperity.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Worldly security is ultimately unreliable",
-                    response: "Yes! What the world offers can be taken in a moment.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the possessions rather than the choice-consequence dynamic. While worldly security is unreliable, the specific lesson concerns how Lot's earlier compromise leads directly to his current predicament.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "God uses crises to rescue us from worse fates",
-                    response: "Sometimes being captured is better than continuing in compromise.",
-                    isCorrect: true,
+                    response:
+                      "VALID but describes God's response rather than the spiritual principle at work. While God does use crises redemptively, the principle demonstrated is the inevitable consequences of compromising choices.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -650,20 +689,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He was a powerful chieftain, not just a nomad",
-                    response: "Exactly! God's blessing included military and economic strength.",
+                    response:
+                      "CORRECT. The size of Abram's fighting force shows he had become a substantial tribal leader with significant wealth and influence. This demonstrates that God's blessing included military and economic power, not just spiritual promises. Abram's obedience led to practical authority and resources that could be used for God's purposes.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He prepared for challenges while trusting God",
-                    response: "Yes! Faith doesn't mean lack of preparation or skill.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the scale of his leadership. While preparation is evident, the significant revelation is Abram's position as a major tribal chieftain with substantial military capability.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He took responsibility for family despite their choices",
-                    response: "Love intervenes even when problems are self-inflicted.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on the rescue motive rather than Abram's status. While responsibility is key, the military force reveals his established leadership position in the region.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -688,20 +730,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God's supernatural assistance in the battle",
-                    response: "Exactly! The victory demonstrates divine empowerment.",
+                    response:
+                      "CORRECT. The victory against overwhelming odds demonstrates divine empowerment rather than military superiority alone. Abram's night attack shows strategic wisdom, but the success against four allied kings points to God's supernatural intervention. This pattern continues throughout Scripture: God often uses the weak to confound the strong to demonstrate that victory comes from Him.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Strategic wisdom combined with courage",
-                    response: "Yes! Night attack shows military savvy, not just brute force.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but attributes too much to human factors. While strategy and courage were present, the decisive factor was God's assistance against impossible odds.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Righteous cause strengthening his men",
-                    response: "Rescuing family inspires greater courage than conquest.",
-                    isCorrect: true,
+                    response:
+                      "VALID but secondary. While a righteous cause can motivate, the primary explanation for defeating four kings with a militia is divine intervention.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -726,20 +771,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It could make him indebted to a wicked king",
-                    response: "Exactly! Acceptance might imply alliance with Sodom.",
+                    response:
+                      "CORRECT. Accepting wealth from the king of Sodom could create obligations that compromise Abram's independence and testimony. The association might suggest alliance with wickedness or imply that Sodom contributed to Abram's success. This demonstrates spiritual wisdom: some 'gifts' come with invisible chains that can hinder God's work.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It could allow Sodom to claim credit for his wealth",
-                    response: "Yes! 'Abram enriched by Sodom' could misrepresent God's blessing.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on reputation rather than spiritual compromise. While credit-taking is a concern, the greater danger is relational entanglement with evil.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It might compromise his testimony",
-                    response: "His witness depends on clear separation from evil.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. The specific compromise would be the appearance of partnership with wickedness and dependence on ungodly sources rather than God alone.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -764,20 +812,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "A pre-incarnation appearance of Christ",
-                    response: "Some early church fathers saw him as a Christophany.",
+                    response:
+                      "CORRECT. Many early church fathers saw Melchizedek as a Christophany - a pre-incarnate appearance of Christ. His sudden introduction without genealogy, his royal priesthood, and his blessing of Abram support this view. Hebrews 7 develops this identification, presenting Melchizedek as a type of Christ's eternal priesthood.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "A Canaanite priest who worshiped the true God",
-                    response: "Yes! God had witnesses outside Abraham's family line.",
-                    isCorrect: true,
+                    response:
+                      "POSSIBLE but less likely given the developed typology. While some see him as a historical Canaanite priest, the biblical evidence strongly points to a supernatural figure, especially given the New Testament interpretation.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "A type of Christ as perfect priest-king",
-                    response: "Hebrews 7 develops this theological significance.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't address his immediate identity. While he certainly types Christ, the question concerns who he was in this historical encounter.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -801,20 +852,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He acknowledges God's ownership of the spoils",
-                    response: "Exactly! The tithe recognizes God as the true source of victory.",
+                    response:
+                      "CORRECT. The tithe recognizes that the victory and spoils ultimately belong to God, not Abram. By giving a tenth to God's priest, Abram acknowledges divine sovereignty over his success. This establishes the principle that our victories and gains are opportunities to honor God as the true source of blessing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He submits to Melchizedek's priestly authority",
-                    response: "Yes! He honors God's representative and his blessing.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While submission is involved, the primary significance is acknowledging God's ownership through the tithe to His representative.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It establishes the principle of firstfruits",
-                    response: "God deserves the first and best, not the leftovers.",
-                    isCorrect: true,
+                    response:
+                      "VALID but focuses on the practice rather than the heart attitude. While tithing is established, the key insight is Abram's recognition of God's claim on all his gains.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -839,20 +893,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God alone gets credit for blessing His people",
-                    response: "Exactly! No confusion about the source of Abram's prosperity.",
+                    response:
+                      "CORRECT. Abram's absolute refusal ensures no one can say human sources enriched him. This protects the testimony that Yahweh alone provides for His people. The principle is crucial: God's reputation depends on His people demonstrating exclusive dependence on Him. Even legitimate gains from questionable sources can compromise this witness.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Complete separation from wicked associations",
-                    response: "Yes! Even small compromises can lead to big consequences.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the separation rather than the testimony. While separation is important, the primary principle is protecting God's exclusive glory as provider.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The testimony to God's faithfulness",
-                    response: "His life preaches that Yahweh alone provides.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. The specific testimony being protected is that God alone is the source of blessing, not human alliances or compromises.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -923,20 +980,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Retaliation from the defeated kings",
-                    response: "Exactly! Military victory can create fear of future attacks.",
+                    response:
+                      "CORRECT. Military victory often creates fear of future revenge attacks. Having defeated four kings, Abram reasonably worries about retaliation from their allies or surviving forces. This shows that spiritual highs are often followed by vulnerability to fear, and that God's protection remains necessary even after demonstrated victories.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "The spiritual implications of his encounters",
-                    response: "Yes! Meeting Melchizedek and refusing Sodom's wealth was spiritually weighty.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but less likely as the primary fear. While the spiritual encounters were weighty, the immediate context suggests concern about practical military consequences.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The ongoing delay of God's promise",
-                    response: "Sometimes after spiritual highs, doubt and fear creep in.",
-                    isCorrect: true,
+                    response:
+                      "VALID but not the stated reason. While the promise remains unfulfilled, God specifically addresses Abram's fear about his personal safety and reward.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -961,20 +1021,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Unfulfilled promises can overshadow present blessings",
-                    response: "Exactly! The one thing missing dominates our perspective.",
+                    response:
+                      "CORRECT. The one missing thing often dominates our perspective, causing us to overlook present blessings and recent victories. Abram's focus on his childlessness despite God's promise of great reward shows how unmet expectations can blind us to current grace. This human tendency requires conscious trust in God's timing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He's proposing a human solution to God's promise",
-                    response: "Yes! Eliezer represents settling for second best.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes his action rather than the psychological dynamic. While he proposes Eliezer, the deeper issue is how the unfulfilled promise obscures his view of God's faithfulness.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Honest doubt is better than pretended faith",
-                    response: "God welcomes our real questions more than fake certainty.",
-                    isCorrect: true,
+                    response:
+                      "VALID but doesn't address the focus issue. While honesty with God is good, the problem is Abram's narrowed perspective on what he lacks rather than what God has given.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -999,20 +1062,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It makes an abstract promise concrete and visible",
-                    response: "Exactly! Faith needs tangible reminders of invisible promises.",
+                    response:
+                      "CORRECT. The starry sky transforms the abstract promise of numerous offspring into a tangible, overwhelming visual reality. This demonstrates God's compassion in giving faith tangible supports. The countless stars make the promise both comprehensible and magnificent, helping Abram grasp the scale of God's commitment.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It connects Abram's offspring to God's cosmic purposes",
-                    response: "Yes! This isn't just about family but about God's kingdom.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While cosmic connections exist, the primary purpose is making the promise visually concrete to strengthen Abram's faith.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates God's creative power",
-                    response: "The God who made stars can certainly give a son.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't address the specific promise. While creative power is evident, the stars specifically illustrate the number of descendants, not just general power.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1036,20 +1102,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Right standing with God comes through faith, not works",
-                    response: "Exactly! This becomes the foundation of justification by faith.",
+                    response:
+                      "CORRECT. This verse establishes the foundational principle of justification by faith. God declares Abram righteous based on his trust in God's promise, not his moral achievements or religious performance. This becomes the cornerstone of Paul's gospel in Romans and Galatians, showing that righteousness is imputed to believers through faith in God's promises.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "God accepts our trust as righteous when we rely on Him",
-                    response: "Yes! Faith is the currency of righteousness in God's economy.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but risks misunderstanding the nature of imputation. God doesn't consider faith itself as righteousness but counts faith as the means through which Christ's righteousness is received.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It establishes the pattern for all salvation",
-                    response: "Paul will later use this verse to explain how anyone is saved.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on application rather than the meaning. While this does establish the salvation pattern, the specific meaning concerns how God declares sinners righteous.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1073,20 +1142,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Doubt questions God's ability, faith seeks God's method",
-                    response: "Exactly! Abram believes God CAN, he wants to know HOW.",
+                    response:
+                      "CORRECT. Abram believes God CAN fulfill the promise but wants to understand HOW it will happen. This distinction is crucial: doubt challenges God's power or faithfulness, while faith seeks clarification about God's means and timing. Abram's question comes after his belief was counted as righteousness, showing it's a request for understanding, not expression of unbelief.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Genuine faith asks honest questions",
-                    response: "Yes! God isn't threatened by our requests for clarity.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't define the boundary between faith and doubt. While faith can ask questions, the key is whether the questions challenge God's character or seek to understand His ways.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He's moving from general promise to specific implementation",
-                    response: "Faith needs to understand how God's promises work in reality.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the progression rather than the faith dynamic. While he is moving to specifics, the significant insight is that this movement demonstrates faith, not doubt.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1111,20 +1183,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The parties would walk between pieces, invoking self-curse",
-                    response: "Exactly! 'May what happened to these animals happen to me if I break this covenant.'",
+                    response:
+                      "CORRECT. In ancient covenants, walking between slaughtered animals symbolized invoking self-malediction: 'May what happened to these animals happen to me if I break this covenant.' This made covenants deadly serious commitments. The ritual graphically represented the consequences of covenant violation.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It represented total commitment",
-                    response: "Yes! Covenants were serious, life-and-death agreements.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but vague. While commitment is involved, the specific symbolism concerns the curse for breaking the commitment.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It established binding legal relationships",
-                    response: "This was the most solemn way to make promises in that culture.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't capture the self-malediction aspect. While relationships were established, the walking ritual specifically symbolized accepting curse consequences for violation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1149,20 +1224,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God alone bears the covenant consequences",
-                    response: "Exactly! He takes full responsibility for fulfilling the covenant.",
+                    response:
+                      "CORRECT. In this unilateral covenant, God alone takes responsibility for fulfilling the terms and bears the consequences of failure. The smoking fire pot and flaming torch represent God's presence passing through, symbolizing His sole obligation to ensure the covenant's success. This demonstrates grace: God binds Himself to bless despite human failure.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It's a covenant of grace, not mutual obligation",
-                    response: "Yes! God binds Himself to bless regardless of human performance.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the nature rather than the symbolism. While it is a grace covenant, the walking through pieces specifically shows God taking sole responsibility.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It points to Christ bearing our curse",
-                    response: "Jesus would later bear the curse of covenant-breaking for us.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL typology but not the immediate meaning. While Christ ultimately bears the curse, the immediate significance is God's unilateral commitment to the covenant.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1187,20 +1265,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It prepares him for the long journey of faith",
-                    response: "Exactly! Real faith understands there will be suffering.",
+                    response:
+                      "CORRECT. God honestly prepares Abram for the difficult path ahead, showing that faith includes enduring hardship, not avoiding it. This demonstrates God's integrity in not promising only easy blessings. Knowing about future suffering helps Abram and his descendants persevere when difficulties come, recognizing they're part of God's plan.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's sovereignty over future difficulties",
-                    response: "Yes! Even the hard times are part of God's plan.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on sovereignty rather than preparation. While sovereignty is evident, the primary purpose is preparing Abram for what's coming.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It includes the promise of ultimate deliverance",
-                    response: "The suffering has purpose and definite end point.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the content rather than the purpose. While deliverance is promised, the revelation of suffering specifically serves to prepare Abram realistically.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1271,20 +1352,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "To eliminate any possibility of human explanation",
-                    response: "Exactly! When it's humanly impossible, God gets all the glory.",
+                    response:
+                      "CORRECT. The extended delay ensures that when the promise is fulfilled, no one can attribute it to natural processes or human effort. God waits until Abram and Sarai are biologically beyond childbearing capacity so the miracle is unmistakable. This pattern continues throughout Scripture: God often waits until human impossibility makes His power evident.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "To develop character and dependence in Abram",
-                    response: "Yes! Waiting purifies motives and deepens faith.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While character development occurs, the primary purpose is ensuring the miracle's divine origin is undeniable.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "To work all things according to His perfect timing",
-                    response: "God's clock is different from ours, but always perfect.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. While God's timing is perfect, the specific purpose in this delay is to eliminate natural explanations for the fulfillment.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1309,20 +1393,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It sought God's ends through human means",
-                    response: "Exactly! Good goals don't justify wrong methods.",
+                    response:
+                      "CORRECT. Sarai and Abram attempt to fulfill God's promise through culturally acceptable but spiritually compromised means. This demonstrates the danger of using worldly methods to achieve divine purposes. Even when intentions seem good, bypassing God's timing and methods shows lack of faith and often creates greater problems.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It showed lack of trust in God's timing",
-                    response: "Yes! Impatience often leads to compromise.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on timing rather than the fundamental error of substituting human solutions for divine action.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It treated Hagar as a means to an end",
-                    response: "People should never be used as instruments for our plans.",
-                    isCorrect: true,
+                    response:
+                      "VALID ethical concern but not the primary spiritual error. While using Hagar was wrong, the greater issue was attempting to accomplish God's work through human ingenuity.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1347,20 +1434,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Pregnancy gave Hagar status Sarai lacked",
-                    response: "Exactly! In that culture, childbearing elevated a woman's position.",
+                    response:
+                      "CORRECT. In their culture, childbearing elevated a woman's status and security. Hagar's pregnancy made her valuable in ways Sarai, as a barren woman, was not. This created competition and resentment, demonstrating how human solutions to spiritual problems often create new relational conflicts. The scheme intended to solve one problem generated others.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It created competition instead of solution",
-                    response: "Yes! Human solutions often create new problems.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the outcome rather than the cultural dynamics. While competition resulted, the specific cause was the status shift through pregnancy.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrated the folly of the arrangement",
-                    response: "Using people as instruments dehumanizes everyone involved.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on the lesson rather than the interpersonal dynamics. While folly is evident, the question concerns why Hagar specifically despised Sarai.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1385,20 +1475,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "We often blame others for consequences we helped create",
-                    response: "Exactly! Taking responsibility is harder than assigning blame.",
+                    response:
+                      "CORRECT. Sarai's blame-shifting demonstrates how sin distorts perspective and avoids personal responsibility. Despite initiating the scheme, she holds Abram responsible for the negative outcomes. This pattern of blaming others for our own sinful choices begins with Adam and continues as a fundamental human tendency that damages relationships.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Sin damages relationships and creates division",
-                    response: "Yes! What was meant to help now creates hostility.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the effect rather than the blame dynamic. While relationships are damaged, the specific revelation is Sarai's refusal to take responsibility.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "She invokes God's judgment on her own scheme",
-                    response: "The irony of asking God to judge what she proposed.",
-                    isCorrect: true,
+                    response:
+                      "IRONIC but not the primary revelation. While the irony is striking, the key insight is the blame-shifting pattern common to fallen humanity.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1423,20 +1516,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He enables abuse rather than providing protection",
-                    response: "Exactly! Leadership requires confronting hard situations.",
+                    response:
+                      "CORRECT. Abram's passive response to Sarai's harsh treatment of Hagar constitutes leadership failure. Rather than confronting the sin and protecting the vulnerable, he abdicates responsibility, allowing abuse to continue. This demonstrates how passive leadership can enable injustice and compound initial sins with further wrongdoing.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He fails both women as spiritual head",
-                    response: "Yes! Passive leadership creates victims and perpetrators.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but vague. While he fails both, the specific failure is enabling Sarai's abuse and abandoning Hagar to mistreatment.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He compounds one sin with another",
-                    response: "The original sin now produces injustice and cruelty.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't specify the nature of the additional sin. The compounding sin is specifically leadership abdication that enables abuse.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1461,20 +1557,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God cares for the marginalized and oppressed",
-                    response: "Exactly! No one is insignificant to God.",
+                    response:
+                      "CORRECT. God's pursuit of Hagar demonstrates His special concern for the vulnerable and exploited. Despite her social insignificance and foreign status, God sees her suffering and intervenes. This reveals God's heart for the oppressed and His commitment to justice for those the world overlooks or mistreats.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He sees our suffering even when others don't",
-                    response: "Yes! God notices those the world overlooks.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on God's awareness rather than His character. While He certainly sees, the greater revelation is His compassionate intervention on behalf of the oppressed.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He has purposes for Ishmael too",
-                    response: "Even our mistakes become part of God's larger story.",
-                    isCorrect: true,
+                    response:
+                      "VALID but secondary. While Ishmael has a role, the primary revelation is God's care for this marginalized woman in her distress.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1499,20 +1598,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It memorializes God's care in her suffering",
-                    response: "Exactly! The name becomes a testimony of divine compassion.",
+                    response:
+                      "CORRECT. The name becomes a permanent testimony that God hears the cries of the afflicted. Every time Hagar says her son's name, she remembers God's faithfulness in her desperation. This demonstrates how God turns our painful experiences into memorials of His grace when we encounter Him in our suffering.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's faithfulness despite human failure",
-                    response: "Yes! God works through messy situations.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the contrast rather than the memorial aspect. While faithfulness is evident, the specific significance is the named memorial of God's attentive care.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It acknowledges the complexity of the situation",
-                    response: "Blessing and difficulty will characterize Ishmael's life.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. While complexity exists, the name specifically commemorates God's response to Hagar's affliction.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1537,20 +1639,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It expresses her experience of God's personal care",
-                    response: "Exactly! Theology becomes personal encounter.",
+                    response:
+                      "CORRECT. Hagar's naming of God as 'the God who sees' represents profound theological insight born from personal experience. An Egyptian slave girl contributes to our understanding of God's character, revealing His attentive care for individuals. This shows that genuine encounter with God leads to fresh revelation of His nature, regardless of one's background or status.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It reveals God's character to the oppressed",
-                    response: "Yes! The God who sees is hope for the invisible.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the recipient rather than the revelation itself. While it comforts the oppressed, the significant development is this new dimension of God's character being revealed.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates God's self-revelation to outsiders",
-                    response: "An Egyptian slave girl contributes to our understanding of God.",
-                    isCorrect: true,
+                    response:
+                      "VALID but secondary. While Hagar is an outsider, the primary significance is the specific revelation of God as the one who sees personal suffering.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1621,20 +1726,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The time for fulfillment is approaching",
-                    response: "Exactly! God's silence doesn't mean His absence.",
+                    response:
+                      "CORRECT. The 13-year silence ends as God prepares to act decisively in fulfilling His promise. The timing shows that God's apparent silence doesn't mean His absence or forgetfulness. 'El Shaddai' (God Almighty) emphasizes God's supreme power to accomplish what He promises, especially significant after the Ishmael detour demonstrated human inability.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "El Shaddai emphasizes God's power to fulfill",
-                    response: "Yes! The All-Sufficient One can do what He promises.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't address the timing question. While the name emphasizes power, the 13-year silence specifically prepares for the imminent fulfillment.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It calls for renewed commitment after failure",
-                    response: "After the Ishmael detour, God reestablishes the relationship.",
-                    isCorrect: true,
+                    response:
+                      "VALID but secondary. While commitment is renewed, the primary significance is the transition to fulfillment timing after the failed human attempt.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1659,20 +1767,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The new name reflects God's promise, not current reality",
-                    response: "Exactly! God calls things that are not as though they are.",
+                    response:
+                      "CORRECT. God gives Abraham a name that declares his destiny before it becomes reality. This demonstrates how God often calls things that are not as though they are, creating identity that aligns with His promises rather than present circumstances. The new name becomes a constant reminder of God's commitment to fulfill what He has promised.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It establishes his new covenant identity",
-                    response: "Yes! Names represent identity and destiny in Scripture.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on identity rather than the faith principle. While identity is established, the significant dynamic is God naming according to promise rather than reality.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It's an act of sovereign grace and calling",
-                    response: "God gives us identities we don't naturally possess.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but vague. While grace is involved, the specific significance is the promise-based naming that requires faith in what God will do.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1697,20 +1808,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It establishes her as covenant partner, not bystander",
-                    response: "Exactly! She's integral to God's promise, not peripheral.",
+                    response:
+                      "CORRECT. The name change from Sarai to Sarah signifies her elevation from Abram's wife to covenant participant in her own right. She is not merely the biological means but an essential partner in God's redemptive plan. This demonstrates God's commitment to include women fully in His covenant purposes and honors her role in the promise.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It reaffirms her dignity after the Hagar incident",
-                    response: "Yes! God restores what was damaged by human failure.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on restoration rather than covenant partnership. While dignity is restored, the greater significance is her established role in the covenant.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It confirms her as mother of nations",
-                    response: "The promise comes through her specifically, not just any woman.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes the result rather than the significance of the name change itself. While she becomes mother of nations, the name change specifically establishes her covenant partnership.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1735,20 +1849,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It seems like amazed disbelief at God's audacity",
-                    response: "Exactly! The promise now seems even more impossible.",
+                    response:
+                      "CORRECT. Abraham's laughter appears to be astonished disbelief at the incredible nature of God's promise. At 100 years old with a 90-year-old wife, the promise seems biologically impossible. His suggestion of Ismael as an alternative shows he hasn't fully grasped that God means Sarah specifically. This represents faith struggling with overwhelming physical reality.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He's grappling with the physical reality",
-                    response: "Yes! Faith wrestles with real-world limitations.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't characterize the laughter. While he grapples with reality, the laughter specifically suggests amazed disbelief.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He suggests Ishmael as God's plan B",
-                    response: "He still doesn't fully grasp God's specific promise through Sarah.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but describes his response rather than the nature of his laughter. While suggesting Ishmael shows misunderstanding, the laughter itself indicates astonished reaction.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1773,20 +1890,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It signifies cutting away fleshly dependence",
-                    response: "Exactly! The flesh must be cut away for God's promise to flourish.",
+                    response:
+                      "CORRECT. Circumcision represents the removal of fleshly confidence and reliance on human ability. As the organ of reproduction, its circumcision signifies that the promised offspring will come through God's power, not human effort. This physical sign constantly reminds covenant members that God's promises are fulfilled by His power, not human capability.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It marks the organ of reproduction",
-                    response: "Yes! The promise involves offspring, so the sign relates to reproduction.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the location rather than the symbolism. While it marks reproduction, the deeper meaning concerns reliance on God rather than human ability for the promised offspring.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It's a permanent, intimate identity marker",
-                    response: "Not visible to others, but always reminding the bearer.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on the practical aspect rather than the theological symbolism. While it is permanent and intimate, the specific symbolism concerns cutting away fleshly trust.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1811,20 +1931,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Covenant membership isn't based on ethnicity alone",
-                    response: "Exactly! Household inclusion shows the broad scope of God's grace.",
+                    response:
+                      "CORRECT. The inclusion of purchased slaves and foreigners demonstrates that covenant relationship with God transcends ethnic boundaries. What matters is belonging to Abraham's household, not biological descent. This establishes the principle that God's people are defined by covenant relationship rather than racial identity, anticipating the inclusion of Gentiles in the New Covenant.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It creates a visible covenant community",
-                    response: "Yes! The sign marks who belongs to God's people.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the community rather than the inclusive principle. While community is created, the significant insight is the non-ethnic basis for inclusion.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates Abraham's leadership responsibility",
-                    response: "He must ensure everyone in his sphere bears the sign.",
-                    isCorrect: true,
+                    response:
+                      "VALID but secondary. While leadership is involved, the primary revelation is the inclusive nature of covenant membership.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1849,20 +1972,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Delayed obedience is disobedience",
-                    response: "Exactly! True faith acts promptly on God's word.",
+                    response:
+                      "CORRECT. Abraham's immediate compliance demonstrates the genuineness of his faith and the seriousness with which he takes God's command. Delaying obedience often indicates reservation or resistance. The prompt action shows Abraham's complete acceptance of God's terms without negotiation or hesitation, modeling the proper response to divine revelation.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It demonstrates full acceptance of God's terms",
-                    response: "Yes! No negotiation or hesitation with God's commands.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but describes the attitude rather than the obedience principle. While acceptance is evident, the specific lesson concerns the importance of immediate rather than delayed obedience.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows leadership by example",
-                    response: "Abraham doesn't ask others to do what he won't do himself.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but secondary. While leadership is demonstrated, the primary significance is the immediate response to God's command.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1887,20 +2013,23 @@ export const GENESIS_LESSONS_13_18: LessonBook = {
                   {
                     id: "opt-1",
                     text: "The costliness of obedience at his age",
-                    response: "Exactly! This was a significant physical risk for an old man.",
+                    response:
+                      "CORRECT. At 99 years old, circumcision represented significant physical risk and discomfort. Abraham's willingness to undergo this procedure demonstrates remarkable faith and commitment. His advanced age makes the obedience more costly and therefore more significant, showing that following God sometimes requires painful steps regardless of our life stage.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "His personal participation in the covenant",
-                    response: "Yes! He doesn't exempt himself from the requirement.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the cost element. While participation is evident, the specific significance is the sacrifice involved given his age.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The faith required to believe future promises",
-                    response: "At 99, he embraces a sign about offspring he doesn't yet have.",
-                    isCorrect: true,
+                    response:
+                      "VALID but focuses on the promises rather than the obedience. While faith is required, the age specifically highlights the cost of the obedient action itself.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,

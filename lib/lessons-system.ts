@@ -1,4 +1,4 @@
-import type { LessonBook, LessonProgress } from "./lessons/types"
+import type { LessonBook, LessonProgress, Lesson } from "./lessons/types"
 import { GENESIS_LESSONS_1_6 } from "./lessons/genesis-lessons-1-6"
 import { GENESIS_LESSONS_7_12 } from "./lessons/genesis-lessons-7-12"
 import { trackLessonCompletion } from "./spiritual-journey" // Import tracking function
@@ -123,6 +123,25 @@ export function isLessonUnlocked(lessonId: string): boolean {
   }
 
   return false
+}
+
+export function getNextLesson(currentLessonId: string): Lesson | null {
+  const allBooks = Object.values(LESSON_BOOKS).flat()
+
+  for (const book of allBooks) {
+    const allLessons = getAllLessonsInOrder(book)
+    const currentIndex = allLessons.findIndex((l) => l.id === currentLessonId)
+
+    if (currentIndex !== -1 && currentIndex + 1 < allLessons.length) {
+      const nextLesson = allLessons[currentIndex + 1]
+      // Check if next lesson is unlocked
+      if (isLessonUnlocked(nextLesson.id)) {
+        return nextLesson
+      }
+    }
+  }
+
+  return null
 }
 
 export function getLessonBooks(religion: string): LessonBook[] {

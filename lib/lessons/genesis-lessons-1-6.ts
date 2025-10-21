@@ -612,7 +612,7 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                 type: "scripture",
                 text: "Eve's modified version:",
                 scripture:
-                  '"And the woman said to the serpent, \\"We may eat of the fruit of the trees in the garden, but God said, \'You shall not eat of the fruit of the tree that is in the midst of the garden, neither shall you touch it, lest you die.\'\\" - Genesis 3:2-3',
+                  "\"And the woman said to the serpent, 'We may eat of the fruit of the trees in the garden, but God said, 'You shall not eat of the fruit of the tree that is in the midst of the garden, neither shall you touch it, lest you die.'' - Genesis 3:2-3",
               },
               {
                 id: "teach-5-g3-perfected",
@@ -653,7 +653,7 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                 type: "scripture",
                 text: "The direct lie:",
                 scripture:
-                  '"But the serpent said to the woman, \\"You will not surely die. For God knows that when you eat of it your eyes will be opened, and you will be like God, knowing good and evil.\\" - Genesis 3:4-5',
+                  "\"But the serpent said to the woman, 'You will not surely die. For God knows that when you eat of it your eyes will be opened, and you will be like God, knowing good and evil.' - Genesis 3:4-5",
               },
               {
                 id: "teach-8-g3-perfected",
@@ -913,20 +913,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God looks at the heart, not just the action",
-                    response: "Exactly! Hebrews tells us Abel offered 'by faith' - the attitude mattered most.",
+                    response:
+                      "CORRECT. Hebrews 11:4 reveals Abel offered 'by faith' - the fundamental difference was their heart attitude toward God. Cain went through religious motions while Abel approached with genuine faith and reverence. God's rejection wasn't arbitrary but exposed Cain's heart condition. Worship is primarily about the worshiper's relationship with God, not the external act itself.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Worship should cost us something",
-                    response: "Yes! Abel gave his best; Cain just went through the motions.",
-                    isCorrect: true,
+                    response:
+                      "PARTIALLY TRUE but misses the heart issue. While Abel did give his best (firstborn and fat portions), the primary distinction was faith, not merely sacrifice quality. David later understood this principle: 'I will not offer burnt offerings that cost me nothing' (1 Chronicles 21:24), but the cost matters because it expresses the heart's priority, not as a mechanical requirement.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It revealed their view of God",
-                    response: "Their offerings showed what they thought God deserved.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but secondary. Their offerings did reflect their theology - Abel saw God as worthy of his best, while Cain approached God as a religious duty. However, the core issue remains the heart attitude of faith versus ritualism. The view of God flows FROM the heart condition rather than being separate from it.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -951,20 +954,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Sin is an active force waiting to pounce",
-                    response: "Exactly! It's not passive - it lurks, ready to seize opportunity.",
+                    response:
+                      "CORRECT. Sin isn't passive but aggressively seeks to dominate us. The crouching animal imagery shows sin's predatory nature - it waits for opportunities to attack and control. This reveals why we can't casually coexist with sin; we must actively resist it through God's power. Sin doesn't politely knock but forces entry when we lower our guard.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "We have responsibility to resist sin",
-                    response: "Yes! 'You must rule over it' - God holds us accountable for our choices.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but incomplete. While we do have responsibility ('you must rule over it'), the imagery emphasizes sin's aggressive power, not just our duty. The warning shows we're in a spiritual battle against an active enemy, not merely exercising self-control. Our responsibility exists because of sin's active threat.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Anger gives sin an opening",
-                    response: "Important insight! Unchecked emotion creates vulnerability to sin's attack.",
-                    isCorrect: true,
+                    response:
+                      "SPECIFIC application but not the primary lesson. While Cain's anger did create vulnerability, the imagery teaches about sin's fundamental nature, not just its connection to anger. Sin crouches at everyone's door, not only when we're angry. The warning is universal, though specific emotions may increase vulnerability.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -989,20 +995,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows sin's rapid escalation",
-                    response: "Exactly! From disobedience to murder in one generation.",
+                    response:
+                      "CORRECT. In one generation, sin progresses from disobedience to deception to murder. This demonstrates sin's exponential growth when unchecked. What began as eating forbidden fruit culminates in destroying God's image-bearer. The progression reveals sin's inherently destructive nature - it never remains contained but spreads and intensifies.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It reveals the ultimate cost of sin",
-                    response: "Yes! Sin always leads to death - physically and spiritually.",
-                    isCorrect: true,
+                    response:
+                      "FOUNDATIONAL truth but not the immediate significance. While sin does lead to death, the shocking impact comes from this being MURDER - violence against God's image-bearer. The first death isn't natural but violent, showing how sin corrupts relationships and destroys what God values most.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates broken relationships",
-                    response: "The first death comes through violence, not natural causes.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but too general. All sin breaks relationships, but this specific death shows the ultimate relational rupture - destroying another human life. The significance isn't just broken relationship but the violent destruction of the relationship itself through murder.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1027,20 +1036,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Complete lack of responsibility",
-                    response: "Exactly! He denies both knowledge and obligation.",
+                    response:
+                      "CORRECT. Cain denies both knowledge and obligation toward his brother. This reveals a heart completely corrupted by sin - no remorse, no compassion, only self-preservation. The question challenges the fundamental principle that we ARE our brothers' keepers, reflecting sin's power to destroy natural affections and moral responsibility.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Defiance toward God's authority",
-                    response: "Yes! The question challenges God's right to hold him accountable.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While Cain does defy God, the deeper revelation is his complete moral breakdown. The defiance flows from a heart that has rejected its created purpose to love and protect others. He questions the basic premise of human responsibility before God.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "The ultimate expression of selfishness",
-                    response: "He sees no connection or duty toward his own brother.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but doesn't capture the relational dimension. Selfishness is certainly present, but the greater tragedy is the denial of brotherhood itself. Cain rejects the fundamental truth that humans are interconnected and responsible for one another's welfare.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1065,20 +1077,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "To demonstrate His mercy even in judgment",
-                    response: "Yes! God's justice doesn't cancel His compassion.",
+                    response:
+                      "CORRECT. God's justice doesn't cancel His compassion. The mark shows that even those under judgment remain objects of God's protective care. This reveals God's complex character - He judges sin severely yet shows mercy to sinners. His justice and mercy coexist, demonstrating that punishment isn't His primary desire but a necessary response to evil.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "To preserve human life which bears God's image",
-                    response: "Important insight! Even a murderer still carries God's image.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT principle but not the primary reason. While human life is sacred, God specifically protects Cain the murderer, not human life in general. The protection demonstrates God's sovereign right to show mercy where He chooses, not an absolute principle of preserving all life.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "To show that vengeance belongs to God",
-                    response: "Exactly! God reserves the right to judge and punish.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. The protection does reserve vengeance to God, but the greater revelation is about God's character. He shows unexpected grace to the undeserving, prefiguring the gospel message that while we were sinners, Christ died for us.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1102,20 +1117,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "God preserves a remnant who seek Him",
-                    response: "Yes! Even in dark times, some continue to worship.",
+                    response:
+                      "CORRECT. Even in humanity's darkest hours, God maintains a line of faithful worshipers. This pattern continues throughout Scripture - Noah, Abraham, the prophets - showing God's commitment to preserve true worship despite widespread corruption. God's purposes cannot be thwarted by human sin; He always has His witnesses.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Worship is the proper human response to God",
-                    response: "Exactly! Calling on God's name acknowledges His sovereignty.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't explain the significance in this context. While worship is always proper, the remarkable thing here is its persistence despite overwhelming sin. The worship continues not because it's natural but because God sovereignly preserves it amid spiritual decline.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Hope persists despite human failure",
-                    response: "The story doesn't end with Cain - God's purposes continue.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL but incomplete. Hope does persist, but specifically through maintained worship. The hope isn't general optimism but grounded in continued relationship with God through worship. God ensures the means of grace remain available even when few avail themselves.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1186,20 +1204,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows God keeps His promises across generations",
-                    response: "Exactly! The line continues despite sin and death.",
+                    response:
+                      "CORRECT. Despite the relentless 'and he died,' the line continues unbroken from Adam to Noah. This demonstrates God's faithfulness to His creation mandate and His promise of redemption. The genealogy shows God working His purposes through ordinary generations, preserving the Messianic line despite universal death and growing sin. God's plans cannot be derailed by human mortality.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It traces the Messianic line",
-                    response: "Yes! This genealogy eventually leads to Abraham, David, and Jesus.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT but not the primary purpose here. While this genealogy does lead to Christ, its immediate function is to show God's faithfulness through the progression from creation to flood. The Messianic significance becomes clearer in later genealogies; here the emphasis is on continuity despite death.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It reminds us of death's reality",
-                    response: "The repeated 'and he died' emphasizes sin's universal consequence.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but misses the redemptive context. The repeated 'and he died' does emphasize sin's universal consequence, but within the genealogy's flow, this serves to highlight God's grace in preserving the line despite death, not just to remind us of mortality.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1224,20 +1245,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "He 'walked with God' intimately",
-                    response: "Exactly! This close relationship resulted in bypassing death.",
+                    response:
+                      "CORRECT. Enoch's translation resulted from his extraordinary closeness to God. The phrase 'walked with God' denotes continuous, intimate fellowship - the same language used of Noah later. His life demonstrates that deep relationship with God transforms our earthly existence and ultimate destiny. Enoch shows what humanity was created for: unbroken communion with God.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "He demonstrates God's reward for faithfulness",
-                    response: "Yes! His life shows that relationship with God transforms our destiny.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but risks misunderstanding the nature of walking with God. While God did reward Enoch, the walking wasn't a means to earn reward but the essence of the relationship itself. The focus should be on the communion, not the compensation. The walking WAS the reward, and translation was the natural culmination.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "He points to resurrection hope",
-                    response: "His translation foreshadows eternal life with God.",
-                    isCorrect: true,
+                    response:
+                      "VALID connection but not the primary significance. While Enoch's translation does foreshadow eternal life, the immediate lesson is about the quality of life that pleases God. His walking with God in a corrupt generation demonstrates faithful living, not just future hope.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1262,20 +1286,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Temporary relief through agriculture",
-                    response: "Possibly! Some see this as hope for better farming conditions.",
-                    isCorrect: true,
+                    response:
+                      "POSSIBLE but too limited. While Noah did introduce vineyard cultivation, the naming prophecy points beyond agricultural innovation. In the context of the curse and God's redemptive purposes, the 'rest' likely signifies something more significant than farming techniques.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-2",
                     text: "Spiritual rest from sin's curse",
-                    response: "Yes! Ultimately, true rest comes from God's redemption.",
+                    response:
+                      "CORRECT. In the context of the creation curse and growing corruption, Noah's name points toward God's provision of relief from sin's effects. While the ultimate rest comes in Christ, Noah prefigures this as one through whom God brings temporary respite and preservation. The ark itself becomes a place of 'rest' from judgment.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-3",
                     text: "A foreshadowing of Christ's rest",
-                    response: "Matthew 11:28 connects ultimate rest to Jesus.",
-                    isCorrect: true,
+                    response:
+                      "THEOLOGICALLY VALID but not the immediate meaning. While Matthew 11:28 connects ultimate rest to Jesus, the naming focuses on Noah's role in his generation. The Christological connection represents later revelation rather than the original context.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1300,20 +1327,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Sin has infected every aspect of humanity",
-                    response: "Exactly! 'Every intention... only evil continually' shows total depravity.",
+                    response:
+                      "CORRECT. The phrases 'every intention,' 'only evil,' and 'continually' show total depravity - not that everyone is as bad as possible, but that no part of human nature remains uncorrupted. This comprehensive diagnosis justifies God's severe judgment while highlighting humanity's desperate need for redemption that must come from outside ourselves.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "The heart is the source of the problem",
-                    response: "Yes! External behavior flows from internal corruption.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but incomplete. While the 'thoughts of the heart' are indeed identified as the source, the emphasis is on the universality and consistency of the corruption. The problem isn't just internal but affects every expression of human life continually.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "This justifies God's coming judgment",
-                    response: "The universal wickedness demands a righteous response.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on consequence rather than condition. The description certainly justifies judgment, but its primary purpose is to reveal the depth of human corruption that makes judgment necessary. The focus is on the human condition that demands divine response.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1338,20 +1368,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Salvation always begins with God's initiative",
-                    response: "Exactly! Noah doesn't earn favor - he finds it as God's gift.",
+                    response:
+                      "CORRECT. Noah doesn't earn favor but finds it as God's unmerited gift. This establishes the pattern for all salvation: God takes the first step toward sinners. Even Noah's righteousness (mentioned later) flows from this prior grace. The sequence is crucial: grace first, then righteous response.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Righteousness is possible by God's grace",
-                    response: "Yes! In a wicked generation, God enables someone to live rightly.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While God's grace enables righteousness, the primary revelation is about initiation. Noah isn't righteous apart from grace; his righteousness is the fruit of the favor he already found. Grace precedes and produces righteousness, not vice versa.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "God preserves a remnant",
-                    response: "Even in judgment, God saves those who walk with Him.",
-                    isCorrect: true,
+                    response:
+                      "IMPORTANT theme but doesn't capture the gracious nature of the preservation. The remnant isn't preserved because they're better but because God graciously chooses to show favor. The emphasis is on God's sovereign choice, not the remnant's qualities.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1422,20 +1455,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Precision matters in God's salvation plans",
-                    response: "Exactly! God's way of salvation requires following His design.",
+                    response:
+                      "CORRECT. God's way of salvation requires following His exact design. The specific dimensions, materials, and construction details show that deliverance comes on God's terms, not human ingenuity. This pattern continues throughout Scripture - whether Passover blood placement or Brazen Serpent viewing, God specifies the means of salvation, and obedience to His instructions brings deliverance.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It tests Noah's obedience in details",
-                    response: "Yes! Faithfulness shows in careful attention to God's commands.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While detailed obedience is important, the primary significance is theological: salvation comes through God's prescribed means. The testing aspect is real but serves the greater purpose of establishing that God designs the ark of salvation.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It ensures the ark's survival",
-                    response: "The specific design would withstand the coming judgment.",
-                    isCorrect: true,
+                    response:
+                      "PRACTICAL but misses the spiritual dimension. While the design was certainly seaworthy, the greater lesson is about trusting God's wisdom even when we don't understand the reasons. The specifications teach dependence on God's knowledge rather than human engineering.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1459,20 +1495,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Complete trust in God's word",
-                    response: "Exactly! He believed God's warning about something never seen before.",
+                    response:
+                      "CORRECT. Noah believed God's warning about something never before seen - a worldwide flood. His obedience demonstrates extraordinary faith in God's word over visible reality. While everyone else lived normally, Noah acted on divine revelation rather than human experience. This is the essence of biblical faith: acting on God's word regardless of circumstances.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "Obedience without understanding everything",
-                    response: "Yes! He followed instructions he couldn't fully comprehend.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but doesn't capture the faith dimension. While Noah certainly didn't understand all the details, the key was his trust in God's character and word. The obedience flowed from confidence in the Speaker, not just mechanical compliance with instructions.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "Faith demonstrated through action",
-                    response: "His belief wasn't theoretical - it drove massive practical effort.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but focuses on the demonstration rather than the source. The actions certainly demonstrated faith, but the profound reality was the faith itself - complete reliance on God's word that motivated massive, costly obedience over decades.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1496,20 +1535,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Salvation is ultimately God's work",
-                    response: "Exactly! Noah built the ark, but God secures their safety.",
+                    response:
+                      "CORRECT. While Noah built the ark according to God's instructions, final security comes from God's action. This demonstrates that salvation, from beginning to end, is God's work. We participate through obedience, but He secures our safety. The closed door signifies that God alone determines who is safe from judgment.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It shows God's personal care",
-                    response: "Yes! The Creator personally ensures their protection.",
-                    isCorrect: true,
+                    response:
+                      "BEAUTIFUL but secondary. While God's care is evident, the primary significance is theological: God actively secures those who take refuge in His provision. The personal touch demonstrates His direct involvement in salvation, not just general oversight.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It marks the point of no return",
-                    response: "The closed door signifies the finality of God's decision.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on the consequence rather than the Actor. The finality is important, but the greater truth is WHO effects that finality. God Himself closing the door emphasizes His sovereign control over salvation and judgment.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1534,20 +1576,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows the comprehensive nature of God's judgment",
-                    response: "Exactly! Sin affected all creation, so judgment reaches all creation.",
+                    response:
+                      "CORRECT. The flood's universal scope matches the universal extent of human corruption. Just as sin infected all creation, judgment reaches all creation. This demonstrates God's thorough dealing with evil - no corner of corrupted creation escapes His righteous assessment. The completeness of judgment highlights the seriousness of sin.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It demonstrates God's sovereignty over nature",
-                    response: "Yes! The Creator can undo His creation work.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but secondary. While God's control over creation is evident, the primary point is the moral dimension: judgment matches the extent of the offense. The sovereignty serves justice, not just displays power.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It highlights the completeness of salvation",
-                    response: "Those in the ark were completely safe, no matter how high the waters.",
-                    isCorrect: true,
+                    response:
+                      "VALID perspective but not the main emphasis here. Those in the ark were completely safe, but the universal language primarily serves to show the thoroughness of judgment. The salvation's completeness is wonderful, but the context emphasizes judgment's comprehensiveness.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1572,20 +1617,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It represents new life after judgment",
-                    response: "Exactly! Life emerges from the waters of death.",
+                    response:
+                      "CORRECT. The fresh olive leaf signals life emerging from the waters of death - creation renewing after judgment. This becomes a powerful symbol of hope, restoration, and new beginnings throughout Scripture. Just as creation was reborn after the flood, God continually brings life from death, hope from despair.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It signals God's peace and restoration",
-                    response: "Yes! The olive branch has symbolized peace ever since.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but more specific than the primary symbolism. While peace is certainly implied, the olive branch specifically represents the end of judgment and the beginning of new creation. The peace comes through the passing of judgment and the emergence of new life.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It shows God's care for His creation",
-                    response: "Plant life survives and begins anew.",
-                    isCorrect: true,
+                    response:
+                      "ACCURATE but too general. God's care is evident throughout, but the olive leaf specifically symbolizes the transition from judgment to renewal. It's not just general care but particular evidence that the world is becoming habitable again.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1610,20 +1658,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "Worship is the proper response to salvation",
-                    response: "Exactly! Having been saved, he immediately honors his Savior.",
+                    response:
+                      "CORRECT. Having been saved from judgment, Noah's immediate response is worship. This pattern continues throughout Scripture - redemption should lead to worship. The sacrifice acknowledges God as the source of deliverance and expresses gratitude for preservation. True salvation always produces worship.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It acknowledges continued need for atonement",
-                    response: "Yes! Salvation from floodwaters doesn't remove the need for blood atonement.",
-                    isCorrect: true,
+                    response:
+                      "THEOLOGICALLY IMPORTANT but not the primary reason. While blood atonement remains necessary, the context emphasizes thanksgiving worship. The salvation from floodwaters doesn't remove sin's guilt, but the sacrifice here functions primarily as worshipful response to deliverance.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It demonstrates gratitude",
-                    response: "The sacrifice expresses thanks for God's preserving mercy.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but incomplete. Gratitude is certainly involved, but the act of sacrifice constitutes formal worship, not just personal thanksgiving. The burnt offering represents complete dedication to God in response to His salvation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
@@ -1648,20 +1699,23 @@ export const GENESIS_LESSONS_1_6: LessonBook = {
                   {
                     id: "opt-1",
                     text: "It shows God's commitment to His creation",
-                    response: "Exactly! Despite human sin, God promises to preserve the world.",
+                    response:
+                      "CORRECT. Despite humanity's persistent sin, God binds Himself to preserve the natural order. This demonstrates His commitment to the world He made, not just to human redemption. The cosmic scope shows God's faithfulness extends beyond His dealings with people to His entire creation project.",
                     isCorrect: true,
                   },
                   {
                     id: "opt-2",
                     text: "It reveals God's gracious restraint",
-                    response: "Yes! He limits His judgment though humanity deserves more.",
-                    isCorrect: true,
+                    response:
+                      "TRUE but focuses on what God won't do rather than His positive commitment. The restraint is real, but the covenant primarily establishes God's positive promise to maintain creation's stability, not just limit judgment.",
+                    isCorrect: false,
                   },
                   {
                     id: "opt-3",
                     text: "It points toward ultimate redemption",
-                    response: "This temporary solution anticipates Christ's eternal solution.",
-                    isCorrect: true,
+                    response:
+                      "VALID connection but not the immediate significance. While the preservation covenant anticipates final redemption, its primary function is to ensure earthly stability until that redemption comes. The promise concerns preservation, not yet transformation.",
+                    isCorrect: false,
                   },
                 ],
                 helpAvailable: true,
